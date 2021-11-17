@@ -1,7 +1,7 @@
 # In Honor of Allison "Dona" Huang
 <h1>Team Fire Alarms (Karthik Valluri, Aadya Daita, Gaurish Gaur, Siya Dixit, Athena Wu)</h1><br>
 <h2>Objectives</h2>
-To create a website that enables the users to survey receipes online and find receipes according to the materials they have available.<br>
+To be continued. <br>
 
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
