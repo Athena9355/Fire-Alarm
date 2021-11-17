@@ -1,5 +1,5 @@
 # In Honor of Allison "Dona" Huang
-<h1>Team Fire Alarms (Karthik Valluri, Aadya Daita, Gaurish Gaur, Siya Dixit, Athena Wu)</h1><br>
+<h1>Team Fire Alarms (Aadya Daita, Siya Dixit, Gaurish Gaur, Karthik Valurri, Athena Wu)</h1><br>
 <h2>Objectives</h2>
 To be continued. <br>
 
@@ -20,7 +20,7 @@ To be continued. <br>
 | Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Athena9355) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aathena9355)  | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=Athena9355) | [Profile](https://github.com/Athena9355) |
 | Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Gaurish-Gaur) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur) |
 | Karthik     | @kar722 | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/kar722) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Akar722) | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=kar722) | [Profile](https://github.com/kar722) |
-| Siya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/siya-dixit) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Asiya-dixit)  | [Commits]() | [Profile](https://github.com/siya-dixit) |
+| Siya       | @siya-dixit  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/siya-dixit) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Asiya-dixit)  | [Commits]() | [Profile](https://github.com/siya-dixit) |
 
 <h2>Roles</h2>
 1. Aadya: Technical Lead <br>
