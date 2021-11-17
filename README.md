@@ -1,7 +1,7 @@
 # In Honor of Allison "Dona" Huang
-<h1>Team Fire Extinguishers (Karthik Valluri, Aadya Daita, Gaurish Gaur, Siya Dixit, Athena Wu)</h1><br>
+<h1>Team Fire Alarms (Karthik Valluri, Aadya Daita, Gaurish Gaur, Siya Dixit, Athena Wu)</h1><br>
 <h2>Objectives</h2>
-To assist distressed students in their adventure into a new schedule with new classes and new teachers. Thee wesbite providees a way for you to find assitance in your journey as a stressed students byt providing several features such as a way to determine your favorability of your teachers, write comments, and even use a spanish translators!<Nightwatch is your go-to place in times of panic. <br>
+To create a website that enables the users to survey receipes online and find receipes according to the materials they have available.<br>
 
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
