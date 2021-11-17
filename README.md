@@ -3,10 +3,9 @@
 <h2>Objectives</h2>
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. Thee wesbite providees a way for you to find assitance in your journey as a stressed students byt providing several features such as a way to determine your favorability of your teachers, write comments, and even use a spanish translators!<Nightwatch is your go-to place in times of panic. <br>
 
-John was here<br>
-[Insights](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)<br>
-[Our GitHub Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1) <br>
-[Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1)<br>
+
+[Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
+[Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1)<br>
 
 <h2>Pair Share Journals</h2>
 
