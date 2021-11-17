@@ -15,10 +15,10 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
-| Karthik     | @kar722 | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/kar722) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Akar722) | [Commits]() | [Profile](https://github.com/kar722) |
-| Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Gaurish-Gaur) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits]() | [Profile](https://github.com/Gaurish-Gaur) |
-| Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Athena9355) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aathena9355)  | [Commits]() | [Profile](https://github.com/Athena9355) |
 | Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/AadyaDaita) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
+| Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Athena9355) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aathena9355)  | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=Athena9355) | [Profile](https://github.com/Athena9355) |
+| Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/Gaurish-Gaur) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur) |
+| Karthik     | @kar722 | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/kar722) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Akar722) | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=kar722) | [Profile](https://github.com/kar722) |
 | Siya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/siya-dixit) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Asiya-dixit)  | [Commits]() | [Profile](https://github.com/siya-dixit) |
 
 <h2>Roles</h2>
