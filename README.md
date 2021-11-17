@@ -22,9 +22,10 @@ To assist distressed students in their adventure into a new schedule with new cl
 | Siya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/siya-dixit) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Asiya-dixit)  | [Commits]() | [Profile](https://github.com/siya-dixit) |
 
 <h2>Roles</h2>
-1. Athena: Scrum Master <br>
-2. Gaurish: Navigator <br>
-3. Karthik: Designer <br>
-4. Siya: Designer<br>
-5. Aadya: Technical Lead <br>
+1. Aadya: Technical Lead <br>
+2. Athena: Scrum Master <br>
+3. Gaurish: Navigator <br>
+4. Karthik: Designer <br>
+5. Siya: Designer<br>
+
 <br>
