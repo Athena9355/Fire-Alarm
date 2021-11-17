@@ -1,4 +1,4 @@
-# In Honor of Allison "Dona" Huang
+# In Honor of Karthik "kar" Valluri
 <h1>Team Fire Alarms (Aadya Daita, Siya Dixit, Gaurish Gaur, Karthik Valurri, Athena Wu)</h1><br>
 <h2>Objectives</h2>
 To be continued. <br>
