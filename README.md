@@ -15,11 +15,11 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
-| Karthik     | @kar722 | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3Aallisonthuang+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aallisonthuang) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=allisonthuang) | [Profile](https://github.com/kar722) |
-| Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AGaurish-Gaur+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur) |
-| Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AAthena9355+is%3Aopen   ) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aathena9355r)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Athena9355) | [Profile](https://github.com/Athena9355) |
+| Karthik     | @kar722 | [Tasks]() | [Scrum Board]() | [Commits]() | [Profile](https://github.com/kar722) |
+| Gaurish     | @Gaurish-Gaur  | [Tasks]() | [Scrum Board]() | [Commits]() | [Profile](https://github.com/Gaurish-Gaur) |
+| Athena      | @Athena9355  |  [Tasks]() | [Scrum Board]()  | [Commits]() | [Profile](https://github.com/Athena9355) |
 | Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-Alarm/issues/assigned/AadyaDaita) | [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-Alarm/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
-| Siya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
+| Siya       | @AadyaDaita  | [Tasks]() | [Scrum Board]()  | [Commits]() | [Profile]() |
 
 <h2>Roles</h2>
 1. Athena: Scrum Master <br>
