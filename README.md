@@ -10,8 +10,8 @@ John was here<br>
 
 <h2>Pair Share Journals</h2>
 
-[Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
-[Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+[Athena, Karthik and Gaurish](https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit?usp=sharing)<br>
+[Aadya and Siya](https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing)<br>
 <h2>Team members</h2>
 
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
