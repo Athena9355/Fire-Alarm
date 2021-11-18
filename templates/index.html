@@ -1,7 +1,17 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/base.html" %}
+{% extends "layouts/project.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+
+
+<!-- Setting up a block replacement to customize background to RINGS -->
+{% block background %}
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/564x/73/79/36/737936e3271f517bb18a9a0bdabe5faa.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+{% endblock %}

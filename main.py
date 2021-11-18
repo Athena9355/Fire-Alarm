@@ -11,30 +11,41 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/aadya')
+def aadya():
+    return render_template("aadya.html")
+
+@app.route('/athena')
+def athena():
+    return render_template("athena.html")
+
+@app.route('/gaurish')
+def gaurish():
+    return render_template("gaurish.html")
+
+@app.route('/karthik')
+def karthik():
+    return render_template("karthik.html")
+
+@app.route('/siya')
+def siya():
+    return render_template("siya.html")
+
 
 
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
 
+"""
 @app.route('/About Us/')
 def aboutus():
     return render_template("About Us.html")
-
+"""
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
