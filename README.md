@@ -26,7 +26,7 @@ To be continued. <br>
 1. Aadya: Technical Lead <br>
 2. Athena: Scrum Master <br>
 3. Gaurish: Navigator <br>
-4. Karthik: Lead Designer <br>
-5. Siya: Designer<br>
+4. Karthik: Designer <br>
+5. Siya: Designer <br>
 
 <br>
