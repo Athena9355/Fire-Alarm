@@ -28,5 +28,8 @@ To be continued. <br>
 3. Gaurish: Navigator <br>
 4. Karthik: Designer <br>
 5. Siya: Designer <br>
+<br>
 
+<h2>Wiki Page<h2>
+  [link](https://github.com/Athena9355/Fire-Alarm/wiki)
 <br>
