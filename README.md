@@ -27,6 +27,6 @@ To be continued. <br>
 2. Athena: Scrum Master <br>
 3. Gaurish: Navigator <br>
 4. Karthik: Lead Designer <br>
-5. Siya: Junior Designer<br>
+5. Siya: Designer<br>
 
 <br>
