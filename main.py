@@ -35,11 +35,19 @@ def karthik():
 def siya():
     return render_template("siya.html")
 
+@app.route('/recipes')
+def recipes():
+    return render_template("recipes.html")
+
+@app.route('/menus')
+def menus():
+    return render_template("menus.html")
+
+@app.route('/restaurants')
+def restaurants():
+    return render_template("restaurants.html")
 
 
-@app.route('/stub/')
-def stub():
-    return render_template("stub.html")
 
 @app.route('/About Us/')
 def aboutus():
