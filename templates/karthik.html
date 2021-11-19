@@ -1,17 +1,604 @@
-<!DOCTYPE html>
-{% include "layouts/navbar.html" %}
-
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png">
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Karthik</title>
 </head>
-<body>
-Hi Im Karthik
-</body>
 
-</html>
+{% include "layouts/navbar.html" %}
+
+<style>
+    body {
+        font-family: "Century Gothic", "Lato", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .et-hero-tabs,
+    .et-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+        background: #eee;
+        text-align: center;
+        padding: 0 2em;
+    }
+    .et-hero-tabs h1,
+    .et-slide h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+    .et-hero-tabs h3,
+    .et-slide h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+    }
+
+    .et-hero-tabs-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        z-index: 10;
+    }
+    .et-hero-tabs-container--top {
+        position: fixed;
+        top: 0;
+    }
+
+    .et-hero-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 0.8rem;
+    }
+    .et-hero-tab:hover {
+        color: white;
+        background: rgba(102, 177, 241, 0.8);
+        transition: all 0.5s ease;
+    }
+
+    .et-hero-tab-slider {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background: #66B1F1;
+        transition: left 0.3s ease;
+    }
+
+    @media (min-width: 800px) {
+        .et-hero-tabs h1,
+        .et-slide h1 {
+            font-size: 3rem;
+        }
+        .et-hero-tabs h3,
+        .et-slide h3 {
+            font-size: 1rem;
+        }
+
+        .et-hero-tab {
+            font-size: 1rem;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+</style>
+
+
+<body>
+
+<style>
+    /* general */
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        width: 40%;
+        min-width: 500px;
+        height: 27.5%;
+    }
+
+    .marginTopBottom {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* COVID19 */
+    .covidInput {
+        display: flex;
+        justify-content: center;
+        line-height: 2;
+    }
+
+    #countries {
+        margin-left: 20px;
+        width: 30%;
+    }
+
+    .mySeparator {
+        height: 0.5px;
+        width: 80%;
+        background-color: whitesmoke;
+    }
+</style>
+
+<section class="et-hero-tabs">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        .about-wrapper{
+            height: 100vh;
+        }
+        .about-left{
+            background: red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .about-left-content > div{
+            background: radial-gradient(red,whitesmoke);
+            padding: 4rem 4rem 2.5rem 5rem;
+            text-align: center;
+        }
+        .about-left-content{
+            box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+        }
+        .about-img img{
+            display: block;
+            width: 200px;
+        }
+        .about-img{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+        }
+        .shadow{
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+        }
+        .shadow::after{
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, 0.4);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            height: 7px;
+            width: 50px;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+        .shadow:hover .about-img{
+            transform: translateY(-10px);
+        }
+        .shadow:hover::after{
+            opacity: 1;
+        }
+        .about-left-content h2{
+            font-size: 2rem;
+            margin: 2.2rem 0 0.6rem 0;
+            line-height: 1.2;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #edffec;
+        }
+        .about-left-content h3{
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-top: 1.2rem;
+        }
+        .icons{
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 0.8rem 0;
+        }
+        .icons li{
+            list-style-type: none;
+            background: lightcoral;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+        .icons li:hover{
+            background: #edffec;
+            color: #000;
+        }
+        .about-right{
+            background: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5rem;
+            text-align: center;
+        }
+        .about-right h1{
+            font-size: 7rem;
+            text-transform: uppercase;
+        }
+        .about-right h1 span{
+            color: red;
+        }
+        .about-right h2{
+            font-weight: 600;
+        }
+        .about-btns{
+            display: flex;
+            margin: 2rem 0;
+        }
+        .btn{
+            border: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 0.55rem 0;
+            width: 130px;
+            font-weight: 600;
+            background: transparent;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+        .btn.btn-pink{
+            background: red;
+            color: #fff;
+            border-color: red;
+            transition: all 0.5s ease-in-out;
+        }
+        .btn.btn-pink:hover{
+            background: transparent;
+            border-color: red;
+            color: #000;
+        }
+        .btn.btn-white{
+            transition: all 0.5s ease-in-out;
+        }
+        .btn.btn-white:hover{
+            background: red;
+            border-color: red;
+            color: #fff;
+        }
+        .about-para p{
+            font-weight: 300;
+            padding: 0.5rem;
+            opacity: 0.8;
+        }
+
+        @media screen and (min-width: 992px){
+            .about-wrapper{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-left{
+                position: relative;
+            }
+            .about-left-content{
+                position: absolute;
+                right: -50px;
+            }
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+    <body>
+
+    <div class = "about-wrapper">
+        <div class = "about-left">
+            <div class = "about-left-content">
+                <div>
+                    <div class = "shadow">
+                        <div class = "about-img">
+                            <img src="/static/images/karthik.jpg" alt = "karthik" id="pic" onclick="swapImage()"/>
+                        </div>
+                    </div>
+
+                    <h2>Karthik<br>Valluri</h2>
+                    <h3>CEO, Co-Founder of A1FromDay0</h3>
+                </div>
+
+                <ul class = "icons">
+                    <li href="instagram.com/itsnotkar"><i class = "fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "about-right">
+            <h1>hi<span>!</span></h1>
+            <h2>I am a lead website designer</h2>
+            <div class="center-block" style="margin: 2% 5% 5%; text-align:center">
+                <div class="col-12">
+                </div>
+            </div>
+
+            <div class = "about-para">
+                <p>I'm 15 y/o and am very passionate about coding and computer science.</p>
+                <p>But along with that I am an avid sports fan (Barca and Lakers) and I enjoy playing basketball, soccer and tennis. I also spend my free time playing video games with my friends.</p>
+            </div>
+        </div>
+    </div>
+
+
+    </body>
+
+    <div class="et-hero-tabs-container">
+        <a class="et-hero-tab" href="#tab-api">WEB API</a>
+        <a class="et-hero-tab" href="#tab-links">Links + Key Indicators of Work</a>
+        <span class="et-hero-tab-slider"></span>
+    </div>
+</section>
+
+<main class="et-main">
+    <section class="et-slide" id="tab-api">
+        <h1>Covid-19 Stats API</h1>
+        <div class="APIContainer">
+            <div class="covidInput">
+                <p>Select a country:</p>
+                <select class="form-control" id="countries">
+                    <option>Select a country</option>
+                </select>
+            </div>
+            <hr class="mySeparator">
+            <div class="text-center">
+                <p class="marginTopBottom" id="covidNewConfirmed">New confirmed cases: -</p>
+                <p class="marginTopBottom" id="covidTotalConfirmed">Total confirmed cases: -</p>
+                <p class="marginTopBottom" id="covidNewDeaths">New deaths: -</p>
+                <p class="marginTopBottom" id="covidTotalDeaths">Total deaths: -</p>
+                <p class="marginTopBottom" id="covidLastUpdate">Last updated: -</p>
+            </div>
+        </div>
+    </section>
+    <section class="et-slide" id="tab-links">
+        <h1>Links + Key Indicators of Work</h1>
+        <br><br>
+        <table>
+            <tr>
+                <th>Tasks</th>
+                <th>Scrum Board</th>
+                <th>Commits</th>
+                <th>Github Profile</th>
+                <th>Github ID</th>
+                <th>Pair Share Journal</th>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/Athena9355/Fire-Alarm/issues/assigned/kar722">Tasks</a></td>
+                <td><a href="https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Akar722">Scrum Board</a></td>
+                <td><a href="https://github.com/Athena9355/Fire-Alarm/commits?author=kar722">Commits</a></td>
+                <td><a href="https://github.com/kar722">Github Profile</a></td>
+                <td>@kar722</td>
+                <td><a href="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit">Pair Share Journal</a></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script id="rendered-js" >
+    class StickyNavigation {
+
+        constructor() {
+            this.currentId = null;
+            this.currentTab = null;
+            this.tabContainerHeight = 70;
+            let self = this;
+            $('.et-hero-tab').click(function() {
+                self.onTabClick(event, $(this));
+            });
+            $(window).scroll(() => { this.onScroll(); });
+            $(window).resize(() => { this.onResize(); });
+        }
+
+        onTabClick(event, element) {
+            event.preventDefault();
+            let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+            $('html, body').animate({ scrollTop: scrollTop }, 600);
+        }
+
+        onScroll() {
+            this.checkTabContainerPosition();
+            this.findCurrentTabSelector();
+        }
+
+        onResize() {
+            if(this.currentId) {
+                this.setSliderCss();
+            }
+        }
+
+        checkTabContainerPosition() {
+            let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+            if($(window).scrollTop() > offset) {
+                $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+            }
+            else {
+                $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+            }
+        }
+
+        findCurrentTabSelector(element) {
+            let newCurrentId;
+            let newCurrentTab;
+            let self = this;
+            $('.et-hero-tab').each(function() {
+                let id = $(this).attr('href');
+                let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                    newCurrentId = id;
+                    newCurrentTab = $(this);
+                }
+            });
+            if(this.currentId != newCurrentId || this.currentId === null) {
+                this.currentId = newCurrentId;
+                this.currentTab = newCurrentTab;
+                this.setSliderCss();
+            }
+        }
+
+        setSliderCss() {
+            let width = 0;
+            let left = 0;
+            if(this.currentTab) {
+                width = this.currentTab.css('width');
+                left = this.currentTab.offset().left;
+            }
+            $('.et-hero-tab-slider').css('width', width);
+            $('.et-hero-tab-slider').css('left', left);
+        }
+
+    }
+
+    new StickyNavigation();
+</script>
+
+<script>
+    let covid19data;
+
+    (function onLoad()
+    {
+        // set a function for each button
+        setButtonFunctions();
+
+        // fetch from each API when the page loads
+        getLatestCOVID19Data();
+    })();
+
+    function setButtonFunctions()
+    {
+        document.getElementById('countries').onchange = function() {
+            const selectedValue = document.getElementById('countries').value;
+            const countryData = covid19data.filter(c => c.country == selectedValue)[0];
+
+            // display data
+            const newConfirmed = document.getElementById('covidNewConfirmed');
+            const totalConfirmed = document.getElementById('covidTotalConfirmed');
+            const covidNewDeaths = document.getElementById('covidNewDeaths');
+            const covidTotalDeaths = document.getElementById('covidTotalDeaths');
+            const lastUpdated = document.getElementById('covidLastUpdate');
+
+            (countryData.cases.new) ? newConfirmed.innerHTML = 'New confirmed cases: ' + countryData.cases.new : newConfirmed.innerHTML = 'New confirmed cases: 0';
+            (countryData.cases.total) ? totalConfirmed.innerHTML = 'Total confirmed cases: ' + countryData.cases.total : totalConfirmed.innerHTML = 'Total confirmed cases: 0';
+            (countryData.deaths.new) ? covidNewDeaths.innerHTML = 'New deaths: ' + countryData.deaths.new : covidNewDeaths.innerHTML = 'New deaths: 0';
+            (countryData.deaths.total) ? covidTotalDeaths.innerHTML = 'Total deaths: ' + countryData.deaths.total : covidTotalDeaths.innerHTML = 'Total deaths: 0';
+            lastUpdated.innerHTML = 'Last updated: ' + countryData.day;
+        };
+    }
+
+    // COVID 19 Data
+    async function getLatestCOVID19Data()
+    {
+        await fetch("https://covid-193.p.rapidapi.com/statistics", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "covid-193.p.rapidapi.com",
+                "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+            }
+        })
+            .then(response => response.json())
+            .then(response => {
+                console.log("COVID 19 API object:");
+                console.log(response);
+                console.log("\n");
+
+                // add all countries to select element
+                response.response.forEach(c => {
+                    const option = document.createElement('option');
+                    option.innerHTML = c.country;
+                    document.getElementById('countries').appendChild(option);
+                })
+
+                // save covid data to global variable
+                covid19data = response.response;
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+</script>
+
+<script>
+function swapImage() {
+    var image = document.getElementById('pic');
+    if (image.src.match("mask")) {
+        image.src = "/static/images/karthik.jpg"
+    } else {
+        image.src = "/static/images/karthikmask.jpg"
+    }
+
+}
+</script>
+
+</body>
