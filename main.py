@@ -53,6 +53,29 @@ def restaurants():
 def aboutus():
     return render_template("About Us.html")
 
+@app.route('/asianfood')
+def asianfood():
+    return render_template("asianfood.html")
+
+
+@app.route('/americanfood')
+def americanfood():
+    return render_template("americanfood.html")
+
+
+@app.route('/europeanfood')
+def europeanfood():
+    return render_template("europeanfood.html")
+
+@app.route('/mexicanfood')
+def mexicanfood():
+    return render_template("mexicanfood.html")
+
+
+@app.route('/oceanicfood')
+def oceanicfood():
+    return render_template("oceanicfood.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
