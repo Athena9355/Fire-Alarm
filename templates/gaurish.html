@@ -2,21 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gaurish</title>
+    <title>About Us</title>
 </head>
-{% block background %}
+
+{% block body %}
+{% block meta %}
+    <script>
+       function switchRooms(){
+           let Image_ID = document.getElementById('getImage')
+           if (Image_ID.src.match("https://drive.google.com/file/d/13XDdeJdTle0Mb9wqp4QM29cPpL_HuHR7/preview")){
+               Image_ID.src= "https://drive.google.com/file/d/12Of09HCwjFTBP9anyVF8EZnX1bGhleDB/preview";
+
+           }
+           else{
+               Image_ID.src = "https://drive.google.com/file/d/13XDdeJdTle0Mb9wqp4QM29cPpL_HuHR7/preview"
+           }
+       }
+
+
+    </script>
+{% endblock %}
+    <!---this is for the title of the page -->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
+        <div class="col-12">
+            <p>Good to have you here {{name1}}!</p>
+        </div>
+    </div>
+    <!---this is for the background image -->
     <style>
-        body {
-            background-image: url('https://sf.ezoiccdn.com/ezoimgfmt/www.schemecolor.com/images/color-image-thumb.php?tx&n=Pale%20Silver&w=250&h=250&hex=cecab3&ezimgfmt=rs:118x118/rscb1/ng:webp/ngcb1');
+        body
+        {
+            background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
             height: 100%;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-{% endblock %}
+            background-size: cover; }
 
-<body>
+        .button2 {
+            border: 2px solid #463d3d;
+            border-radius: 4px;
+            padding: 5px;
+            width: 250px;
+            color: antiquewhite;
+            font-size: 15px;
+            background-color: darkblue;
+        }
+
+        /* hover over effect*/
+        .button2:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+            transform:scale(2);
+            background-color: gray;
+        }
+
+
+    </style>
+
+
+
+
+    <body>
+    <!---Gaurish's title -->
+    <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
+        <div class="col-12">
+
+        </div>
+    </div>
+
+    <!---Gaurish's info -->
+    <div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
+        <div class="col-12">
+            <p>Name: Gaurish Gaur <br>
+                <br>
+                Age: 17 <br>
+                <br>
+                Date of Birth: August 1st, 2004<br>
+                <br>
+                Favorite color: Brown <br>
+                <br>
+                Favorite animal: Mole <br>
+                <br>
+                Message to user: ☺ What's up? <br>
+                <br>
+                Picture of me: <br>
+                <input type="button" onclick="switchRooms()" class="button button2" value="Switch Rooms">
+                <iframe src="https://drive.google.com/file/d/13XDdeJdTle0Mb9wqp4QM29cPpL_HuHR7/preview" width="150" height="150" allow="autoplay" id="getImage"> </iframe>
+
+                <img src="https://drive.google.com/thumbnail?id=1M8WXSavKDpB-gzZXPMFsnFmTSU8o7mur" style="height: 250px" >
+
+            </p>
+        </div>
+    </div>
+    <p> Gaurish Gaur</p>
+    <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit"></iframe></p>
+
+{% endblock %}
 
 </body>
 </html>
