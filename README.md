@@ -1,4 +1,4 @@
-# In Honor of Allison Huang
+<h3>In Honor of Allison Huang<h3>
 <h1>Team Fire Alarms (Aadya Daita, Siya Dixit, Gaurish Gaur, Karthik Valluri, Athena Wu)</h1><br>
 <h2>Objectives</h2>
 To be continued. <br>
@@ -28,5 +28,11 @@ To be continued. <br>
 3. Gaurish: Navigator <br>
 4. Karthik: Designer <br>
 5. Siya: Designer <br>
-
 <br>
+
+<h2>Wiki Page</h2>
+
+[Wiki](https://github.com/Athena9355/Fire-Alarm/wiki)<br>
+
+<h2>To Be Continued</h2>
+
