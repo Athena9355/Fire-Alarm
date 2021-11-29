@@ -27,7 +27,7 @@ To be continued. <br>
 2. Athena: Scrum Master <br>
 3. Gaurish: Navigator <br>
 4. Karthik: Designer <br>
-5. Siya: Designer <br>
+5. Siya: Deployment Manager <br>
 <br>
 
 <h2>Wiki Page</h2>
