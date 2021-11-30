@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,7 +28,66 @@
     </style>
 {% endblock %}
 <body>
-<img src="https://drive.google.com/thumbnail?id=1m3CgKEiiSZqUoLxTKHdz5VaLAOw-aZ1P" style="height: 250px" >
+
+<br>
+<br>
+<h3> Click on the Image...</h3>
+
+
+<script>
+    function swapImage() {
+        var Image_Id = document.getElementById('mask');
+        if (Image_Id.src.match("static/images/mask_aadya.jpg")) {
+            Image_Id.src = "static/images/aadya_without_mask.jpeg";
+        }
+        else {
+            Image_Id.src = "static/images/mask_aadya.jpg";
+        }
+    }
+</script>
+
+<p>
+    <img alt="" src="/static/images/mask_aadya.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+</p>
+
+
+
+<h3>API...</h3>
+
+
+
+<br>
+<br>
+<h3> Showing Engagement...</h3>
+
+<br>
+
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Tasks</th>
+        <th>Scrum Board</th>
+        <th>Commits</th>
+
+    </tr>
+    <tr>
+        <td>@AadyaDaita</td>
+        <td><a href="https://github.com/Athena9355/Fire-Alarm/issues/assigned/AadyaDaita">Tasks</a></td>
+        <td><a href="https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Aaadyadaita">Scrum Board</a></td>
+        <td><a href="https://github.com/Athena9355/Fire-Alarm/commits?author=AadyaDaita">Commits</a></td>
+    </tr>
+
+</table>
+<br>
+<br>
+
+<p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing"></iframe></p>
+
 
 
 </body>
