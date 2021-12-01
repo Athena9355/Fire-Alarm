@@ -95,6 +95,26 @@
             <p>Navigate to other pages!</p>
         </div>
     </div>
+    <h3> Click on the Image...</h3>
+
+
+    <script>
+        function swapImage() {
+            var Image_Id = document.getElementById('mask');
+            if (Image_Id.src.match("static/images/athena_mask.jpg")) {
+                Image_Id.src = "static/images/athena_unmasked.jpg";
+            }
+            else {
+                Image_Id.src = "static/images/athena_mask.jpg";
+            }
+        }
+    </script>
+
+    <p>
+        <img alt="" src="/static/images/athena_mask.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+    </p>
+
+
 
     <!-- navbar
     <div class="center-block" style="margin: 0% 5% 2%; text-align:left; font-family: Courier New,serif;font-size:20px;">
