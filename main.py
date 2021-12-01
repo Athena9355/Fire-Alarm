@@ -1,7 +1,9 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # create a Flask instance
+from templates.aadya_aboutme_api import get_numberfact
+
 app = Flask(__name__)
 
 
@@ -75,6 +77,19 @@ def mexicanfood():
 @app.route('/oceanicfood')
 def oceanicfood():
     return render_template("oceanicfood.html")
+
+@app.route('/aadya_aboutme_api', methods=['GET', 'POST'])
+def api_translator():
+    number = " "
+    if request.form:
+        english_text = request.form.get("translate")
+        number = get_numberfact(english_text)
+        if number != 0:  # input field has content
+            print("Please enter an input")
+        print(number)
+
+    return render_template("aadya.html", fact=number)
+
 
 # runs the application on the development server
 if __name__ == "__main__":
