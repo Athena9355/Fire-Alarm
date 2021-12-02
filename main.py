@@ -1,8 +1,10 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+import requests, json
 
 # create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
+#from templates.ggapi.py import get_numfact
 
 app = Flask(__name__)
 
@@ -11,11 +13,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
-
-
-
-
-
 
 @app.route('/aadya')
 def aadya():
@@ -27,7 +24,22 @@ def athena():
 
 @app.route('/gaurish')
 def gaurish():
-    return render_template("gaurish.html")
+
+    url = "https://geek-jokes.p.rapidapi.com/api"
+
+    querystring = {"format":"json"}
+
+    headers = {
+        'x-rapidapi-host': "geek-jokes.p.rapidapi.com",
+        'x-rapidapi-key': "22692e996amsha664a7bacb687dbp12f1a7jsnf87abd1fdaf7"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    output = json.loads(response.text)
+
+    print(response.text)
+    return render_template("gaurish.html", result=output)
+
 
 @app.route('/karthik')
 def karthik():
@@ -89,6 +101,7 @@ def api_translator():
         print(number)
 
     return render_template("aadya.html", fact=number)
+
 
 
 # runs the application on the development server

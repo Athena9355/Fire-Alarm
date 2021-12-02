@@ -19,13 +19,23 @@
            }
        }
 
+       (function onload() {
+           setButtonFunctions();
+
+           getTranslatedText();
+       })()
+ function setButtonFunctions() {
+           document.getElementById('translated').onclick = getTranslatedText;
+ }
+
+
 
     </script>
 {% endblock %}
     <!---this is for the title of the page -->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
         <div class="col-12">
-            <p>Good to have you here {{name1}}!</p>
+            <p style="color:rosybrown">Good to have you here {{name1}}!</p>
         </div>
     </div>
     <!---this is for the background image -->
@@ -62,7 +72,7 @@
 
 
     <body>
-    <!---Gaurish's title -->
+    <!---Gaurish's title -->/
     <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
         <div class="col-12">
 
@@ -72,7 +82,7 @@
     <!---Gaurish's info -->
     <div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
         <div class="col-12">
-            <p>Name: Gaurish Gaur <br>
+            <p style="color: brown">Name: Gaurish Gaur <br>
                 <br>
                 Age: 17 <br>
                 <br>
@@ -93,7 +103,18 @@
             </p>
         </div>
     </div>
-    <p> Gaurish Gaur</p>
+
+    <div class="col-12">
+          <label for="translated">Enter a Phrase!</label>
+        <button href="/gaurish"> Click me!</button>
+
+    <p> {{ result['joke'] }} </p>
+    </div>
+
+    <p> Gaurish Gaur
+    </p>
+
+
     <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit"></iframe></p>
 
 {% endblock %}
