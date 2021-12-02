@@ -1,7 +1,10 @@
 <h3>In Honor of Allison Huang<h3>
 <h1>Team Fire Alarms (Aadya Daita, Siya Dixit, Gaurish Gaur, Karthik Valluri, Athena Wu)</h1><br>
 <h2>Objectives</h2>
-Grrrrrr. Your stomach is growling. Straving, yet unable to think, you can't help but let your mind wander. What will I eat? Where can I get it from? Do I have the ingedients for that? But, suddenly, all your qualms are eased. It's MenYou. Men<br>
+<br>
+Grrrrrr. Your stomach is growling. Straving, yet unable to think, you can't help but let your mind wander. What will I eat? Where can I get it from? Do I have the ingedients for that? But, suddenly, all your qualms are eased. It's MenYou. Men us, no men you. It's built around you, the individual. You're able to find the perfect minestrone for your family. You become the hero of the family. And most importantly, you satisfy your hunger<br>
+  
+<br>That's what we do. Our project provides a platform for meal creation, meal ideation, meal deliveration through a variety of stub pages. Maybe you want to order a speicfic type of meal based on regionality. Maybe you want to see what you can make with your ingredients in your fridge that day. Maybe you want to enjoy fun food-related games while chomping down ont ehir meal. Maybe that's why you will check out MenYou. Please contact our glorius scrum master, Athena Wu, for collaboration infromation and licensing.<br>
 
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
