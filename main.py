@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 import requests, json
+import urllib
 
 # create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
@@ -25,20 +26,11 @@ def athena():
 @app.route('/gaurish')
 def gaurish():
 
-    url = "https://geek-jokes.p.rapidapi.com/api"
-
-    querystring = {"format":"json"}
-
-    headers = {
-        'x-rapidapi-host': "geek-jokes.p.rapidapi.com",
-        'x-rapidapi-key': "22692e996amsha664a7bacb687dbp12f1a7jsnf87abd1fdaf7"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    output = json.loads(response.text)
-
-    print(response.text)
-    return render_template("gaurish.html", result=output)
+    with urllib.request.urlopen("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single") as url:
+        data = json.loads(url.read().decode())
+        text = data["joke"].replace("\'", '"')
+        text = text.replace("\n", '')
+    return render_template("gaurish.html", result=text)
 
 
 @app.route('/karthik')
