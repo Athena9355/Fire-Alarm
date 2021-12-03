@@ -51,9 +51,9 @@ def restaurants():
 
 
 
-@app.route('/About Us/')
+@app.route('/about_us/')
 def aboutus():
-    return render_template("About Us.html")
+    return render_template("about_us.html")
 
 @app.route('/asianfood')
 def asianfood():

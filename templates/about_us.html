@@ -1,13 +1,25 @@
 <!DOCTYPE HTML>
+
+{% set icon_link = "" %}
+{% set firstname = "" %}
+{% set lastname = "" %}
+{% set social_media_link = "" %}
+{% set social_media_name = "" %}
+{% set greeting = "" %}
+{% set your_role = "" %}
+{% set sentence_about_me1 = "" %}
+{% set sentence_about_me2 = "" %}
+
+
+
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png">
-
+  <link rel="shortcut icon" type="image/x-icon" href="{{ icon_link }}">
 </head>
 
-{% include "layouts/navbar.html" %}
+{% include "layouts/navbar2.html" %}
 
 <style>
   body {
@@ -56,7 +68,7 @@
   }
   .et-hero-tabs-container--top {
     position: fixed;
-    top: 0;
+    bottom: 0;
   }
 
   .et-hero-tab {
@@ -98,63 +110,10 @@
       font-size: 1rem;
     }
   }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-
 </style>
 
 
 <body>
-
-<style>
-  /* general */
-
-  .APIContainer {
-    margin: 50px auto 150px auto;
-    padding: 10px 20px 10px 20px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
-    width: 40%;
-    min-width: 500px;
-    height: 27.5%;
-  }
-
-  .marginTopBottom {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  /* COVID19 */
-  .covidInput {
-    display: flex;
-    justify-content: center;
-    line-height: 2;
-  }
-
-  #countries {
-    margin-left: 20px;
-    width: 30%;
-  }
-
-  .mySeparator {
-    height: 0.5px;
-    width: 80%;
-    background-color: whitesmoke;
-  }
-</style>
 
 <section class="et-hero-tabs">
   <style>
@@ -172,7 +131,7 @@
       height: 100vh;
     }
     .about-left{
-      background: red;
+      background: peachpuff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -180,7 +139,7 @@
       height: 100vh;
     }
     .about-left-content > div{
-      background: radial-gradient(red,whitesmoke);
+      background: radial-gradient(lightcyan,whitesmoke);
       padding: 4rem 4rem 2.5rem 5rem;
       text-align: center;
     }
@@ -250,7 +209,7 @@
     }
     .icons li{
       list-style-type: none;
-      background: lightcoral;
+      background: lightseagreen;
       color: #fff;
       width: 40px;
       height: 40px;
@@ -286,42 +245,6 @@
     }
     .about-right h2{
       font-weight: 600;
-    }
-    .about-btns{
-      display: flex;
-      margin: 2rem 0;
-    }
-    .btn{
-      border: none;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      border: 2px solid #000;
-      border-radius: 20px;
-      padding: 0.55rem 0;
-      width: 130px;
-      font-weight: 600;
-      background: transparent;
-      margin: 0 0.5rem;
-      cursor: pointer;
-    }
-    .btn.btn-pink{
-      background: red;
-      color: #fff;
-      border-color: red;
-      transition: all 0.5s ease-in-out;
-    }
-    .btn.btn-pink:hover{
-      background: transparent;
-      border-color: red;
-      color: #000;
-    }
-    .btn.btn-white{
-      transition: all 0.5s ease-in-out;
-    }
-    .btn.btn-white:hover{
-      background: red;
-      border-color: red;
-      color: #fff;
     }
     .about-para p{
       font-weight: 300;
@@ -359,31 +282,31 @@
         <div>
           <div class = "shadow">
             <div class = "about-img">
-              <img src="/static/images/karthik.jpg" alt = "karthik" id="pic" onclick="swapImage()"/>
+              <img src="{{ image }}" {{ swapimagecode }}/>
             </div>
           </div>
 
-          <h2>Karthik<br>Valluri</h2>
-          <h3>CEO, Co-Founder of A1FromDay0</h3>
+          <h2>{{ firstname }}<br>{{ lastname }}</h2>
+          <h3>Co-Founder of YourChoice</h3>
         </div>
 
         <ul class = "icons">
-          <li href="instagram.com/itsnotkar"><i class = "fab fa-instagram"></i></li>
+          <li href="{{ social_media_link }}"><i class = "fab fa-{{ social_media_name }}"></i></li>
         </ul>
       </div>
     </div>
 
     <div class = "about-right">
-      <h1>hi<span>!</span></h1>
-      <h2>I am a lead website designer</h2>
+      <h1>{{ greeting }}<span>!</span></h1>
+      <h2>I am the {{ your_role }}</h2>
       <div class="center-block" style="margin: 2% 5% 5%; text-align:center">
         <div class="col-12">
         </div>
       </div>
 
       <div class = "about-para">
-        <p>I'm 15 y/o and am very passionate about coding and computer science.</p>
-        <p>But along with that I am an avid sports fan (Barca and Lakers) and I enjoy playing basketball, soccer and tennis. I also spend my free time playing video games with my friends.</p>
+        <p>{{ sentence_about_me1 }}</p>
+        <p>{{ sentence_about_me2 }}</p>
       </div>
     </div>
   </div>
@@ -400,45 +323,10 @@
 
 <main class="et-main">
   <section class="et-slide" id="tab-api">
-    <h1>Covid-19 Stats API</h1>
-    <div class="APIContainer">
-      <div class="covidInput">
-        <p>Select a country:</p>
-        <select class="form-control" id="countries">
-          <option>Select a country</option>
-        </select>
-      </div>
-      <hr class="mySeparator">
-      <div class="text-center">
-        <p class="marginTopBottom" id="covidNewConfirmed">New confirmed cases: -</p>
-        <p class="marginTopBottom" id="covidTotalConfirmed">Total confirmed cases: -</p>
-        <p class="marginTopBottom" id="covidNewDeaths">New deaths: -</p>
-        <p class="marginTopBottom" id="covidTotalDeaths">Total deaths: -</p>
-        <p class="marginTopBottom" id="covidLastUpdate">Last updated: -</p>
-      </div>
-    </div>
+    {{ API }}
   </section>
   <section class="et-slide" id="tab-links">
-    <h1>Links + Key Indicators of Work</h1>
-    <br><br>
-    <table>
-      <tr>
-        <th>Tasks</th>
-        <th>Scrum Board</th>
-        <th>Commits</th>
-        <th>Github Profile</th>
-        <th>Github ID</th>
-        <th>Pair Share Journal</th>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/Athena9355/Fire-Alarm/issues/assigned/kar722">Tasks</a></td>
-        <td><a href="https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Akar722">Scrum Board</a></td>
-        <td><a href="https://github.com/Athena9355/Fire-Alarm/commits?author=kar722">Commits</a></td>
-        <td><a href="https://github.com/kar722">Github Profile</a></td>
-        <td>@kar722</td>
-        <td><a href="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit">Pair Share Journal</a></td>
-      </tr>
-    </table>
+    {{ IndicatorsofWork }}
   </section>
 </main>
 
@@ -524,73 +412,6 @@
   new StickyNavigation();
 </script>
 
-<script>
-  let covid19data;
 
-  (function onLoad()
-  {
-    // set a function for each button
-    setButtonFunctions();
-
-    // fetch from each API when the page loads
-    getLatestCOVID19Data();
-  })();
-
-  function setButtonFunctions()
-  {
-    document.getElementById('countries').onchange = function() {
-      const selectedValue = document.getElementById('countries').value;
-      const countryData = covid19data.filter(c => c.country == selectedValue)[0];
-
-      // display data
-      const newConfirmed = document.getElementById('covidNewConfirmed');
-      const totalConfirmed = document.getElementById('covidTotalConfirmed');
-      const covidNewDeaths = document.getElementById('covidNewDeaths');
-      const covidTotalDeaths = document.getElementById('covidTotalDeaths');
-      const lastUpdated = document.getElementById('covidLastUpdate');
-
-      (countryData.cases.new) ? newConfirmed.innerHTML = 'New confirmed cases: ' + countryData.cases.new : newConfirmed.innerHTML = 'New confirmed cases: 0';
-      (countryData.cases.total) ? totalConfirmed.innerHTML = 'Total confirmed cases: ' + countryData.cases.total : totalConfirmed.innerHTML = 'Total confirmed cases: 0';
-      (countryData.deaths.new) ? covidNewDeaths.innerHTML = 'New deaths: ' + countryData.deaths.new : covidNewDeaths.innerHTML = 'New deaths: 0';
-      (countryData.deaths.total) ? covidTotalDeaths.innerHTML = 'Total deaths: ' + countryData.deaths.total : covidTotalDeaths.innerHTML = 'Total deaths: 0';
-      lastUpdated.innerHTML = 'Last updated: ' + countryData.day;
-    };
-  }
-
-  // COVID 19 Data
-  async function getLatestCOVID19Data()
-  {
-    await fetch("https://covid-193.p.rapidapi.com/statistics", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-        "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
-      }
-    })
-            .then(response => response.json())
-            .then(response => {
-              console.log("COVID 19 API object:");
-              console.log(response);
-              console.log("\n");
-
-              // add all countries to select element
-              response.response.forEach(c => {
-                const option = document.createElement('option');
-                option.innerHTML = c.country;
-                document.getElementById('countries').appendChild(option);
-              })
-
-              // save covid data to global variable
-              covid19data = response.response;
-            })
-            .catch(err => {
-              console.log(err);
-            });
-  }
-</script>
-
-<script>
-
-</script>
 
 </body>
