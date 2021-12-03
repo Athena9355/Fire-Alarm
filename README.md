@@ -6,7 +6,6 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
   
 <br>That's what we do. Our project provides a platform for meal creation, meal ideation, meal deliveration through a variety of stub pages. Maybe you want to order a speicfic type of meal based on regionality. Maybe you want to see what you can make with your ingredients in your fridge that day. Maybe you want to enjoy fun food-related games while chomping down ont ehir meal. Maybe that's why you will check out MenYou. Please contact our glorius scrum master, Athena Wu, for collaboration infromation and licensing. -Gaurish "big G" Gaur<br>
   
- <br> this is amazing <br>
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
 [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1)<br>
@@ -29,8 +28,8 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 <h2>Roles</h2>
 1. Aadya: Technical Lead <br>
 2. Athena: Scrum Master <br>
-3. Gaurish: Navigator <br>
-4. Karthik: Designer <br>
+3. Gaurish: Github Admin <br>
+4. Karthik: Design Lead <br>
 5. Siya: Deployment Manager <br>
 <br>
 
