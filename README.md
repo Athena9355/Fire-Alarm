@@ -37,5 +37,7 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 
 [Wiki](https://github.com/Athena9355/Fire-Alarm/wiki)<br>
 
+  <h2>Week 1</h2><br>
+  Table of Contents: https://github.com/Athena9355/Fire-Alarm/issues/24
 <h2>To Be Continued</h2>
 
