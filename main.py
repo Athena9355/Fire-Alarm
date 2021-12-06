@@ -54,7 +54,6 @@ def restaurants():
     return render_template("restaurants.html")
 
 
-
 @app.route('/about_us/')
 def aboutus():
     return render_template("about_us.html")
