@@ -36,6 +36,9 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 <h2>Wiki Page</h2>
 
 [Wiki](https://github.com/Athena9355/Fire-Alarm/wiki)<br>
+  
+  <h2> create task </h2>
+  https://docs.google.com/presentation/d/1mZJtmeRaYxeR4A_FF8irP9VBWS4rJCxeDDVcgdbWt90/edit#slide=id.p
 
   <h2>Week 1</h2><br>
   Table of Contents: https://github.com/Athena9355/Fire-Alarm/issues/24
