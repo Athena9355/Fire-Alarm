@@ -1,8 +1,11 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+import requests, json
+import urllib
 
 # create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
+#from templates.ggapi.py import get_numfact
 
 app = Flask(__name__)
 
@@ -11,11 +14,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
-
-
-
-
-
 
 @app.route('/aadya')
 def aadya():
@@ -27,7 +25,13 @@ def athena():
 
 @app.route('/gaurish')
 def gaurish():
-    return render_template("gaurish.html")
+
+    with urllib.request.urlopen("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single") as url:
+        data = json.loads(url.read().decode())
+        text = data["joke"].replace("\'", '"')
+        text = text.replace("\n", '')
+    return render_template("gaurish.html", result=text)
+
 
 @app.route('/karthik')
 def karthik():
@@ -50,10 +54,9 @@ def restaurants():
     return render_template("restaurants.html")
 
 
-
-@app.route('/About Us/')
+@app.route('/about_us/')
 def aboutus():
-    return render_template("About Us.html")
+    return render_template("about_us.html")
 
 @app.route('/asianfood')
 def asianfood():
@@ -89,6 +92,7 @@ def api_translator():
         print(number)
 
     return render_template("aadya.html", fact=number)
+
 
 
 # runs the application on the development server
