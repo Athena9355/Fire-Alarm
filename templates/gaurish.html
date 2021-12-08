@@ -5,7 +5,10 @@
     <title>About Us</title>
 </head>
 
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 {% block body %}
+
 {% block meta %}
     <script>
        function switchRooms(){
@@ -27,6 +30,13 @@
  function setButtonFunctions() {
            document.getElementById('translated').onclick = getTranslatedText;
  }
+       var one
+       function click1(){
+           one = one + 1;
+       }
+       if (one == 3){
+           document.write('yes')
+       }
 
 
 
@@ -35,7 +45,7 @@
     <!---this is for the title of the page -->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
         <div class="col-12">
-            <p style="color:rosybrown">Good to have you here {{name1}}!</p>
+            <p style="color:black"><br><br>Good to have you here {{name1}}!</p>
         </div>
     </div>
     <!---this is for the background image -->
@@ -104,15 +114,32 @@
         </div>
     </div>
 
-    <div class="col-12">
-        <button onClick="window.location.reload();">New Joke</button>
+    <style>
 
-    <p> {{ result }} </p>
-    </div>
+        table, th, td {
+            border:3px solid black;
+        }
+    </style>
 
-    <p> Gaurish Gaur
-    </p>
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>Tasks</th>
+            <th>Scrum Board</th>
+            <th>Commits</th>
+            <th>Profile</th>
 
+        </tr>
+        <tr>
+            <td>@Gaurish-Gaur</td>
+            <td><a href="https://github.com/Athena9355/Fire-Alarm/issues/assigned/Gaurish-Gaur">Tasks</a></td>
+            <td><a href="https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3Agaurish-gaur">Scrum Board</a></td>
+            <td><a href="https://github.com/Athena9355/Fire-Alarm/commits?author=Gaurish-Gaur">Commits</a></td>
+            <td><a href="https://github.com/Gaurish-Gaur">Profile</a></td>
+
+        </tr>
+
+    </table>
 
     <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit"></iframe></p>
 

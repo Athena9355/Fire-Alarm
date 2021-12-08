@@ -26,11 +26,7 @@ def athena():
 @app.route('/gaurish')
 def gaurish():
 
-    with urllib.request.urlopen("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single") as url:
-        data = json.loads(url.read().decode())
-        text = data["joke"].replace("\'", '"')
-        text = text.replace("\n", '')
-    return render_template("gaurish.html", result=text)
+    return render_template("gaurish.html")
 
 
 @app.route('/karthik')
