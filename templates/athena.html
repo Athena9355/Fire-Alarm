@@ -16,7 +16,8 @@
 {% set sentence_about_me1 = "My name is Athena" %}
 {% set sentence_about_me2 = "" %}
 {% set API_name = "API" %}
-{% set github_username = "kar722" %}
+{% set github_username = "Athena9355" %}
+{% set pair_share_journal = "https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit?usp=sharing" %}
 
 <body>
 {% block imagefunction %}
@@ -39,13 +40,17 @@
 
 
 {% endblock %}
+<br>
+<br>
 {% block API_content %}
     <div class="col-12">
+        <br>
+        <br>
         <form action="/athena_aboutme_api" id="joke" method="POST" >
             <label for="label">translate!</label>
             <input name="output" id="joke">
             <input type="submit" value="submit">
-            {{ joke }}
+            {{ result }}
         </form>
 
     </div>
