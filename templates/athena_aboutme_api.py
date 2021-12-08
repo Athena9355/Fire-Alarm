@@ -1,9 +1,11 @@
 import requests
-def get_word(input):
-    input = str(input)
+
+
+def get_word(input_word):
+    input_word = str(input_word)
     url = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
 
-    querystring = {"word":input}
+    querystring = {"word": input_word}
 
     headers = {
         'x-rapidapi-host': "dictionary-by-api-ninjas.p.rapidapi.com",
