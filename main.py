@@ -93,7 +93,9 @@ def api_translator():
 
     return render_template("aadya.html", fact=number)
 
-
+@app.route('/aboutustemp')
+def aboutustemp():
+    return render_template("aboutustemp.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
