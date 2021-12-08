@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,82 +9,6 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 {% block body %}
-
-    <!--navbar
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-
-            .topnav {
-                overflow: hidden;
-                background-color: #FFFFFF;
-            }
-
-            .topnav a {
-                float: left;
-                color: #897C7C;
-                text-align: center;
-                padding: 20px 12px;
-                text-decoration: none;
-                font-size: 15px;
-            }
-
-            .topnav a:hover {
-                background-color: #ddd;
-                color: black;
-            }
-
-            /*.topnav a.active {
-                background-color: white;
-                color: #897C7C;
-            }*/
-        </style>
-    </head>
-    <body>
-
-    <div class="topnav">
-        <a class="active" href="http://127.0.0.1:5000">Home/Portfolio</a>
-        <a href="http://127.0.0.1:5000/gaurish">Gaurish's About Me</a>
-        <a href="http://127.0.0.1:5000/allison">Allison's About Me</a>
-        <a href="http://127.0.0.1:5000/aadya">Aadya's About Me</a>
-        <a href="http://127.0.0.1:5000/greet">Mini Lab</a>
-
-        <a href="http://127.0.0.1:5000/videos">Videos</a>
-        <a href="http://127.0.0.1:5000/ratingsystem">Rate a Class</a>
-        <a href="http://127.0.0.1:5000/classrecommendations">Class Recommendations</a>
-        <a href="http://127.0.0.1:5000/commentforum">Comment Forum</a>
-    </div>
-    </body>
-    </html>
-    <!-navbar ends-->
-    <!--drop down code below-->
-    <!--
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            About Us
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/team">Team</a>
-            <a class="dropdown-item" href="/athena">Athena</a>
-            <a class="dropdown-item" href="/gaurish">Gaurish</a>
-            <a class="dropdown-item" href="/allison">Allison</a>
-            <a class="dropdown-item" href="/aadya">Aadya</a>
-        </div>
-    </li> -->
-    <!--drop down ends-->
-
-
-    <!--navbar ends here-->
-
-
-
-
 
     <html>
     <body>
@@ -95,8 +20,6 @@
         </div>
     </div>
     <h3> Click on the Image!</h3>
-
-
     <script>
         function swapImage() {
             var Image_Id = document.getElementById('mask');
@@ -115,37 +38,24 @@
 
 
 
-    <!-- navbar
-    <div class="center-block" style="margin: 0% 5% 2%; text-align:left; font-family: Courier New,serif;font-size:20px;">
-        <div class="topnav">
-            <a class="active" href="http://127.0.0.1:5000">Home</a>
-            <a href="http://127.0.0.1:5000/greet">Mini Lab and Journal 0</a>
-            <a href="http://127.0.0.1:5000/ratingsystem">Rate a Class</a>
-            <a href="http://127.0.0.1:5000/classrecommendations">Class Recommendations</a>
-            <a href="http://127.0.0.1:5000/commentforum">Comment Forum</a>
-            <a href="http://127.0.0.1:5000/allison">Allison</a>
-            <a href="http://127.0.0.1:5000/gaurish">Gaurish</a>
-            <a href="http://127.0.0.1:5000/aadya">Aadya</a>
-            <a href="http://127.0.0.1:5000/team">Team</a>
-
-        </div>
-    </div>
-    -->
-
-
-
-
-
-
-
     <!---this is for the title of the page -->
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:25px;">
+    <!--<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:25px;">
         <div class="col-12">
             <p>Hi, welcome to the about me page! Here, you will find information about the students who made this site!</p>
         </div>
+    </div> -->
+
+    <div class="col-12">
+        <form action="/athena_aboutme_api" id="joke" method="POST" >
+            <label for="label">translate!</label>
+            <input name="output" id="joke">
+            <input type="submit" value="submit">
+            {{ joke }}
+        </form>
+
     </div>
-    <!---this is for the background image -->
-    <style>
+
+    <!--<style>
         body {
             background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
             height: 100%;
@@ -153,25 +63,26 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-    </style>
+    </style> -->
+
+
+    <head>
+        <style>
+            body {
+                background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+
 
     <!-- Extending the project layout, as this file will do minor customizations -->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-        <!--
-        <div class="col-12">
-            <p>Hi {{name1}}!</p>
-        </div> -->
-
-        <!--<div class="col-12">
-            <form action="/greet_athena" id="greet_athena" method="POST" >
-                <label for="name1">Type a greeting name?</label>
-                <input name="name1" id="name1">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>-->
 
     </div>
-
 
 
     <body>
@@ -197,8 +108,8 @@
                 <br>
                 Message to user: Hi! I hope you will find the website useful and enjoy using the site! :) <br>
                 <br>
-                Picture of me: <br>
-                <img src="https://drive.google.com/thumbnail?id=1-ZaqtGmpULr_vjoE2K67G8gu8F3rLRmx" style="height: 300px" >
+                <!--Picture of me: <br>
+                <img src="https://drive.google.com/thumbnail?id=1-ZaqtGmpULr_vjoE2K67G8gu8F3rLRmx" style="height: 300px" >-->
             </p>
         </div>
     </div>
@@ -219,4 +130,3 @@
 
 
 <!--navbar part 3-->
-
