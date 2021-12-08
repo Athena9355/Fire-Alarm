@@ -1,11 +1,9 @@
-# import "packages" from flask
+#import "packages" from flask
 from flask import Flask, render_template, request
-import requests, json
-import urllib
 
-# create a Flask instance
+#create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
-#from templates.ggapi.py import get_numfact
+from templates.athena_aboutme_api import get_word
 
 app = Flask(__name__)
 
@@ -14,6 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/aadya')
 def aadya():
@@ -25,13 +24,7 @@ def athena():
 
 @app.route('/gaurish')
 def gaurish():
-
-    with urllib.request.urlopen("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single") as url:
-        data = json.loads(url.read().decode())
-        text = data["joke"].replace("\'", '"')
-        text = text.replace("\n", '')
-    return render_template("gaurish.html", result=text)
-
+    return render_template("gaurish.html")
 
 @app.route('/karthik')
 def karthik():
@@ -64,9 +57,10 @@ def restaurants():
     return render_template("restaurants.html")
 
 
-@app.route('/about_us/')
+
+@app.route('/About Us/')
 def aboutus():
-    return render_template("about_us.html")
+    return render_template("About Us.html")
 
 @app.route('/asianfood')
 def asianfood():
@@ -102,6 +96,17 @@ def api_translator():
 
     return render_template("aadya.html", fact=number)
 
+@app.route('/athena_aboutme_api', methods=['GET', 'POST'])
+def dictionary():
+    result = " "
+    if request.form:
+        input_word = request.form.get("translate_word")
+        result = get_word(input_word)
+        render_template("athena.html", result=result)
+        #if len(input_word) == 0:  # no input
+        #print("Please enter an input")
+        #print(result)
+    #return render_template("athena.html", result=result)
 
 
 # runs the application on the development server
