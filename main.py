@@ -39,7 +39,17 @@ def karthik():
 
 @app.route('/siya')
 def siya():
-    return render_template("siya.html")
+    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+
+    headers = {
+        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "0a4557c36bmsh023bf219202e218p153360jsndbf67f2a9f06"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
+    print(response.text)
+    return render_template("siya.html", result = output)
 
 @app.route('/recipes')
 def recipes():
@@ -75,7 +85,6 @@ def europeanfood():
 @app.route('/mexicanfood')
 def mexicanfood():
     return render_template("mexicanfood.html")
-
 
 @app.route('/oceanicfood')
 def oceanicfood():
