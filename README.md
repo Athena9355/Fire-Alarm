@@ -40,7 +40,7 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
   <h2> create task </h2>
   https://docs.google.com/presentation/d/1mZJtmeRaYxeR4A_FF8irP9VBWS4rJCxeDDVcgdbWt90/edit#slide=id.p
   Our goal for this trimester is to get ready for the create task. Our project is going to be based on user inputs, as we are striving to practice this. Our goal is to work with user inputs, and proccess them, in order to do functions on them. On our Create Task Project, we wish to be prepared on this skill. An example of this is seen with data sets. Currently, we are working with data sets to keep and store user input, and when called upon, the given information about certain data is posted. This practice can help us explore and get us ready for the Create Task project. <br>
-  [create task issue](https://github.com/Athena9355/Fire-Alarm/issues/29)
+  [Wiki](https://github.com/Athena9355/Fire-Alarm/issues/29)<br>
 
   <h2>Week 1</h2><br>
   Table of Contents: https://github.com/Athena9355/Fire-Alarm/issues/24
