@@ -91,13 +91,13 @@ def api_translator():
 def dictionary():
     result = " "
     if request.form:
-        input_word = request.form.get("translate_word")
+        input_word = request.form.get("define_word")
         result = get_word(input_word)
         render_template("athena.html", result=result)
         #if len(input_word) == 0:  # no input
         #print("Please enter an input")
         #print(result)
-    #return render_template("athena.html", result=result)
+    return render_template("athena.html", result=result)
 
 
 # runs the application on the development server
