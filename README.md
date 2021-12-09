@@ -4,8 +4,8 @@
 <br>
 Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help but let your mind wander. What will I eat? Where can I get it from? Do I have the ingedients for that? But, suddenly, all your qualms are eased. It's MenYou. Men us, no men you. It's built around you, the individual. You're able to find the perfect minestrone for your family. You become the hero of the family. And most importantly, you satisfy your hunger<br>
   
-<br>That's what we do. Our project provides a platform for meal creation, meal ideation, meal deliveration through a variety of stub pages. Maybe you want to order a speicfic type of meal based on regionality. Maybe you want to see what you can make with your ingredients in your fridge that day. Maybe you want to enjoy fun food-related games while chomping down ont ehir meal. Maybe that's why you will check out MenYou. Please contact our glorius scrum master, Athena Wu, for collaboration infromation and licensing. -Gaurish Gaur<br>
-
+<br>That's what we do. Our project provides a platform for meal creation, meal ideation, meal deliveration through a variety of stub pages. Maybe you want to order a speicfic type of meal based on regionality. Maybe you want to see what you can make with your ingredients in your fridge that day. Maybe you want to enjoy fun food-related games while chomping down ont ehir meal. Maybe that's why you will check out MenYou. Please contact our glorius scrum master, Athena Wu, for collaboration infromation and licensing. -Gaurish "big G" Gaur<br>
+  
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
 [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1)<br>
@@ -28,8 +28,8 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 <h2>Roles</h2>
 1. Aadya: Technical Lead <br>
 2. Athena: Scrum Master <br>
-3. Gaurish: Navigator <br>
-4. Karthik: Designer <br>
+3. Gaurish: Github Admin <br>
+4. Karthik: Design Lead <br>
 5. Siya: Deployment Manager <br>
 <br>
 
@@ -37,5 +37,17 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 
 [Wiki](https://github.com/Athena9355/Fire-Alarm/wiki)<br>
 
+  
+<h2>Create Task</h2>
+
+[Creat Task Table of Contents](https://github.com/Athena9355/Fire-Alarm/issues/29)<br>
+  
+  
+  
+
+
+  <h2>Week 1</h2><br>
+  Table of Contents: https://github.com/Athena9355/Fire-Alarm/issues/24
 <h2>To Be Continued</h2>
 
+  create task plan
