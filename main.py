@@ -25,8 +25,17 @@ def athena():
 
 @app.route('/gaurish')
 def gaurish():
+    url = "https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes"
 
-    return render_template("gaurish.html")
+    headers = {
+        'x-rapidapi-host': "jokes-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    output = json.loads(response.text)
+    return render_template("gaurish.html", result=output)
 
 
 @app.route('/karthik')
