@@ -119,7 +119,6 @@
       height: 100vh;
     }
     .about-left{
-      background: peachpuff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -127,7 +126,6 @@
       height: 100vh;
     }
     .about-left-content > div{
-      background: radial-gradient(lightcyan,whitesmoke);
       padding: 4rem 4rem 2.5rem 5rem;
       text-align: center;
     }
@@ -379,9 +377,10 @@
         <td><a href="https://github.com/Athena9355/Fire-Alarm/projects/1?card_filter_query=assignee%3A{{ github_username }}">Scrum Board</a></td>
         <td><a href="https://github.com/Athena9355/Fire-Alarm/commits?author={{ github_username }}">Commits</a></td>
         <td><a href="https://github.com/{{ github_username }}">Github Profile</a></td>
-        <td>@kar722</td>
-        <td><a href="https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit">Pair Share Journal</a></td>
+        <td>{{ github_username }}</td>
+        <td><a href="{{ pair_share_journal }}">Pair Share Journal</a></td>
       </tr>
+
     </table>
     {% endblock %}
   </section>
@@ -469,6 +468,18 @@
   new StickyNavigation();
 </script>
 
+{% block background %}
+<style>
+  .about-left{
+    background: peachpuff;
+</style>
+{% endblock %}
 
+{% block foreground %}
+<style>
+  .about-left-content > div{
+    background: radial-gradient(lightcyan,whitesmoke);
+</style>
+{% endblock %}
 
 </body>
