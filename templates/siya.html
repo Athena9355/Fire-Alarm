@@ -3,61 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <title>Siya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 {% block background %}
-    <style>
-        body {
-            background-image: url('https://www.schemecolor.com/images/color-image-thumb.php?tx&n=Arylide%20Yellow&w=250&h=250&hex=ead66b');
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
+
+<style>
+    body {
+        margin-bottom: 100px;
+        background-image: url('https://wallpaperaccess.com/full/250951.jpg')
+    }
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 20px 20px 20px 20px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        width: 40%;
+        min-width: 500px;
+        height: 20%;
+    }
+
+    .questionContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .questionTitle {
+        margin-left: 10px;
+    }
+
+    #question {
+        margin-left: 10px;
+        margin-top: 5px;
+        font-size: medium;
+        color: white;
+    }
+
+    #buttonGetquestion {
+        margin-left: auto;
+    }
+
+    #myDIV {
+        width: 40%;
+        padding: 15px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 15px;
+    }
+
+    body {
+        background-image: url('https://www.schemecolor.com/images/color-image-thumb.php?tx&n=Arylide%20Yellow&w=250&h=250&hex=ead66b');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 <h1>
     Hi! I'm Siya, welcome to my About Me Page!
-<h1>
-    <script>
-    function swapImage() {
-        var Image_Id = document.getElementById('mask');
-        if (Image_Id.src.match("static/images/siya_unmasked.jpg")) {
-            Image_Id.src = "static/images/siya_mask.JPG";
-        }
-        else {
-            Image_Id.src = "static/images/siya_unmasked.jpg";
-        }
-    }
-</script>
-
-<h3>Click on the image!</h3>
-    <p>
-        <img alt="" src="/static/images/siya_unmasked.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
-    </p>
-
- 
-    <h3>
-        {#addition#}
-        <label>Number 1</label>
-        <input type="text" id="n1">
-        <label> + Number 2 </label>
-        <input type="text" id="n2">
-        <input type="button" value="Add" onclick="add()"><br>
-        <div id="res"></div>
+    <h1>
         <script>
+            function swapImage() {
+                var Image_Id = document.getElementById('mask');
+                if (Image_Id.src.match("static/images/siya_unmasked.jpg")) {
+                    Image_Id.src = "static/images/siya_mask.JPG";
+                }
+                else {
+                    Image_Id.src = "static/images/siya_unmasked.jpg";
+                }
+            }
+        </script>
+
+        <h3>Click on the image!</h3>
+        <p>
+            <img alt="" src="/static/images/siya_unmasked.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+        </p>
 
 
-    function add(){
-    var n1 = parseInt(document.getElementById("n1").value);
-    var n2 = parseInt(document.getElementById("n2").value)
-    var sum = n1+n2;
-    document.getElementById("res").innerHTML=sum;
-    }
-    </script>
- <h3>Enter numbers above! ^ </h3>
+        <h3 class="display-4 text-center" style="color: white">Trivia API</h3>
+        <div class="APIContainer">
+            <div class="questionContainer">
+                <div>
+                    <a class="buttonGetquestion" href="siya" class="btn btn-primary"> New Question </a>
+                </div>
+                <div class="question">
+                    <p> Question: {{ result[0]["question"] }}</p>
+                </div>
+                <br>
+                <br>
+                <button onclick="show()" >Hide Answer</button>
+                <div id="myDIV">
+                    <a id="result">{{ result[0]["answer"] }}</a>
+                </div>
+            </div>
+        </div>
 
+        <script>
+            function show() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
 
-{% endblock %}
-<body>
-<p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing"></iframe></p>
-</body>
+        {% endblock %}
+        <body>
+        <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing"></iframe></p>
+        </body>
 </html>
