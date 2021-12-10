@@ -62,15 +62,21 @@
 <body>
 {% block imagefunction %}
         <img alt="" src="/static/images/IMG-0911.JPG" style="height: 300px" id="room" onclick="switchRooms()"  />
+<style>
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
 
         <script>
             function switchRooms() {
                 var Image_Id = document.getElementById('room');
-                if (Image_Id.src.match("static/images/IMG-0911.JPG")) {
-            Image_Id.src = "static/images/IMG-0912.JPG";
+                if (Image_Id.src.match("static/images/gaurishnew1.PNG")) {
+            Image_Id.src = "static/images/gaurishold1.PNG";
                   }
                  else {
-            Image_Id.src = "static/images/IMG-0911.JPG";
+            Image_Id.src = "static/images/gaurishnew1.PNG";
         }
         }
     </script>
