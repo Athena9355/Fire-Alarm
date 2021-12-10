@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siya</title>
+</head>
+{% block background %}
+    <style>
+        body {
+            background-image: url('https://www.schemecolor.com/images/color-image-thumb.php?tx&n=Arylide%20Yellow&w=250&h=250&hex=ead66b');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+<h1>
+    Hi! I'm Siya, welcome to my About Me Page!
+<h1>
+    <script>
+    function swapImage() {
+        var Image_Id = document.getElementById('mask');
+        if (Image_Id.src.match("static/images/siya_unmasked.jpg")) {
+            Image_Id.src = "static/images/siya_mask.JPG";
+        }
+        else {
+            Image_Id.src = "static/images/siya_unmasked.jpg";
+        }
+    }
+</script>
+
+<h3>Click on the image!</h3>
+    <p>
+        <img alt="" src="/static/images/siya_unmasked.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+    </p>
+
+ 
+    <h3>
+        {#addition#}
+        <label>Number 1</label>
+        <input type="text" id="n1">
+        <label> + Number 2 </label>
+        <input type="text" id="n2">
+        <input type="button" value="Add" onclick="add()"><br>
+        <div id="res"></div>
+        <script>
+
+
+    function add(){
+    var n1 = parseInt(document.getElementById("n1").value);
+    var n2 = parseInt(document.getElementById("n2").value)
+    var sum = n1+n2;
+    document.getElementById("res").innerHTML=sum;
+    }
+    </script>
+ <h3>Enter numbers above! ^ </h3>
+
+
+{% endblock %}
+<body>
+<p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing"></iframe></p>
+</body>
+</html>

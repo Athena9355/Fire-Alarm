@@ -32,7 +32,7 @@ def karthik():
 
 @app.route('/siya')
 def siya():
-    return render_template("siya.html")
+    return render_template("siya_backup.html")
 
 @app.route('/recipes')
 def recipes():
