@@ -3,11 +3,17 @@
 <head>
     {% extends "layouts/about_us.html" %}
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>GaurishAbout</title>
 </head>
 
 {% set icon_link = "" %}
-{% set firstname = "Gaursh" %}
+{% set firstname = "Gaurish" %}
 {% set lastname = "Gaur" %}
 {% set social_media_link = "https://www.instagram.com/gaurish_gaur" %}
 {% set social_media_name = "instagram" %}
@@ -15,8 +21,43 @@
 {% set your_role = "Student, Classmate, Coder, Github Admin" %}
 {% set sentence_about_me1 = "My name is Gaurish Gaur" %}
 {% set sentence_about_me2 = "The name so nice you say it twice©" %}
-{% set API_name = "JokesAPI" %}
+{% set API_name = "Jokes API" %}
 {% set github_username = "gaurish-gaur" %}
+{% set pair_share_journal = "https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit" %}
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        margin-bottom: 100px;
+    }
+
+    .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-33:hover {
+        box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+</style>
 
 <body>
 {% block imagefunction %}
@@ -37,9 +78,47 @@
 
 {% endblock %}
 {% block API_content %}
+
+
+<body>
+
+<div class="container p-3 my-3 border">
     <p>{{ result[0]["joke"] }}</p>
-    <a class = "button" href="/gaurish" style="text-align: center">New Joke</a>
+    <br>
+    <a class = "lolvai" href="/gaurish" style="text-align: center"><button class="button-33" role="button">New Joke</button></a>
+
+</div>
+
+<style>
+    .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-33:hover {
+        box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+</style>
+</body>
 {% endblock %}
 
 </body>
+
+
+
 </html>
