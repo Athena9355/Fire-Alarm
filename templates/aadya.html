@@ -6,7 +6,7 @@
     <title>Temp</title>
 </head>
 
-{% set icon_link = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" %}
+{% set icon_link = "https://static01.nyt.com/images/2020/05/26/us/26xp-minneapolis-floyd/26xp-minneapolis-floyd-superJumbo.jpg" %}
 {% set firstname = "Aadya" %}
 {% set lastname = "Daita" %}
 {% set social_media_link = "https://github.com/AadyaDaita" %}
@@ -15,36 +15,43 @@
 {% set your_role = "Technical Officer " %}
 {% set sentence_about_me1 = "Hi my name is Aadya. " %}
 {% set sentence_about_me2 = "Welcome to my about me page " %}
-{% set API_name = "API" %}
+{% set API_name = "Numbers API" %}
 {% set github_username = "AadyaDaita" %}
 {% set pair_share_journal = "https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit" %}
+{% block background %}
+<style>
+    .about-left{
+        background: #dbedd1;
+</style>
+{% endblock %}
+{% block foreground %}
+<style>
+    .about-left-content > div{
+        background: radial-gradient(lightblue,whitesmoke);
+</style>
+{% endblock %}
 
 <body>
 {% block imagefunction %}
-    <img alt="" src="/static/images/mask_aadya.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+    <img alt="" src="/static/images/mask_aadya1.jpg" style="height: 300px" id="mask" onclick="swapImage()"/>
 
     <script>
         function swapImage() {
             var Image_Id = document.getElementById('mask');
-            if (Image_Id.src.match("static/images/mask_aadya.jpg")) {
-                Image_Id.src = "static/images/aadya_without_mask.jpeg";
+            if (Image_Id.src.match("static/images/mask_aadya1.jpg")) {
+                Image_Id.src = "static/images/aadya_without_mask1.jpeg";
             }
             else {
-                Image_Id.src = "static/images/mask_aadya.jpg";
+                Image_Id.src = "static/images/mask_aadya1.jpg";
             }
         }
-
-
     </script>
 
 {% endblock %}
 {% block API_content %}
-    <br>
-    <br>
-    <br>
-    <h3>API...</h3>
-
-    <div class="col-12">
+<br>
+<br>
+    <div>
         <form action="/aadya_aboutme_api" id="translation" method="POST" >
             <label for="translation">Enter a Number!</label>
             <input name="translate" id="translate">
@@ -56,7 +63,6 @@
 
 
 {% endblock %}
-
 
 
 
