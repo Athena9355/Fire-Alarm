@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% extends "layouts/about_us.html" %}
     <meta charset="UTF-8">
-    <title>Siya</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Temp</title>
 </head>
-{% block background %}
 
+{% set icon_link = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" %}
+{% set firstname = "Siya" %}
+{% set lastname = "Dixit" %}
+{% set social_media_link = "https://www.instagram.com/_siyadixit_" %}
+{% set social_media_name = "instagram" %}
+{% set greeting = "Hello!" %}
+{% set your_role = "Deployment Manager" %}
+{% set sentence_about_me1 = "Hi, my name is Siya, and I'm a sophomore at Del Norte!" %}
+{% set API_name = "Trivia API" %}
+{% set github_username = "siya-dixit" %}
+{% set pair_share_journal = "https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit" %}
+{% block background %}
 <style>
-    body {
-        margin-bottom: 100px;
-        background-image: url('https://wallpaperaccess.com/full/250951.jpg')
+    .about-left{
+        background: lightyellow;
+</style>
+{% endblock %}
+{% block foreground %}
+<style>
+    .about-left-content > div{
+        background:#f7e1f7;
+</style>
+{% endblock %}
+
+
+<body>
+{% block imagefunction %}
+<script>
+    function swapImage() {
+        var Image_Id = document.getElementById('mask');
+        if (Image_Id.src.match("static/images/siya_mask.JPG")) {
+            Image_Id.src = "static/images/siya_unmasked.jpg";
+        }
+        else {
+            Image_Id.src = "static/images/siya_mask.JPG";
+        }
     }
+</script>
+
+<p>
+    <img alt="" src="/static/images/siya_mask.JPG" style="height: 300px" id="mask" onclick="swapImage()"  />
+</p>
+{% endblock %}
+{% block API_content %}
+<style>
 
     .APIContainer {
         margin: 50px auto 150px auto;
@@ -60,58 +98,89 @@
         background-size: cover;
     }
 </style>
-<h1>
-    Hi! I'm Siya, welcome to my About Me Page!
-    <h1>
-        <script>
-            function swapImage() {
-                var Image_Id = document.getElementById('mask');
-                if (Image_Id.src.match("static/images/siya_unmasked.jpg")) {
-                    Image_Id.src = "static/images/siya_mask.JPG";
-                }
-                else {
-                    Image_Id.src = "static/images/siya_unmasked.jpg";
-                }
-            }
-        </script>
-
-        <h3>Click on the image!</h3>
-        <p>
-            <img alt="" src="/static/images/siya_unmasked.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
-        </p>
 
 
-        <h3 class="display-4 text-center" style="color: white">Trivia API</h3>
-        <div class="APIContainer">
-            <div class="questionContainer">
-                <div>
-                    <a class="buttonGetquestion" href="siya" class="btn btn-primary"> New Question </a>
-                </div>
-                <div class="question">
-                    <p> Question: {{ result[0]["question"] }}</p>
-                </div>
-                <br>
-                <br>
-                <button onclick="show()" >Hide Answer</button>
-                <div id="myDIV">
-                    <a id="result">{{ result[0]["answer"] }}</a>
-                </div>
-            </div>
+<div class="APIContainer">
+    <div class="questionContainer">
+        <div>
+            <a href="siya"> <button class="button-64" role="button"><span class="text">New Question</span></button> </a>
         </div>
+        <div class="question">
+            <p> Question: {{ result[0]["question"] }}</p>
+        </div>
+        <br>
+        <br>
+        <button onclick="show()" >Hide Answer</button>
+        <div id="myDIV">
+            <a id="result">{{ result[0]["answer"] }}</a>
+        </div>
+    </div>
+</div>
 
-        <script>
-            function show() {
-                var x = document.getElementById("myDIV");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
-        </script>
+<!-- HTML !-->
 
-        {% endblock %}
-        <body>
-        <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1FtdWpVy_CJZpu8YmIE0UjfWv7T8IVVkyAn3OUUUnyzo/edit?usp=sharing"></iframe></p>
-        </body>
+
+<style>
+.button-64 {
+align-items: center;
+background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+border: 0;
+border-radius: 8px;
+box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+box-sizing: border-box;
+color: #FFFFFF;
+display: flex;
+font-family: Phantomsans, sans-serif;
+font-size: 20px;
+justify-content: center;
+line-height: 1em;
+max-width: 100%;
+min-width: 140px;
+padding: 3px;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+white-space: nowrap;
+cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+outline: 0;
+}
+
+.button-64 span {
+background-color: rgb(5, 6, 45);
+padding: 16px 24px;
+border-radius: 6px;
+width: 100%;
+height: 100%;
+transition: 300ms;
+}
+
+.button-64:hover span {
+background: none;
+}
+
+@media (min-width: 768px) {
+.button-64 {
+font-size: 24px;
+min-width: 196px;
+}
+}
+</style>
+<script>
+    function show() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+{% endblock %}
+
+</body>
 </html>

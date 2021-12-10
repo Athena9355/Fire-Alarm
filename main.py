@@ -5,6 +5,7 @@ import requests, json
 # create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
 from templates.athena_aboutme_api import get_word
+from templates.siya_aboutme_api import siya
 
 app = Flask(__name__)
 
@@ -58,6 +59,20 @@ def siya():
     output = json.loads(response.text)
     print(response.text)
     return render_template("siya.html", result = output)
+
+
+
+@app.route('/siya_aboutme_api', methods=['POST'])
+def trivia():
+    result = ""
+    if request.form:
+
+        result = siya()
+        render_template("siya.html", trivia=trivia)
+    if result !=0:
+        print(result)
+
+    return render_template("siya.html", trivia=trivia)
 
 
 @app.route('/recipes')
