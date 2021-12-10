@@ -8,6 +8,7 @@
 
 {% set icon_link = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" %}
 {% set firstname = "Siya" %}
+
 {% set lastname = "Dixit" %}
 {% set social_media_link = "https://www.instagram.com/_siyadixit_" %}
 {% set social_media_name = "instagram" %}
@@ -67,20 +68,36 @@
         align-items: center;
     }
 
-    .questionTitle {
-        margin-left: 10px;
+<body>
+{% block imagefunction %}
+<script>
+    function swapImage() {
+        var Image_Id = document.getElementById('mask');
+        if (Image_Id.src.match("static/images/siya_mask.JPG")) {
+            Image_Id.src = "static/images/siya_unmasked.jpg";
+        }
+        else {
+            Image_Id.src = "static/images/siya_mask.JPG";
+        }
     }
+</script>
 
-    #question {
-        margin-left: 10px;
-        margin-top: 5px;
-        font-size: medium;
-        color: white;
-    }
+<p>
+    <img alt="" src="/static/images/siya_mask.JPG" style="height: 300px" id="mask" onclick="swapImage()"  />
+</p>
+{% endblock %}
+{% block API_content %}
+<div class="col-12">
+    <!--<form action="/siya_aboutme_api" id="trivia" method="POST" >
+        <label for="trivia">Enter a Number!</label>
+        <input name="trivia" id="trivia!">
+        <input type="submit" value="Give Fact!">
+        {{ fact }}
+    </form> -->
 
-    #buttonGetquestion {
-        margin-left: auto;
-    }
+    <div class="col-12">
+        <form action="/siya_aboutme_api" id="trivia" method="POST" >
+
 
     #myDIV {
         width: 40%;
@@ -181,6 +198,28 @@ min-width: 196px;
     }
 </script>
 {% endblock %}
+
+
+
+            <input type="submit" value="Click Me!">-->
+            {{ trivia }}
+        </form>
+
+    </div>
+
+<!--
+    <button onclick="trivia()">Click me!</button>
+    <p id="demo"></p>
+    <script>
+        function trivia(){
+            document.getElementById("demo").innerHTML = "{{ trivia }}";
+        }
+    </script>
+-->
+</div>
+
+{% endblock %}
+
 
 </body>
 </html>
