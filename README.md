@@ -48,6 +48,22 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 
   <h2>Week 1</h2><br>
   Table of Contents: https://github.com/Athena9355/Fire-Alarm/issues/24
+  Design - Wiki Theme, Brain Write & Wire Frame **1/1**
+- You have a clear [idea for the homepage of your website](https://docs.google.com/presentation/d/1Sczk_IaBQmxqrkR8TEYE7kZ8-0mBp67-pxc8kIWyYz8/edit?usp=sharing)! Good job
+
+Technicals - 10  to 12 key ideas **1/1**
+- You have an interesting website idea and very many technical ideas that you made issues for! [Wiki Page](https://github.com/Athena9355/Fire-Alarm/wiki/10-12-Key-Ideas)
+
+Github - On Wiki containing Management Plan **1/1**
+- You have an extensive[ management plan](https://github.com/Athena9355/Fire-Alarm/wiki/Management-Plan,-Github-Admin) and I feel like your group would be able to handle anything if your github admin was gone.
+
+Deployment - Wiki Plan, Hardware and Frequency **.7/1**
+- You have important notes in your wiki for deployment! Maybe you could add a couple steps before the first note because I'm not sure how to start off the deployment process based off of the wiki. Steps for deployment are not in-depth. [Wiki](https://github.com/Athena9355/Fire-Alarm/wiki/Deployment-Guide)
+
+Scrum Board - Assignments and Backlog **1/1**
+- Your [scrum board](https://github.com/Athena9355/Fire-Alarm/projects/1) looks very active and you have issues in each column
+
+_Overall: 4.7/5_
 <h2>To Be Continued</h2>
 
   create task plan
