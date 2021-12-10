@@ -18,17 +18,31 @@
 {% set API_name = "API" %}
 {% set github_username = "Athena9355" %}
 {% set pair_share_journal = "https://docs.google.com/document/d/1RKQYQk72xNNsAfam6i4DWZPq3Ip1vbQbMoXzIbpKPdo/edit?usp=sharing" %}
+{% block background %}
+<style>
+    .about-left{
+        background: #ded3ed;
+</style>
+{% endblock %}
+{% block foreground %}
+<style>
+    .about-left-content > div {
+        background: #dbedd1;
+    }
+</style>
+{% endblock %}
+
 
 <body>
 {% block imagefunction %}
     <script>
         function swapImage() {
             var Image_Id = document.getElementById('mask');
-            if (Image_Id.src.match("static/images/athena_mask.jpg")) {
-                Image_Id.src = "static/images/athena_unmasked.jpg";
+            if (Image_Id.src.match("static/images/athena_mask1.jpg")) {
+                Image_Id.src = "static/images/athena_unmasked1.jpg";
             }
             else {
-                Image_Id.src = "static/images/athena_mask.jpg";
+                Image_Id.src = "static/images/athena_mask1.jpg";
             }
         }
     </script>
@@ -40,27 +54,17 @@
 
 
 {% endblock %}
-<br>
-<br>
 {% block API_content %}
-    <div class="col-12">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h3>API!</h3>
-        <form action="athena_aboutme_api" id="define" method="POST" >
-            <label for="define">define!</label>
-            <input name="define" id="define">
-            <input type="submit" value="  Define!  ">
-            {{ result }}
-        </form>
-
-    </div>
-
-
-
+<br>
+<br>
+<div>
+    <form action="athena_aboutme_api" id="define" method="POST" >
+        <label for="define">define!</label>
+        <input name="define" id="define">
+        <input type="submit" value="  Define!  ">
+        {{ result }}
+    </form>
+</div>
 {% endblock %}
 
 </body>
