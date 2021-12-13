@@ -2,12 +2,16 @@
 from flask import Flask, render_template, request
 import requests, json
 
+from __init__ import app
+
 # create a Flask instance
+
 from templates.aadya_aboutme_api import get_numberfact
 from templates.athena_aboutme_api import get_word
 from templates.siya_aboutme_api import siya
 
-app = Flask(__name__)
+from crud.app_crud import app_crud
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
@@ -19,6 +23,7 @@ def index():
 @app.route('/aadya')
 def aadya():
     return render_template("aadya.html")
+
 
 
 @app.route('/athena')
@@ -44,6 +49,8 @@ def gaurish():
 @app.route('/karthik')
 def karthik():
     return render_template("karthik.html")
+
+
 
 
 @app.route('/siya')
