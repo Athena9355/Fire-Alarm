@@ -43,9 +43,98 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 [Creat Task Table of Contents](https://github.com/Athena9355/Fire-Alarm/issues/29)<br>
   
   
+  <h2>Week 3</h2>
+  Review Ticket: https://github.com/Athena9355/Fire-Alarm/issues/38 <br>
+  Check list:
+  **Team**
+Design Manager:
+
+> - [ ] showing Bootstrap layouts
+> - [ ] at least 3 frontend screens with functionality toward Project Theme
+
+Scrum Master:
+
+> - [ ] overview of progress using GitHub [README](https://github.com/Athena9355/Fire-Alarm#readme)
+> - [ ] overview of progress using [Tickets](https://github.com/Athena9355/Fire-Alarm/issues/38) (Completed and Backlog)
+> - [ ] overview of progress using [Wiki](https://github.com/Athena9355/Fire-Alarm/wiki).
+> - [ ] Show expected [backlog](https://github.com/Athena9355/Fire-Alarm/wiki) when returning from Winter Break.
+
+Technical officer:
+
+> - [ ] highlighting Asynchronous access(es) to a Database (expectation is a Search and/or a CRUD operations).
+
+Deployment manager:
+
+> - [ ] showing Web Site running from URL (https)
+> - [ ] demonstrating the process to perform an update.
+
+GitHub admin:
+
+> - [ ] highlighting commits and pull requests completed by each individual.
+
+**Individual**
+Aadya:
+
+> - [ ] AP MCQ Test and Corrections (2 pts)
+> 
+> College Board Quiz and Journal
+> 
+> - [ ] 3.11 Binary Search
+> 
+> - [ ] 3.12 Calling Procedures
+> 
+> - [ ] 3.13 Developing Procedures
+
+Athena:
+
+> - [ ] AP MCQ Test and Corrections (2 pts)
+> 
+> College Board Quiz and Journal
+> 
+> - [ ] 3.11 Binary Search
+> 
+> - [ ] 3.12 Calling Procedures
+> 
+> - [ ] 3.13 Developing Procedures
+
+Gaurish:
+
+> - [ ] AP MCQ Test and Corrections (2 pts)
+> 
+> College Board Quiz and Journal
+> 
+> - [ ] 3.11 Binary Search
+> 
+> - [ ] 3.12 Calling Procedures
+> 
+> - [ ] 3.13 Developing Procedures
+
+Karthik:
+
+> - [ ] AP MCQ Test and Corrections (2 pts)
+> 
+> College Board Quiz and Journal
+> 
+> - [ ] 3.11 Binary Search
+> 
+> - [ ] 3.12 Calling Procedures
+> 
+> - [ ] 3.13 Developing Procedures
+
+Siya:
+
+> - [ ] AP MCQ Test and Corrections (2 pts)
+> 
+> College Board Quiz and Journal
+> 
+> - [ ] 3.11 Binary Search
+> 
+> - [ ] 3.12 Calling Procedures
+> 
+> - [ ] 3.13 Developing Procedures
   
-<h2>Week 2</h2>
-  Review Ticket:https://github.com/Athena9355/Fire-Alarm/issues/30
+  <h2>Week 2</h2>
+  Review Ticket:https://github.com/Athena9355/Fire-Alarm/issues/30 <br>
   
   Check list (same as tehe one on the review ticket)
   **Summary of scores**
