@@ -77,7 +77,7 @@ Aadya:
 
 > - [ ] AP MCQ Test and Corrections (2 pts)
 > 
-> College Board Quiz and Journal
+> College Board Journal
 > 
 > - [ ] 3.11 Binary Search
 > 
@@ -89,7 +89,7 @@ Athena:
 
 > - [ ] AP MCQ Test and Corrections (2 pts)
 > 
-> College Board Quiz and Journal
+> College Board Journal
 > 
 > - [ ] 3.11 Binary Search
 > 
@@ -101,7 +101,7 @@ Gaurish:
 
 > - [ ] AP MCQ Test and Corrections (2 pts)
 > 
-> College Board Quiz and Journal
+> College Board Journal
 > 
 > - [ ] 3.11 Binary Search
 > 
@@ -113,7 +113,7 @@ Karthik:
 
 > - [ ] AP MCQ Test and Corrections (2 pts)
 > 
-> College Board Quiz and Journal
+> College Board Journal
 > 
 > - [ ] 3.11 Binary Search
 > 
@@ -125,7 +125,7 @@ Siya:
 
 > - [ ] AP MCQ Test and Corrections (2 pts)
 > 
-> College Board Quiz and Journal
+> College Board Journal
 > 
 > - [ ] 3.11 Binary Search
 > 
