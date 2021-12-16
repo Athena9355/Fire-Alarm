@@ -3,15 +3,91 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png">
-
 
     <meta charset="UTF-8">
-    <title>Restaurant Generator</title>
 </head>
 
-{% include "layouts/navbar2.html" %}
-<body>
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Restaurant Generator" %}
+{% set page_description = "A restaurant a business establishment where meals or refreshments may be purchased" %}
+{% set img = "https://cdn.vox-cdn.com/thumbor/0LszXQmBEuNvTgksqb23sd2vqA8=/0x0:1000x600/1200x900/filters:focal(420x220:580x380):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68734628/Born___Raised.0.jpg" %}
+
+{% block content %}
+<body >
+    <div class="display-4 text-center">Find a Random Restuarant to go to</div>
+    <div class="APIContainer">
+        <div style="text-align: center">
+            <div class="jokeContainer">
+                <div>
+                    <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Random Restaurants</p>
+                </div>
+            </div>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()">Yes, Im so hungry!</button>
+        </div>
+    </div>
 
 </body>
+<style>
+    /* general */
+    body {
+        margin-bottom: 100px;}
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 50px 30px 50px 30px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        width: 40%;
+        min-width: 500px;
+        height: 20%;
+    }
+
+    /* Chuck Norris */
+    .jokeContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .jokeTitle {
+        text-align: center;
+    }
+
+    #joke {
+        margin-left: 10px;
+        margin-top: 5px;
+        font-size: medium;
+        color: white;
+    }
+
+    #buttonGetJoke {
+        margin-left: auto;
+    }
+
+
+</style>
+
+<script>
+    var up = document.getElementById('GFG_UP');
+    var down = document.getElementById('GFG_DOWN');
+
+    var arr = ["Taco Bell", "Tim Hortons",
+        "In-N-Out", "iHop", "Chipotle", "Yogurt Lounge", "Jamba Juice",
+        "Applebee’s", "Buca di Beppo", "Olive Garden",
+        "The Cheesecake Factory","California Pizza Kitchen",
+        "Outback Steakhouse", "Denny's","Panera Bread","Bonefish Grill",
+        "Chili's","P. F. Chang's","Carino's Italian","Pizza Hut","Domino's Pizza",
+        "Papa John's Pizza","Little Caesars","KFC","McDonald's",
+        "Burger King","Wendy's","Chuck E. Cheese","Buffalo Wild Wings"];
+
+    up.innerHTML = "Click on the button to generate "
+        + "a random restuarant.<br><br>";
+
+    function GFG_Fun() {
+        down.innerHTML =
+            arr[Math.floor(Math.random() * arr.length)];
+    }
+</script>
+{% endblock %}
+
+
 </html>

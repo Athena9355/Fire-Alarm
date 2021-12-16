@@ -160,6 +160,10 @@ def about_us():
 def aboutustemp():
     return render_template("/aboutustemp.html")
 
+@app.route('/pagelayout/index')
+def pl():
+    return render_template("pagelayout/index.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
