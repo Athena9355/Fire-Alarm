@@ -5,6 +5,7 @@ import requests, json
 # create a Flask instance
 from templates.aadya_aboutme_api import get_numberfact
 from templates.athena_aboutme_api import get_word
+from templates.siya_aboutme_api import siya
 
 app = Flask(__name__)
 
@@ -47,17 +48,20 @@ def karthik():
 
 @app.route('/siya')
 def siya():
-    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+    return render_template("siya.html")
 
-    headers = {
-        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-        'x-rapidapi-key': "0a4557c36bmsh023bf219202e218p153360jsndbf67f2a9f06"
-    }
 
-    response = requests.request("GET", url, headers=headers)
-    output = json.loads(response.text)
-    print(response.text)
-    return render_template("siya.html", result = output)
+@app.route('/siya_aboutme_api', methods=['POST'])
+def trivia():
+    result = ""
+    if request.form:
+
+        result = siya()
+        render_template("siya.html", trivia=trivia)
+    if result !=0:
+        print(result)
+
+    return render_template("siya.html", trivia=trivia)
 
 
 @app.route('/recipes')
