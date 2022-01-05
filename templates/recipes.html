@@ -9,7 +9,7 @@
 
 {% extends "pagelayout/index.html" %}
 {% set page_title = "Recipe Generator" %}
-{% set page_description = "A recipe is a set of instructions that describes how to prepare or make something, especially a dish of prepared food." %}
+{% set page_description = "For a personalized recipe, check all the ingredients you already have!" %}
 {% set img = "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bean-recipes-1.jpg" %}
 
 {% block content %}
@@ -69,44 +69,19 @@
     </head>
     <body>
 
-    <h2>Choose the cuisine!</h2>
-    <p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+    <form action="/recipes">
+        <input type="checkbox" id="food_item1" name="fooditem1" value="Rice">
+        <label for="food_item1"> Rice </label><br><br><br>
 
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Cuisines!</button>
-        <div id="myDropdown" class="dropdown-content">
-            <input type="text" placeholder="Search for the cuisine" id="myInput" onkeyup="filterFunction()">
-            <a href="/asianfood">Asian Food</a>
-            <a href="/americanfood">American Food</a>
-            <a href="/europeanfood">European Food</a>
-            <a href="/mexicanfood">Mexican Food</a>
-            <a href="/oceanicfood">Oceanic Food</a>
-        </div>
-    </div>
+        <input type="checkbox" id="food_item2" name="fooditem2" value="Wheat">
+        <label for="food_item2"> Wheat </label><br><br><br>
 
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+        <input type="checkbox" id="food_item3" name="fooditem3" value="Milk">
+        <label for="food_item3"> Milk</label><br><br><br><br>
 
-        function filterFunction() {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            div = document.getElementById("myDropdown");
-            a = div.getElementsByTagName("a");
-            for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    a[i].style.display = "";
-                } else {
-                    a[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+        <input type="submit" value="Submit">
+    </form>
+
 {% endblock %}
 
 
