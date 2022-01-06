@@ -94,6 +94,7 @@ def result_recipe_rice():
 def result_recipe_potatos():
     return render_template("result_recipe_potatos.html")
 
+
 @app.route('/result_recipe_milk')
 def result_recipe_milk():
     return render_template("result_recipe_milk.html")
