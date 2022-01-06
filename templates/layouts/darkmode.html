@@ -45,8 +45,8 @@
 
 </head>
 
-<button class="switch" onclick="myFunction()" data-switch-dark aria-hidden>
-    <p id="switch"> Light </p>
+<button class="switch" id="darklight" onclick="myFunction()" data-switch-dark aria-hidden>
+    Light
 </button>
 
 <body>
@@ -55,7 +55,7 @@
 
 <script>
     function myFunction() {
-        var x = document.getElementById("switch");
+        var x = document.getElementById("darklight");
         if (x.innerHTML === "Light") {
             x.innerHTML = "Dark";
         } else {
