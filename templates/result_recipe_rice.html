@@ -9,7 +9,7 @@
 
 {% extends "pagelayout/index.html" %}
 {% set page_title = "Recipe Generator" %}
-{% set page_description = "For a personalized recipe, check all the ingredients you already have, and we will give you a meal option!" %}
+{% set page_description = "Here are possible recipes that you can try with rice..." %}
 {% set img = "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bean-recipes-1.jpg" %}
 
 {% block content %}
@@ -69,27 +69,15 @@
     </head>
     <body>
 
-    <form action="/result_recipe_rice">
-        <input type="checkbox" id="food_item1" name="fooditem1" value="Rice">
-        <label for="food_item1"> Rice </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
+    <img alt="" src="https://www.recipetineats.com/wp-content/uploads/2020/03/Seasoned-Rice_3.jpg " style="height: 300px" id="rice1"/>
+    <a href="https://www.recipetineats.com/buttery-seasoned-rice/">Buttery Seasoned Rice</a>
 
-    <form action="/result_recipe_potatos">
-        <input type="checkbox" id="food_item2" name="fooditem2" value="Potatos">
-        <label for="food_item2"> Potatoes </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
-    <form action="/result_recipe_milk">
-    <input type="checkbox" id="food_item3" name="fooditem3" value="Milk">
-        <label for="food_item3"> Milk</label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br><br>
+
+    <img alt="" src="https://www.flavourstreat.com/wp-content/uploads/2020/12/turmeric-lemon-rice-recipe-02.jpg" style="height: 300px" id="rice2"/>
+    <a href="https://www.indianhealthyrecipes.com/lemon-rice-recipe/">Lemon Rice</a>
+
+
 {% endblock %}
-
 
 
 </body>
