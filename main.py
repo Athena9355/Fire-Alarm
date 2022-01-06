@@ -86,6 +86,17 @@ def trivia():
 def recipes():
     return render_template("recipes.html")
 
+@app.route('/result_recipe_rice')
+def result_recipe_rice():
+    return render_template("result_recipe_rice.html")
+
+@app.route('/result_recipe_potatos')
+def result_recipe_potatos():
+    return render_template("result_recipe_potatos.html")
+
+@app.route('/result_recipe_milk')
+def result_recipe_milk():
+    return render_template("result_recipe_milk.html")
 
 @app.route('/menus')
 def menus():
