@@ -9,9 +9,7 @@
 
 {% extends "pagelayout/index.html" %}
 {% set page_title = "Recipe Generator" %}
-
-{% set page_description = "For a personalized recipe, check all the ingredients you already have, and we will give you a meal option!" %}
-
+{% set page_description = "Here are possible recipes that you can try with potatoes..." %}
 {% set img = "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bean-recipes-1.jpg" %}
 
 {% block content %}
@@ -71,25 +69,12 @@
     </head>
     <body>
 
-    <form action="/result_recipe_rice">
-        <input type="checkbox" id="food_item1" name="fooditem1" value="Rice">
-        <label for="food_item1"> Rice </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
+    <img alt="" src="https://www.dinneratthezoo.com/wp-content/uploads/2019/12/homemade-french-fries-5.jpg" style="height: 300px" id="potatos1"/>
+    <a href="https://www.dinneratthezoo.com/homemade-french-fries/">French Fries</a>
 
-    <form action="/result_recipe_potatos">
-        <input type="checkbox" id="food_item2" name="fooditem2" value="Potatos">
-        <label for="food_item2"> Potatoes </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
-    <form action="/result_recipe_milk">
-    <input type="checkbox" id="food_item3" name="fooditem3" value="Milk">
-        <label for="food_item3"> Milk</label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br><br>
+    <img alt="" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190411-potato-salad-horizontal-2-1555688422.png?crop=0.577xw:0.865xh;0.202xw,0.0638xh&resize=768:*" style="height: 300px" id="potatos2"/>
+    <a href="https://www.foodiecrush.com/how-to-make-the-best-potato-salad/">Potato Salad</a>
+
 
 {% endblock %}
 
