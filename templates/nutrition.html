@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+
+
+
+<!--<p>
+    <img alt="" src="/static/images/athena_mask.jpg" style="height: 300px" id="mask" onclick="swapImage()"  />
+</p> -->
+
+
+<div style="height:100px;width:140px;overflow:auto;background-color:yellowgreen;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+    <!--code source for text box: https://www.quackit.com/html/codes/html_scroll_box.cfm -->
+    <form action="nutritional_info_api" id="search" method="POST" >
+        <label for="search">search!</label>
+        <input name="search" id="search">
+        <input type="submit" value="  Search!  ">
+        {{ information }}
+    </form>
+</div>
+
+</body>
+</html>
