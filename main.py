@@ -118,25 +118,44 @@ def aboutus():
 def asianfood():
     return render_template("asianfood.html")
 
+@app.route('/asianfoodgen')
+def asianfoodgen():
+    return render_template("asianfoodgen.html")
+
 
 @app.route('/americanfood')
 def americanfood():
     return render_template("americanfood.html")
+
+@app.route('/americanfoodgen')
+def americanfoodgen():
+    return render_template("americanfoodgen.html")
 
 
 @app.route('/europeanfood')
 def europeanfood():
     return render_template("europeanfood.html")
 
+@app.route('/europeanfoodgen')
+def europeanfoodgen():
+    return render_template("europeanfoodgen.html")
 
 @app.route('/mexicanfood')
 def mexicanfood():
     return render_template("mexicanfood.html")
 
+@app.route('/mexicanfoodgen')
+def mexicanfoodgen():
+    return render_template("mexicanfoodgen.html")
+
 
 @app.route('/oceanicfood')
 def oceanicfood():
     return render_template("oceanicfood.html")
+
+@app.route('/oceanicfoodgen')
+def oceanicfoodgen():
+    return render_template("oceanicfoodgen.html")
 
 
 @app.route('/aadya_aboutme_api', methods=['GET', 'POST'])
@@ -175,6 +194,10 @@ def aboutustemp():
 @app.route('/pagelayout/index')
 def pl():
     return render_template("pagelayout/index.html")
+
+@app.route('/darkmode')
+def darkmode():
+    return render_template("darkmode.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
