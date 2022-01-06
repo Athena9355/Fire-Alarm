@@ -9,12 +9,24 @@
 
 {% extends "pagelayout/index.html" %}
 {% set page_title = "Restaurant Generator" %}
-{% set page_description = "A restaurant a business establishment where meals or refreshments may be purchased" %}
-{% set img = "https://cdn.vox-cdn.com/thumbor/0LszXQmBEuNvTgksqb23sd2vqA8=/0x0:1000x600/1200x900/filters:focal(420x220:580x380):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68734628/Born___Raised.0.jpg" %}
+{% set page_description = "Not sure where to eat?" %}
+{% set img = "https://media.timeout.com/images/105787696/630/472/image.jpg" %}
 
 {% block content %}
 <body >
-    <div class="display-4 text-center">Find a Random Restuarant to go to</div>
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Cuisines!</button>
+    <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search for the cuisine" id="myInput" onkeyup="filterFunction()">
+        <a href="/asianfoodgen">Asian Food</a>
+        <a href="/americanfoodgen">American Food</a>
+        <a href="/europeanfoodgen">European Food</a>
+        <a href="/mexicanfoodgen">Mexican Food</a>
+        <a href="/oceanicfoodgen">Oceanic Food</a>
+    </div>
+</div>
+
+    <div class="display-4 text-center">Random Cuisine</div>
     <div class="APIContainer">
         <div style="text-align: center">
             <div class="jokeContainer">
@@ -22,11 +34,65 @@
                     <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Random Restaurants</p>
                 </div>
             </div>
-            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()">Yes, Im so hungry!</button>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> Yes! </button>
         </div>
     </div>
 
 </body>
+    <style>
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: darkcyan;
+        }
+
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myInput:focus {outline: 3px solid #ddd;}
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+    </style>
+
 <style>
     /* general */
     body {
@@ -70,14 +136,7 @@
     var up = document.getElementById('GFG_UP');
     var down = document.getElementById('GFG_DOWN');
 
-    var arr = ["Taco Bell", "Tim Hortons",
-        "In-N-Out", "iHop", "Chipotle", "Yogurt Lounge", "Jamba Juice",
-        "Applebee’s", "Buca di Beppo", "Olive Garden",
-        "The Cheesecake Factory","California Pizza Kitchen",
-        "Outback Steakhouse", "Denny's","Panera Bread","Bonefish Grill",
-        "Chili's","P. F. Chang's","Carino's Italian","Pizza Hut","Domino's Pizza",
-        "Papa John's Pizza","Little Caesars","KFC","McDonald's",
-        "Burger King","Wendy's","Chuck E. Cheese","Buffalo Wild Wings"];
+    var arr = ["Asian","American", "Mexican", "European", "Oceanic"];
 
     up.innerHTML = "Click on the button to generate "
         + "a random restuarant.<br><br>";
