@@ -2,11 +2,14 @@
 <!-- Preparing search using asynchronous "fetch" (no page reload, no wait)
 inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 -->
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Search CRUD" %}
+{% set page_description = "Not sure where to eat?" %}
+{% set img = "https://media.timeout.com/images/105787696/630/472/image.jpg" %}
 
 
-{% block meta %}
-    <title>SQL search</title>
-{% endblock %}
+<title>SQL search</title>
+
 
 {% block content %}
     <div class="container py-4 bg-primary">
