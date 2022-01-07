@@ -83,6 +83,18 @@ def trivia():
 def recipes():
     return render_template("recipes.html")
 
+@app.route('/result_recipe_rice')
+def result_recipe_rice():
+    return render_template("result_recipe_rice.html")
+
+@app.route('/result_recipe_potatos')
+def result_recipe_potatos():
+    return render_template("result_recipe_potatos.html")
+
+
+@app.route('/result_recipe_milk')
+def result_recipe_milk():
+    return render_template("result_recipe_milk.html")
 
 @app.route('/menus')
 def menus():
@@ -103,25 +115,44 @@ def aboutus():
 def asianfood():
     return render_template("asianfood.html")
 
+@app.route('/asianfoodgen')
+def asianfoodgen():
+    return render_template("asianfoodgen.html")
+
 
 @app.route('/americanfood')
 def americanfood():
     return render_template("americanfood.html")
+
+@app.route('/americanfoodgen')
+def americanfoodgen():
+    return render_template("americanfoodgen.html")
 
 
 @app.route('/europeanfood')
 def europeanfood():
     return render_template("europeanfood.html")
 
+@app.route('/europeanfoodgen')
+def europeanfoodgen():
+    return render_template("europeanfoodgen.html")
 
 @app.route('/mexicanfood')
 def mexicanfood():
     return render_template("mexicanfood.html")
 
+@app.route('/mexicanfoodgen')
+def mexicanfoodgen():
+    return render_template("mexicanfoodgen.html")
+
 
 @app.route('/oceanicfood')
 def oceanicfood():
     return render_template("oceanicfood.html")
+
+@app.route('/oceanicfoodgen')
+def oceanicfoodgen():
+    return render_template("oceanicfoodgen.html")
 
 
 @app.route('/aadya_aboutme_api', methods=['GET', 'POST'])
@@ -164,7 +195,6 @@ def aboutustemp():
 def pl():
     return render_template("pagelayout/index.html")
 
-
 ##nutritional information api
 
 @app.route('/nutrition')
@@ -183,6 +213,10 @@ def search():
         # print("Please enter an input")
         # print(result)
     return render_template("athena.html", result=result)  # works when nutrition.html is changed to athena.html
+  
+@app.route('/darkmode')
+def darkmode():
+    return render_template("darkmode.html")
 
 
 # runs the application on the development server
