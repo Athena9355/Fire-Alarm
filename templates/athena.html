@@ -21,7 +21,7 @@
 {% block background %}
 <style>
     .about-left{
-        background: #ded3ed;
+        background: #ded3ed;}
 </style>
 {% endblock %}
 {% block foreground %}
@@ -66,6 +66,21 @@
         {{ result }}
     </form>
 </div>
+<!--
+    <div style="height:500px;width:400px;overflow:auto;background-color:lightblue;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+-->
+        <!--code source for text box: https://www.quackit.com/html/codes/html_scroll_box.cfm -->
+        <form action="nutritional_info_api" id="search" method="POST" >
+            <label for="search">search!</label>
+            <input name="search" id="search">
+            <input type="submit" value="  Search!  ">
+            <!--<div style="height:1000px;width:1400px;overflow:auto;background-color:lightblue;color:white;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+            {{ information }}
+            </div>-->
+        </form>
+    </div>
+    </div>
+
 
 {% endblock %}
 
