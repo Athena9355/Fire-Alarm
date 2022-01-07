@@ -1,6 +1,7 @@
 import requests
 
 ##API source: https://rapidapi.com/edamam/api/edamam-food-and-grocery-database/
+##(final) API source: https://rapidapi.com/calorieninjas/api/calorieninjas/
 
 def get_info(ingredient):
     ingredient = str(ingredient)
