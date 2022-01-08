@@ -45,7 +45,7 @@
 
 </head>
 
-<button class="switch" id="darklight" onclick="myFunction()" data-switch-dark aria-hidden>
+<button class="switch" id="darklight" onclick="dark()" data-switch-dark>
     Light
 </button>
 
@@ -54,7 +54,7 @@
 
 
 <script>
-    function myFunction() {
+    function dark() {
         var x = document.getElementById("darklight");
         if (x.innerHTML === "Light") {
             x.innerHTML = "Dark";
@@ -62,9 +62,12 @@
             x.innerHTML = "Light";
         }
     }
+    // Switch Text from Light --> Dark when clicked to match the style
+
     document.querySelector('[data-switch-dark]').addEventListener('click', function() {
         document.body.classList.toggle('dark');
     });
+    // Returns the darkmode CSS when click of the button
 </script>
 
 
