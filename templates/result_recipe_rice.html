@@ -1,83 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <meta charset="UTF-8">
-</head>
-
-{% extends "pagelayout/index.html" %}
-{% set page_title = "Recipe Generator" %}
-{% set page_description = "Here are possible recipes that you can try with rice..." %}
-{% set img = "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bean-recipes-1.jpg" %}
-
-{% block content %}
-    <style>
-        .dropbtn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: darkcyan;
-        }
-
-        #myInput {
-            box-sizing: border-box;
-            background-image: url('searchicon.png');
-            background-position: 14px 12px;
-            background-repeat: no-repeat;
-            font-size: 16px;
-            padding: 14px 20px 12px 45px;
-            border: none;
-            border-bottom: 1px solid #ddd;
-        }
-
-        #myInput:focus {outline: 3px solid #ddd;}
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f6f6f6;
-            min-width: 230px;
-            overflow: auto;
-            border: 1px solid #ddd;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {background-color: #ddd;}
-
-        .show {display: block;}
-    </style>
-    </head>
-    <body>
-
-    <img alt="" src="https://www.recipetineats.com/wp-content/uploads/2020/03/Seasoned-Rice_3.jpg " style="height: 300px" id="rice1"/>
-    <a href="https://www.recipetineats.com/buttery-seasoned-rice/">Buttery Seasoned Rice</a>
 
 
-    <img alt="" src="https://www.flavourstreat.com/wp-content/uploads/2020/12/turmeric-lemon-rice-recipe-02.jpg" style="height: 300px" id="rice2"/>
-    <a href="https://www.indianhealthyrecipes.com/lemon-rice-recipe/">Lemon Rice</a>
+{% extends "result_recipe_all.html" %}
+    {% set recipe_website_link = "https://www.recipetineats.com/buttery-seasoned-rice/" %}
+    {% set image_link = "https://www.recipetineats.com/wp-content/uploads/2020/03/Seasoned-Rice_3.jpg" %}
+    {% set image_id = "rice1" %}
+    {% set food_item = "Buttery Seasoned Rice" %}
+
+    {% set recipe_website_link2 = "https://www.indianhealthyrecipes.com/lemon-rice-recipe/" %}
+    {% set image_link2 = "https://www.flavourstreat.com/wp-content/uploads/2020/12/turmeric-lemon-rice-recipe-02.jpg" %}
+    {% set image_id2 = "rice2" %}
+    {% set food_item2 = "Lemon Rice" %}
 
 
-{% endblock %}
+
+
 
 
 </body>
