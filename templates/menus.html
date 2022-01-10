@@ -3,8 +3,6 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
 </head>
 
 
@@ -13,57 +11,230 @@
 {% set page_description = "The menu is a list of food and beverages offered to customers and the prices. A menu may be à la carte – which presents a list of options from which customers choose – or table d'hôte, in which case a pre-established sequence of courses is offered." %}
 {% set img = "http://stellar-signs.com/wp-content/uploads/2017/08/menu_board3.jpg" %}
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    * {
-      box-sizing: border-box;
-    }
-
-    form.example input[type=text] {
-      padding: 10px;
-      font-size: 17px;
-      border: 1px solid grey;
-      float: left;
-      width: 80%;
-      background: #f1f1f1;
-    }
-
-    form.example button {
-      float: left;
-      width: 20%;
-      padding: 10px;
-      background: #2196F3;
-      color: white;
-      font-size: 17px;
-      border: 1px solid grey;
-      border-left: none;
-      cursor: pointer;
-    }
-
-    form.example button:hover {
-      background: #0b7dda;
-    }
-
-    form.example::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-</style>
-</head>
-<body>
-
-<form class="example" action="/action_page.php">
-    <input type="text" placeholder="Search..." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form>
 
 
-</body>
+{% block content %}
+<select id='eatery'>
+    <option>Select An Option...</option>
+    <option value="0">In-N-Out Burger</option>
+    <option value="1">Breakfast Republic</option>
+    <option value="2">KFC</option>
+    <option value="3">Taco Bell</option>
+    <option value="4">Jamba Juice</option>
+    <option value="5">Chick-Fil-A</option>
+</select>
+
+
+
+<div class="row gx-5 align-items-center">
+    <div class="container">
+        <div class="row">
+            <!-- In-N-Out, Value 0 -->
+            <div>
+                <div class="text-center" style='display:none;' id='innout'>
+                    <div class="dropdown">
+                        <span><i class="bi bi-arrow-90deg-right icon-feature text-gradient d-block mb-3"></i></span>
+                        <div class="dropdown-content">
+                            <a href="https://www.in-n-out.com/menu#doubledouble"><p>DOUBLE-DOUBLE®</p></a>
+                            <a href="https://www.in-n-out.com/menu#cheeseburger"><p>CHEESEBURGER</p></a>
+                            <a href="https://www.in-n-out.com/menu#hamburger"><p>HAMBURGER</p></a>
+                            <a href="https://www.in-n-out.com/menu#fries"><p>FRENCH FRIES</p></a>
+                            <a href="https://www.in-n-out.com/menu#beverages"><p>BEVERAGES</p></a>
+                            <a href="https://www.in-n-out.com/menu#shakes"><p>SHAKES</p></a>
+                            <a href="https://www.in-n-out.com/menu/not-so-secret-menu"><p>Secret Menu Items</p></a>
+                        </div>
+                        <h3 class="font-alt">In-N-Out Burger</h3>
+                        <p class="text-muted mb-0">American regional chain of fast food restaurants</p>
+                    </div>
+                </div>
+
+
+                <!-- Breakfast Republic, Value 1 -->
+                <div class="text-center" style='display:none;' id='br'>
+                    <div class="dropdown">
+                        <span><i class="bi-egg-fried icon-feature text-gradient d-block mb-3"></i></span>
+                        <div class="dropdown-content">
+                            <a href="https://www.in-n-out.com/menu#doubledouble"><p>BENEDICTS</p></a>
+                            <a href="https://www.in-n-out.com/menu#cheeseburger"><p>OMELETES</p></a>
+                            <a href="https://www.in-n-out.com/menu#hamburger"><p>SCRAMBLES</p></a>
+                            <a href="https://www.in-n-out.com/menu#fries"><p>PANCAKES</p></a>
+                            <a href="https://www.in-n-out.com/menu#beverages"><p>FRENCH TOAST</p></a>
+                            <a href="https://www.in-n-out.com/menu#shakes"><p>VEGAN</p></a>
+                            <a href="https://www.in-n-out.com/menu/not-so-secret-menu"><p>SIDES</p></a>
+                        </div>
+                        <h3 class="font-alt">Breakfast Republic</h3>
+                        <p class="text-muted mb-0">San Diego's top spot to enjoy the most important meal of the day, breakfast</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- KFC, Value 2 -->
+            <div>
+                <div class="text-center" style='display:none;' id='kfc'>
+                    <div class="dropdown">
+                        <span><i class="bi-bucket-fill icon-feature text-gradient d-block mb-3"></i></span>
+                        <div class="dropdown-content">
+                            <p>KFC CHICKEN SANDWICH COMBO</p>
+                            <p>10 PIECE FEAST</p>
+                            <p>8 PC. TENDERS MEAL</p>
+                            <p>MENU Item</p>
+                            <p>MENU Item</p>
+                            <p>MENU Item</p>
+                            <p>MENU Item</p>
+                        </div>
+                        <h3 class="font-alt">KFC</h3>
+                        <p class="text-muted mb-0">American fast food restaurant chain that specializes in fried chicken</p>
+                    </div>
+                </div>
+
+
+                <!-- Taco Bell, Value 3 -->
+                <div class="text-center" style='display:none;' id='tacob'>
+                    <div class="dropdown">
+                        <span><i class="bi-bell icon-feature text-gradient d-block mb-3"></i></span>
+                        <div class="dropdown-content">
+                            <p>NACHOS BELLGRANDE® COMBO</p>
+                            <p>VEGGIE BURRITO SUPREME®</p>
+                            <p>CHEESE QUESADILLA</p>
+                            <p>CHEESY FIESTA POTATOES</p>
+                            <p>CHIPOTLE CHEDDAR CHALUPA - BLACK BEAN</p>
+                            <p>CRUNCHWRAP SUPREME®</p>
+                            <p>HASH BROWN</p>
+
+                        </div>
+
+                        <h3 class="font-alt">Taco Bell</h3>
+                        <p class="text-muted mb-0">Taco Bell is an American-based chain of fast food restaurants specialzing in American-Mexican food</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jamba Juice, Value 4 -->
+            <div>
+                <div class="text-center" style='display:none;' id='jamba'>
+                    <div class="dropdown">
+                        <span><i class="bi-cup-straw icon-feature text-gradient d-block mb-3"></i></span>
+                        <div class="dropdown-content">
+                            <p>the go getter</p>
+                            <p>summer blackberry</p>
+                            <p>apple 'n greens™</p>
+                            <p>orange-c booster™</p>
+                            <p>matcha green tea blast®</p>
+                            <p>blueberry strawberry blast-off™</p>
+                            <p>strawberries gone bananas™</p>
+                        </div>
+                    </div>
+                    <h3 class="font-alt">Jamba Juice</h3>
+                    <p class="text-muted mb-0">American company that produces blended fruit and vegetable juices, smoothies and similar products</p>
+                </div>
+
+                <!-- Chick-Fil-A, Value 5 -->
+                <div>
+                    <div class="text-center" style='display:none;' id='chick'>
+                        <div class="dropdown">
+                            <span><i class="bi-hdd-fill icon-feature text-gradient d-block mb-3"></i></span>
+                            <div class="dropdown-content">
+                                <p>CHICK-FIL-A® CHICKEN</p>
+                                <p>SPICY CHICKEN</p>
+                                <p>CHICK-FIL-A® DELUXE</p>
+                                <p>SPICY DELUXE</p>
+                                <p>CHICK-FIL-A® NUGGETS</p>
+                                <p>WAFFLE POTATO FRIES</p>
+                                <p>CHICK-FIL-A® MAC N CHEESE</p>
+                            </div>
+                            <h3 class="font-alt">Chick-Fil-A</h3>
+                            <p class="text-muted mb-0">American company fast food chain whose specialty is chicken sandwiches</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+        $(document).ready(function(){
+            $('#eatery').on('change', function() {
+                // in-n-out
+                if ( this.value == '0')
+                {
+                    $("#innout").show();
+                }
+                else
+                {
+                    $("#innout").hide();
+
+                    // breakfast republic
+                    if ( this.value == '1')
+                    {
+                        $("#br").show();
+                    }
+                    else
+                    {
+                        $("#br").hide();
+                    }
+
+                    // KFC
+                    if ( this.value == '2')
+                    {
+                        $("#kfc").show();
+                    }
+                    else
+                    {
+                        $("#kfc").hide();
+                    }
+
+                    // Taco Bell
+                    if ( this.value == '3')
+                    {
+                        $("#tacob").show();
+                    }
+                    else
+                    {
+                        $("#tacob").hide();
+                    }
+
+                    // Jamba Juice
+                    if ( this.value == '4')
+                    {
+                        $("#jamba").show();
+                    }
+                    else
+                    {
+                        $("#jamba").hide();
+                    }
+
+                    // Chick-Fil-A
+                    if ( this.value == '5')
+                    {
+                        $("#chick").show();
+                    }
+                    else
+                    {
+                        $("#chick").hide();
+                    }
+
+                }
+            });
+        });
+    </script>
+
+                {% endblock %}
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
