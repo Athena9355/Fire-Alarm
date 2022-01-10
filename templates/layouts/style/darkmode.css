@@ -1,16 +1,15 @@
+/* light mode */
+/* selects the original element of the html document */
 :root {
   --color-page-background: rgba(0, 0, 0, 0.15);
   --color-text: black;
-  --color-border: black;
-  --color-article-background: white;
-  --color-article-shadow: rgba(0, 0, 0, 0.15); }
+  --color-border: black; }
 
+/* dark mode */
 .dark {
   --color-page-background: black;
   --color-text: white;
-  --color-border: white;
-  --color-article-background: rgba(255, 255, 255, 0.15);
-  --color-article-shadow: rgba(0, 0, 0, 0.15); }
+  --color-border: white; }
 
 body {
   background-color: var(--color-page-background);
@@ -20,11 +19,14 @@ body {
   position: fixed;
   right: 2rem;
   top: 2rem;
-  height: 3rem;
-  width: 3rem;
   background-color: var(--color-black);
-  border: 1px solid var(--color-text);
+  border: 0px solid var(--color-text);
   color: var(--color-text);
-  border-radius: 50%; }
+  text-align: center;
+  width: 60px;
+  height: 34px; }
+
+button {
+  text-decoration: none; }
 
 /*# sourceMappingURL=darkmode.css.map */

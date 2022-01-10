@@ -3,21 +3,21 @@ $color-white: rgb(255,255,255);
 $color-gray-light: rgba($color-white, .15);
 $color-gray-dark: rgba($color-black, .15);
 
+/* light mode */
+/* selects the original element of the html document */
 :root {
   --color-page-background: #{$color-gray-dark};
   --color-text: #{$color-black};
   --color-border: #{$color-black};
-  --color-article-background: #{$color-white};
-  --color-article-shadow: #{$color-gray-dark};
 }
 
+/* dark mode */
 .dark {
   --color-page-background: #{$color-black};
   --color-text: #{$color-white};
   --color-border: #{$color-white};
-  --color-article-background: #{$color-gray-light};
-  --color-article-shadow: #{$color-gray-dark};
 }
+
 
 body {
   background-color: var(--color-page-background);
@@ -29,10 +29,15 @@ body {
   position: fixed;
   right: 2rem;
   top: 2rem;
-  height: 3rem;
-  width: 3rem;
   background-color: var(--color-black);
-  border: 1px solid  var(--color-text);
+  border: 0px solid var(--color-text);
   color: var(--color-text);
-  border-radius: 50%;
+  text-align: center;
+  width: 60px;
+  height: 34px;
+}
+
+
+button {
+  text-decoration: none;
 }
