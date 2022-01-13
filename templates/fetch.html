@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Test Page</title>
+</head>
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Fetch" %}
+{% set img = "https://cdn.thegentlemansjournal.com/wp-content/uploads/2016/09/restsushisambalondon-664x442-c-center.jpg" %}
+
+
+<body>
+{% block content %}
+<input type="button" id="basicFetchButton" value="Try it">
+
+<script>
+    document.getElementById("basicFetchButton").addEventListener("click", function(){
+        // Loading the jQuery code
+        fetch("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+            .then(function (response) {
+                response.text().then(function (responseText) {
+                    console.log(responseText);
+                    alert("Done using Fetch!");
+                });
+            });
+    });
+</script>
+{% endblock %}
+
+
+</body>
+
+</html>

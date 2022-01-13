@@ -11,7 +11,7 @@
 
 
 {% extends "pagelayout/index.html" %}
-{% set page_title = "Recipe Generator" %}
+{% set page_title = "Recipe Generator Results Found!" %}
 {% set page_description = "Here are possible recipes that you can try with the chosen ingredient..." %}
 {% set img = "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bean-recipes-1.jpg" %}
 
@@ -93,6 +93,8 @@
         <img alt="" src="{{ image_link }}" style="height: 300px" id="{{ image_id }}"/>
     </a>
     <a href="{{ recipe_website_link }}">{{ food_item }}</a>
+
+
 
     <a href="{{ recipe_website_link2 }}">
         <img alt="" src="{{ image_link2 }}" style="height: 300px" id="{{ image_id2 }}"/>

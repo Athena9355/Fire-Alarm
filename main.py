@@ -185,6 +185,9 @@ def define():
 def about_us():
     return render_template("layouts/about_us.html")
 
+@app.route('/fetch')
+def fetch():
+    return render_template("fetch.html")
 
 @app.route('/aboutustemp')
 def aboutustemp():
