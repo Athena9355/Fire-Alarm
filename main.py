@@ -208,7 +208,7 @@ def search():
     if request.form:
         ingredient = request.form.get("search")
         result = get_info(ingredient)
-        render_template("athena.html", result=result)  # works when nutrition.html is changed to athena.html
+        # render_template("athena.html", result=result)  # works when nutrition.html is changed to athena.html
         # if len(input_word) == 0:  # no input
         # print("Please enter an input")
         # print(result)
