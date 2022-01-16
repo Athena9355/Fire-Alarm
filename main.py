@@ -221,6 +221,10 @@ def search():
 def darkmode():
     return render_template("darkmode.html")
 
+@app.route('/snakegame')
+def snakegame():
+    return render_template("snakegame.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
