@@ -42,6 +42,15 @@ def main():
     rows = 20 #number of rows. can be set to any number as long as it can be divided by the width and height evenly. i.e. 500 has to be the multiple of rows
     win = pygame.display.set_mode ((width, height)) #making a surface
     #setting up a snake object below
+    s = snake((255, 0, 0), (10,10)) #first parameter (255, 0, 0) gives the color of the snake. (10,10) gives the position
+
+    #main loop for the game
+    flag = True
+    clock = pygame.time.Clock()
+    while flag:
+        pygame.time.delay (50) #delays 50 miliseconds every time. purpose: so that the program doesn't run too fast. i.e., the smaller the number, the faster the speed
+        clock.tick(10) #snake moving 10 blocks per second. ie, the smaller the number, the slower the snake
+        redrawWindow(win)
 
     pass
 
