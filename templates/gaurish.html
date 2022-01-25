@@ -81,16 +81,23 @@
 </style>
 
         <script>
-            function switchRooms() {
-                var Image_Id = document.getElementById('room');
-                if (Image_Id.src.match("static/images/gaurishnew1.PNG")) {
-            Image_Id.src = "static/images/gaurishold1.PNG";
-                  }
-                 else {
-            Image_Id.src = "static/images/gaurishnew1.PNG";
-        }
-        }
-    </script>
+            // program to check if the number is even or odd
+            // take input from the user
+            const number = prompt("Enter a number: ");
+
+            //check if the number is even
+            if(number % 2 == 0) {
+                console.log("The number is even.");
+            }
+
+            // if the number is odd
+            else {
+                console.log("The number is odd.");
+            }
+
+        </script>
+
+
 
 
 {% endblock %}
@@ -98,6 +105,7 @@
 
 
 <body>
+
 
 <div class="container p-3 my-3 border">
     <p>{{ result[0]["joke"] }}</p>

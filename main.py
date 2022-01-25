@@ -96,6 +96,22 @@ def result_recipe_potatos():
 def result_recipe_milk():
     return render_template("result_recipe_milk.html")
 
+@app.route('/result_recipe_rp')
+def result_recipe_rp():
+    return render_template("result_recipe_rp.html")
+
+@app.route('/result_recipe_rm')
+def result_recipe_rm():
+    return render_template("result_recipe_rm.html")
+
+@app.route('/result_recipe_pm')
+def result_recipe_pm():
+    return render_template("result_recipe_pm.html")
+
+@app.route('/result_recipe_all')
+def result_recipe_all():
+    return render_template("result_recipe_all.html")
+
 @app.route('/menus')
 def menus():
     return render_template("menus.html")
