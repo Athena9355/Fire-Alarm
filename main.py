@@ -225,6 +225,11 @@ def darkmode():
 def snakegame():
     return render_template("snakegame.html")
 
+@app.route('/pacman')
+def pacman():
+    return render_template("PacMan Game/pacman.html")
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":
