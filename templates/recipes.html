@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% block meta %}
+    <script>
+        function pageFxn() {
+            const one = document.getElementById("1box")
+            const two = document.getElementById("2box")
+            const three = document.getElementById("3box")
+
+
+            if (one.checked) {
+                    location.replace("result_recipe_rice")
+                }
+                else
+                {
+                    if (two.checked) {
+                        location.replace("result_recipe_potatos")
+                    }
+                    else {
+                        location.replace("result_recipe_milk")
+
+                    }
+                }
+
+
+            if (one.checked && two.checked) {
+                location.replace("result_recipe_rp")
+            }
+
+            if (two.checked && three.checked) {
+                location.replace("result_recipe_pm")
+            }
+            if (one.checked && three.checked) {
+                location.replace("result_recipe_rm")
+            }
+            if (one.checked && two.checked && three.checked) {
+                location.replace("result_recipe_all")
+            }
+
+
+
+
+        }
+    </script>
+
+{% endblock %}
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,6 +61,39 @@
 
 {% block content %}
     <style>
+        .button1 {
+            border: 2px solid #463d3d;
+            border-radius: 4px;
+            padding: 5px;
+            width: 50px;
+            color: antiquewhite;
+            font-size: 15px;
+            background-color: darkblue;
+        }
+
+        /* hover over effect*/
+        .button1:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+            transform:scale(2);
+            background-color: gray;
+        }
+        .button2 {
+            border: 2px solid #463d3d;
+            border-radius: 4px;
+            padding: 5px;
+            width: 50px;
+            color: antiquewhite;
+            font-size: 15px;
+            background-color: darkblue;
+        }
+
+        /* hover over effect*/
+        .button2:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+            transform:scale(2);
+            background-color: gray;
+        }
+
         .dropbtn {
             background-color: #04AA6D;
             color: white;
@@ -70,26 +148,16 @@
     </style>
     </head>
     <body>
+    <input type="checkbox" name="Rice" class="incline checkbox" id="1box" value="1">   Rice     <br><br><br>
 
-    <form action="/result_recipe_rice">
-        <input type="checkbox" id="food_item1" name="fooditem1" value="Rice">
-        <label for="food_item1"> Rice </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
+    <input type="checkbox" name="Potatoes" class="incline checkbox" id="2box" value="1">   Potatoes    <br><br><br>
 
-    <form action="/result_recipe_potatos">
-        <input type="checkbox" id="food_item2" name="fooditem2" value="Potatos">
-        <label for="food_item2"> Potatoes </label>
-        <input type="submit" value="Submit">
-    </form>
-    <br><br><br>
-    <form action="/result_recipe_milk">
-    <input type="checkbox" id="food_item3" name="fooditem3" value="Milk">
-        <label for="food_item3"> Milk</label>
-        <input type="submit" onclick = "food()" value="Submit">
-    </form>
-    <br><br><br><br>
+    <input type="checkbox" name="Milk" class="incline checkbox" id="3box" value="1">   Milk    <br><br><br>
+
+
+    <input type="button" onclick="pageFxn()" class="button button2" value="Go!">
+
+
 
 {% endblock %}
 
