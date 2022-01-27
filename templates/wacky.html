@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+</head>
+
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Wacky Sentence Generator" %}
+{% set page_description = "Ready for the best time of your life?" %}
+{% set img = "https://hessunacademy.com/wp-content/uploads/2021/05/funny-mad-libs.jpg" %}
+
+{% block content %}
+    <body >
+
+    <div class="display-4 text-center">Wacky Sentence Generator</div>
+    <div class="APIContainer">
+        <div style="text-align: center">
+            <div class="jokeContainer">
+                <div>
+                    <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Wacky Sentence Generator</p>
+                </div>
+            </div>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> WooHooooooooo </button>
+        </div>
+    </div>
+
+    </body>
+    <style>
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: darkcyan;
+        }
+
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myInput:focus {outline: 3px solid #ddd;}
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+    </style>
+
+    <style>
+        /* general */
+        body {
+            margin-bottom: 100px;}
+
+        .APIContainer {
+            margin: 50px auto 150px auto;
+            padding: 50px 30px 50px 30px;
+            border: 1px solid darkgray;
+            border-radius: 5px;
+            width: 40%;
+            min-width: 500px;
+            height: 20%;
+        }
+
+        /* Chuck Norris */
+        .jokeContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        .jokeTitle {
+            text-align: center;
+        }
+
+        #joke {
+            margin-left: 10px;
+            margin-top: 5px;
+            font-size: medium;
+            color: white;
+        }
+
+        #buttonGetJoke {
+            margin-left: auto;
+        }
+
+
+    </style>
+
+    <script>
+
+        const container = prompt("Enter a Container: ");
+        const adj = prompt("Enter an Adjective: ");
+        const adj2 = prompt("Enter another Adjective: ");
+        const adj3 = prompt("Enter another Adjective: ");
+        const adj4 = prompt("Enter another Adjective: ");
+        const food = prompt("Enter a food: ");
+        const food2 = prompt("Enter another food: ");
+        const noun = prompt("Enter a Noun: ");
+        const noun2 = prompt("Enter another Noun: ");
+        const noun3 = prompt("Enter another Noun: ");
+        const person = prompt("Enter a Person: ");
+        const person2 = prompt("Enter another Person: ");
+        const verb = prompt("Enter a Verb: ");
+        const verb2 = prompt("Enter another Verb: ");
+        const place = prompt("Enter a Place: ");
+        const place2 = prompt("Enter another Place: ");
+        const animal = prompt("Enter an Animal: ");
+
+    </script>
+
+    <script>
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
+
+        var arr = ["Is your " + container + " full of " + adj + " food? Maybe you should buy the " + food + " in the cafeteria. The sandwiches are made with " + adj2 + " " + " " + noun + " . Yum. They are wrapped in " + noun2 + " and are very " + adj3 + ". But if you pack your own lunch, be sure to bring " + adj4 + " " + " " + noun3 + ". Everyone loves those. You can even share them with " + person + " .",
+            "At night I dream of " + food + " that is as big as a " + noun + ". When I try to take a bite, it " + verb + " on my " + noun2 + ". The best time I ever ate "  + food2 + " was at the " + place + ". It tasted " + adj3 + " . But don't ever think I would do it again, even if it is most " + adj4 + " . My friend, " + person2 + ", likes it best with " + noun3 + " ." + " Be sure to give the leftovers to your " + animal + ".",
+        "Our school cafeteria has really " + adj + " food. Just thinking about it makes my stomach " + verb + " . The spaghetti is " + adj2 + " and tastes like " + noun + " . One day, I swear one of my meatballs started to " + verb2 + " ! The turkey tacos were totally " + adj3 + " and look kind of like old " + noun2 + " . My friend Dana actually likes the meatloaf, even thought it's " + adj3 + " " + adj4 + " . I call it 'mystery meatloaf' and think it's really made out of " + noun3 + " . My dad said he'd make my lunches, but the first day, he made me a sandwich out of " + noun + " and peanut butter! I think I'd rather take my chances with the cafeteria!"]
+
+        up.innerHTML = "Click on the button to generate "
+            + "a random restuarant.<br><br>";
+
+        function GFG_Fun() {
+            down.innerHTML =
+                arr[Math.floor(Math.random() * arr.length)];
+        }
+    </script>
+{% endblock %}
+
+
+</html>

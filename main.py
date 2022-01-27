@@ -121,6 +121,9 @@ def menus():
 def restaurants():
     return render_template("restaurants.html")
 
+@app.route('/wacky')
+def wacky():
+    return render_template("wacky.html")
 
 @app.route('/About Us/')
 def aboutus():
