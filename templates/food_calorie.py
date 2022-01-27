@@ -1,6 +1,6 @@
 import random
 
-from flask import Blueprint, jsonify
+from flask import Blueprint
 
 app_api = Blueprint('api', __name__,
                     url_prefix='/api',
@@ -38,8 +38,10 @@ food_list = [
 def _init_food():
     item_id = 1
     for item in food_list:
-        food_data.append({"foodName": item_id, "foodType": item, "protein": 0, "calories": 0})
+        food_data.append({" ": item})
         item_id += 1
+
+
 
 
 @app_api.route('/food')
@@ -49,11 +51,6 @@ def food1():
     return random.choice(food_data)
 
 
-@app_api.route('/jokes')
-def food2():
-    if len(food_data) == 0:
-        _init_food()
-    return food_data
 
 
 if __name__ == "__main__":
