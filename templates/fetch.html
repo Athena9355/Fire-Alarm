@@ -24,7 +24,22 @@
                 });
             });
     });
+
 </script>
+
+
+    <script>
+
+        function fetchData() {
+            return fetch('https://csp.nighthawkcodingsociety.com/api/jokes', {
+                mode: "no-cors"})
+                .then(data => console.log(data));
+
+        }
+
+    </script>
+
+    <button  class="btn btn-primary" id = "button" onclick = "fetchData()"> Click this to run Jokes in console </button>
 {% endblock %}
 
 
