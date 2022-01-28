@@ -1,0 +1,7 @@
+.grid{
+    display: flex; /*makes it actually look like a grid*/
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px; /*28 by 28 grid. 20px per square*/
+    border:  black;
+}

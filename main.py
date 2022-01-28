@@ -227,8 +227,12 @@ def snakegame():
 
 @app.route('/pacman')
 def pacman():
-    return render_template("PacMan Game/pacman.html")
+    return render_template("PacMan Game/index.html")
 
+
+@app.route('/pacman2')
+def pacman2():
+    return render_template("PacMan ver 2/pacman2.html")
 
 
 # runs the application on the development server
