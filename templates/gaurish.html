@@ -80,17 +80,9 @@
     }
 </style>
 
-        <script>
-            function switchRooms() {
-                var Image_Id = document.getElementById('room');
-                if (Image_Id.src.match("static/images/gaurishnew1.PNG")) {
-            Image_Id.src = "static/images/gaurishold1.PNG";
-                  }
-                 else {
-            Image_Id.src = "static/images/gaurishnew1.PNG";
-        }
-        }
-    </script>
+
+
+
 
 
 {% endblock %}
@@ -98,6 +90,7 @@
 
 
 <body>
+
 
 <div class="container p-3 my-3 border">
     <p>{{ result[0]["joke"] }}</p>

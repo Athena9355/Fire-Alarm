@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+</head>
+
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Calorie Counter" %}
+{% set page_description = "Want a random food item, and it's info?" %}
+{% set img = "https://media.timeout.com/images/105787696/630/472/image.jpg" %}
+
+
+{% block content %}
+<body>
+
+<div>
+    <br>
+    <form action="/food_calorie_py" id="translation" method="GET" >
+        <input type="submit"  class="btn btn-primary" id = "button_chipotle" value="Randomize Chipotle Menu!">
+        {{ result1 }}
+    </form>
+
+    <br>
+
+    <form action="/food_calorie_paneera_py" id="translation" method="GET" >
+        <input type="submit"  class="btn btn-primary" id = "button_paneera" value="Randomize Panera Menu!">
+        {{ result2 }}
+    </form>
+
+    <br>
+
+    <form action="/food_calorie_chickfila_py" id="translation" method="GET" >
+        <input type="submit"  class="btn btn-primary" id = "button_chickfila" value="Randomize Chick Fil A Menu!">
+        {{ result3 }}
+    </form>
+
+    <br>
+
+    <form action="/food_calorie_subway_py" id="translation" method="GET" >
+        <input type="submit"  class="btn btn-primary" id = "button_subway" value="Randomize Subway Menu!">
+        {{ result4 }}
+    </form>
+
+
+</div>
+
+</body>
+
+{% endblock %}
+</html>

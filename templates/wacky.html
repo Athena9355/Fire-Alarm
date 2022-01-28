@@ -8,32 +8,22 @@
 </head>
 
 {% extends "pagelayout/index.html" %}
-{% set page_title = "Restaurant Generator" %}
-{% set page_description = "Not sure where to eat?" %}
-{% set img = "https://www.marineroom.com/resourcefiles/home-special-menu-images/thanksgiving21.jpg" %}
+{% set page_title = "Wacky Sentence Generator" %}
+{% set page_description = "Ready for the best time of your life?" %}
+{% set img = "https://hessunacademy.com/wp-content/uploads/2021/05/funny-mad-libs.jpg" %}
 
 {% block content %}
     <body >
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Cuisines!</button>
-        <div id="myDropdown" class="dropdown-content">
-            <input type="text" placeholder="Search for the cuisine" id="myInput" onkeyup="filterFunction()">
-            <a href="/europeanfoodgen">European Food</a>
-            <a href="/asianfoodgen">Asian Food</a>
-            <a href="/mexicanfoodgen">Mexican Food</a>
-            <a href="/americanfoodgen">American Food</a>
-        </div>
-    </div>
 
-    <div class="display-4 text-center">Oceanic Restraunt</div>
+    <div class="display-4 text-center">Wacky Sentence Generator</div>
     <div class="APIContainer">
         <div style="text-align: center">
             <div class="jokeContainer">
                 <div>
-                    <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Random Restaurants</p>
+                    <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Wacky Sentence Generator</p>
                 </div>
             </div>
-            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> kia ora </button>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> WooHooooooooo </button>
         </div>
     </div>
 
@@ -132,14 +122,34 @@
     </style>
 
     <script>
+
+        const container = prompt("Enter a Container: ");
+        const adj = prompt("Enter an Adjective: ");
+        const adj2 = prompt("Enter another Adjective: ");
+        const adj3 = prompt("Enter another Adjective: ");
+        const adj4 = prompt("Enter another Adjective: ");
+        const food = prompt("Enter a food: ");
+        const food2 = prompt("Enter another food: ");
+        const noun = prompt("Enter a Noun: ");
+        const noun2 = prompt("Enter another Noun: ");
+        const noun3 = prompt("Enter another Noun: ");
+        const person = prompt("Enter a Person: ");
+        const person2 = prompt("Enter another Person: ");
+        const verb = prompt("Enter a Verb: ");
+        const verb2 = prompt("Enter another Verb: ");
+        const place = prompt("Enter a Place: ");
+        const place2 = prompt("Enter another Place: ");
+        const animal = prompt("Enter an Animal: ");
+
+    </script>
+
+    <script>
         var up = document.getElementById('GFG_UP');
         var down = document.getElementById('GFG_DOWN');
 
-        var arr = ["Grumpy's Meat Pies", "Queenstown Public House",
-            "Westerly Public House", "Perky's", "Pop Pie",
-            "Queenston Bistro", "Raglan Public House", "Blackmarket Bakery",
-            "Bare Back Grill","The Smoking Goat",
-            "Australian Pub", "Society Pacific Beach", "Piccolo Mondo"];
+        var arr = ["Is your " + container + " full of " + adj + " food? Maybe you should buy the " + food + " in the cafeteria. The sandwiches are made with " + adj2 + " " + " " + noun + " . Yum. They are wrapped in " + noun2 + " and are very " + adj3 + ". But if you pack your own lunch, be sure to bring " + adj4 + " " + " " + noun3 + ". Everyone loves those. You can even share them with " + person + " .",
+            "At night I dream of " + food + " that is as big as a " + noun + ". When I try to take a bite, it " + verb + " on my " + noun2 + ". The best time I ever ate "  + food2 + " was at the " + place + ". It tasted " + adj3 + " . But don't ever think I would do it again, even if it is most " + adj4 + " . My friend, " + person2 + ", likes it best with " + noun3 + " ." + " Be sure to give the leftovers to your " + animal + ".",
+        "Our school cafeteria has really " + adj + " food. Just thinking about it makes my stomach " + verb + " . The spaghetti is " + adj2 + " and tastes like " + noun + " . One day, I swear one of my meatballs started to " + verb2 + " ! The turkey tacos were totally " + adj3 + " and look kind of like old " + noun2 + " . My friend Dana actually likes the meatloaf, even thought it's " + adj3 + " " + adj4 + " . I call it 'mystery meatloaf' and think it's really made out of " + noun3 + " . My dad said he'd make my lunches, but the first day, he made me a sandwich out of " + noun + " and peanut butter! I think I'd rather take my chances with the cafeteria!"]
 
         up.innerHTML = "Click on the button to generate "
             + "a random restuarant.<br><br>";
