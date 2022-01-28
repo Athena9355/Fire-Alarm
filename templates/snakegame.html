@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+
     <style>
         #myBtn {
             display: none;
@@ -36,7 +40,16 @@
         }
     </style>
 </head>
+
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Snake Game" %}
+{% set page_description = "Play the Snake Game!" %}
+{% set img = "https://image.winudf.com/v2/image1/aHUuYmthbG1hbi5hbmRyb2lkLmFwcC53aGl0ZXNjcmVlbl9zY3JlZW5fMl8xNTY3MDI0NzUxXzA3Mg/screen-2.jpg?fakeurl=1&type=.jpg" %}
+
+
 <body>
+
+{% block content %}
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
 
@@ -69,7 +82,7 @@
 <body>
 
 <div id="score">0</div>
-<canvas id="snakeboard" width="400" height="400"></canvas> <!-- sets up the board/dimension of the board -->
+<canvas id="snakeboard" width="475" height="475"></canvas> <!-- sets up the board/dimension of the board -->
 
 <!--formatting the format and design of the snake  board and the score -->
 <!--future plans: add grids in the snakeboard-->
@@ -77,7 +90,7 @@
     #snakeboard {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 69%;
         transform: translate(-50%, -50%);
     }
     #score {
@@ -265,8 +278,10 @@
 </html>
 
 
-
+{% endblock %}
 
 </body>
+
+
 </html>
 
