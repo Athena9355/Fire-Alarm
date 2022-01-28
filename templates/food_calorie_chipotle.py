@@ -1,6 +1,7 @@
 import random
 
-from flask import Blueprint
+from flask import Blueprint, render_template
+from __init__ import app
 
 app_api = Blueprint('api', __name__,
                     url_prefix='/api',
@@ -49,6 +50,12 @@ def food1():
     if len(food_data) == 0:
         _init_food()
     return random.choice(food_data)
+
+
+
+@app.route('/food_calorie_chipotle_py', methods=['GET', 'POST'])
+def py_calorie():
+    return render_template("food_calorie.html", result1=food1())
 
 
 

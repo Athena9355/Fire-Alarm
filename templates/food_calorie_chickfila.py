@@ -1,6 +1,7 @@
 import random
 
-from flask import Blueprint
+from flask import Blueprint, render_template
+from __init__ import app
 
 app_api = Blueprint('api', __name__,
                     url_prefix='/api',
@@ -61,6 +62,9 @@ def food1_chickfila():
         _init_food_chickfila()
     return random.choice(food_data_chickfila)
 
+@app.route('/food_calorie_chickfila_py', methods=['GET', 'POST'])
+def py_calorie_chickfila():
+    return render_template("food_calorie.html", result3=food1_chickfila())
 
 
 

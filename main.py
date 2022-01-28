@@ -7,11 +7,18 @@ from __init__ import app
 # create a Flask instance
 
 from templates.aadya_aboutme_api import get_numberfact
-from templates.food_calorie import food1
-from templates.food_calorie_paneera import food1_paneera
 
+#PLEASE DO NOT DELETE THESE: blue print doesn't work, even if these are not being called, however they are
+# needed for the calorie function.
+from templates.food_calorie_chipotle import food1
 from templates.food_calorie_chickfila import food1_chickfila
+from templates.food_calorie_paneera import food1_paneera
 from templates.food_calorie_subway import food1_subway
+
+
+
+
+
 from templates.athena_aboutme_api import get_word
 from templates.siya_aboutme_api import siya
 
@@ -192,23 +199,13 @@ def calorie():
     return render_template("food_calorie.html")
 
 
-@app.route('/food_calorie_py', methods=['GET', 'POST'])
-def py_calorie():
-      return render_template("food_calorie.html", result1=food1())
 
 
-@app.route('/food_calorie_paneera_py', methods=['GET', 'POST'])
-def py_calorie_paneera():
-    return render_template("food_calorie.html", result2=food1_paneera())
 
 
-@app.route('/food_calorie_chickfila_py', methods=['GET', 'POST'])
-def py_calorie_chickfila():
-    return render_template("food_calorie.html", result3=food1_chickfila())
 
-@app.route('/food_calorie_subway_py', methods=['GET', 'POST'])
-def py_calorie_subway():
-    return render_template("food_calorie.html", result4=food1_subway())
+
+
 
 
 
