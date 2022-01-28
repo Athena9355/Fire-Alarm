@@ -153,6 +153,19 @@ def search():
 def darkmode():
     return render_template("darkmode.html")
 
+@app.route('/snakegame')
+def snakegame():
+    return render_template("snakegame.html")
+
+@app.route('/pacman')
+def pacman():
+    return render_template("PacMan Game/index.html")
+
+
+@app.route('/pacman2')
+def pacman2():
+    return render_template("PacMan ver 2/pacman2.html")
+
 
 
 
