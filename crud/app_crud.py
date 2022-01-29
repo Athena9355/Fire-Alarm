@@ -2,7 +2,6 @@
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_restful import Api, Resource
 import requests
-
 from crud.model import Users
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects

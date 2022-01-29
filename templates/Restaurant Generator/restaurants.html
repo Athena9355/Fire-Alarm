@@ -21,8 +21,6 @@
         <a href="/asianfoodgen">Asian Food</a>
         <a href="/americanfoodgen">American Food</a>
         <a href="/europeanfoodgen">European Food</a>
-        <a href="/mexicanfoodgen">Mexican Food</a>
-        <a href="/oceanicfoodgen">Oceanic Food</a>
     </div>
 </div>
 
@@ -34,7 +32,7 @@
                     <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Random Restaurants</p>
                 </div>
             </div>
-            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> Yes! </button>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> Want a random cuisine? </button>
         </div>
     </div>
 
@@ -136,19 +134,16 @@
     var up = document.getElementById('GFG_UP');
     var down = document.getElementById('GFG_DOWN');
 
-    var arr = ["Asian","American", "Mexican", "European", "Oceanic"];
+    var arr = ["Asian","American", "European"];
 
     up.innerHTML = "Click on the button to generate "
         + "a random restuarant.<br><br>";
 
-
     function GFG_Fun() {
         down.innerHTML =
-        const number = prompt("Enter a Verb: ");     arr[Math.floor(Math.random() * arr.length)];
+            arr[Math.floor(Math.random() * arr.length)];
     }
 </script>
-
-
 {% endblock %}
 
 

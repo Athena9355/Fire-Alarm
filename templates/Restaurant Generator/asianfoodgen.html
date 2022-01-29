@@ -10,7 +10,7 @@
 {% extends "pagelayout/index.html" %}
 {% set page_title = "Restaurant Generator" %}
 {% set page_description = "Not sure where to eat?" %}
-{% set img = "https://cdn.thegentlemansjournal.com/wp-content/uploads/2016/09/restsushisambalondon-664x442-c-center.jpg" %}
+{% set img = "https://www.gannett-cdn.com/presto/2021/02/23/NCOD/92d20d31-6efb-4b2f-b5d5-b9e2ea3f2454-IMG_3165.JPG" %}
 
 {% block content %}
     <body >
@@ -19,13 +19,12 @@
         <div id="myDropdown" class="dropdown-content">
             <input type="text" placeholder="Search for the cuisine" id="myInput" onkeyup="filterFunction()">
             <a href="/americanfoodgen">American Food</a>
-            <a href="/asianfoodgen">Asian Food</a>
-            <a href="/mexicanfoodgen">Mexican Food</a>
-            <a href="/oceanicfoodgen">Oceanic Food</a>
+            <a href="/europeanfoodgen">European Food</a>
+
         </div>
     </div>
 
-    <div class="display-4 text-center">European Restraunt</div>
+    <div class="display-4 text-center">Asian Restraunt</div>
     <div class="APIContainer">
         <div style="text-align: center">
             <div class="jokeContainer">
@@ -33,7 +32,7 @@
                     <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Random Restaurants</p>
                 </div>
             </div>
-            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> Oui </button>
+            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> 你好 </button>
         </div>
     </div>
 
@@ -135,11 +134,15 @@
         var up = document.getElementById('GFG_UP');
         var down = document.getElementById('GFG_DOWN');
 
-        var arr = ["Chez Loma", "Et Voila",
-            "La bonne Table", "The French Gourmet", "The Cheesecake Factory",
-            "Aniruff", "Blue Boheme", "Parc Bistro-Brasserie",
-            "Kaiserhof Restaurant & Biergarten","Au Revoir French Bistro",
-            "Bistro du Marche", "Little Frenchie", "Ikea Restaurant"];
+        var arr = ["Yummy Sushi", "Manna Korean BBQ",
+            "China Max", "Pho Ca Dao & Grill", "Saigon on Fifth",
+            "Amarin Thai Restaurant", "Spices Thai Cafe", "PB Sushi",
+            "Full Moon Sushi & Kitchen Bar","The Joint",
+            "Saiko Sushi", "Mizu", "Lotus Thai Cuisine", "Sushi Mori", "P.F. Chang's", "Alvaro's Mexican Food", "Turmeric Thai Kitchen",
+            "Dumpling Inn", "Shiku",
+            "Azuki Sushi", "Swaddee Thai Restaurant", "Din Tai Fung",
+            "Sushi Deli 2 Restaurant", "Nobu San Diego", "Nobu San Diego",
+            "Nobu San Diego","Harney Sushi"];
 
         up.innerHTML = "Click on the button to generate "
             + "a random restuarant.<br><br>";
