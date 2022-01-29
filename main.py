@@ -13,7 +13,9 @@ from templates.nutritional_info_api import get_info
 
 from crud.app_crud import app_crud
 
-app.register_blueprint(app_crud)
+from aboutus import aboutus
+
+app.register_blueprint(aboutus)
 
 
 # connects default URL to render index.html
