@@ -7,7 +7,18 @@ from __init__ import app
 # create a Flask instance
 
 from templates.aadya_aboutme_api import get_numberfact
-from templates.food_calorie import food1,food2
+
+#PLEASE DO NOT DELETE THESE: blue print doesn't work, even if these are not being called, however they are
+# needed for the calorie function.
+from templates.food_calorie_chipotle import food1
+from templates.food_calorie_chickfila import food1_chickfila
+from templates.food_calorie_paneera import food1_paneera
+from templates.food_calorie_subway import food1_subway
+
+
+
+
+
 from templates.athena_aboutme_api import get_word
 from templates.siya_aboutme_api import siya
 
@@ -16,8 +27,14 @@ from templates.nutritional_info_api import get_info
 
 from crud.app_crud import app_crud
 
+
+from aboutus import aboutus
+
+app.register_blueprint(aboutus)
+
 app.register_blueprint(app_crud)
-#app.register_blueprint(app_api)
+app.register_blueprint(app_api)
+
 
 
 # connects default URL to render index.html
@@ -38,10 +55,21 @@ def result_recipe_rice():
 def result_recipe_potatos():
     return render_template("result_recipe_potatos.html")
 
+@app.route('/result_recipe_pm')
+def result_recipe_pm():
+    return render_template("result_recipe_pm.html")
 
-@app.route('/result_recipe_milk')
-def result_recipe_milk():
-    return render_template("result_recipe_milk.html")
+@app.route('/result_recipe_rm')
+def result_recipe_rm():
+    return render_template("result_recipe_rm.html")
+
+@app.route('/result_recipe_rp')
+def result_recipe_rp():
+    return render_template("result_recipe_rp.html")
+
+@app.route('/result_recipe_all')
+def result_recipe_all():
+    return render_template("result_recipe_all.html")
 
 @app.route('/menus')
 def menus():
@@ -52,6 +80,9 @@ def menus():
 def restaurants():
     return render_template("Restaurant Generator/restaurants.html")
 
+@app.route('/wacky')
+def wacky():
+    return render_template("wacky.html")
 
 @app.route('/About Us/')
 def aboutus():
@@ -135,6 +166,19 @@ def search():
 def darkmode():
     return render_template("darkmode.html")
 
+@app.route('/snakegame')
+def snakegame():
+    return render_template("snakegame.html")
+
+@app.route('/pacman')
+def pacman():
+    return render_template("PacMan Game/index.html")
+
+
+@app.route('/pacman2')
+def pacman2():
+    return render_template("PacMan ver 2/pacman2.html")
+
 
 
 
@@ -161,9 +205,14 @@ def calorie():
     return render_template("food_calorie.html")
 
 
-@app.route('/food_calorie_py', methods=['GET', 'POST'])
-def py_calorie():
-      return render_template("food_calorie.html", result1=food1(), result2=food2())
+
+
+
+
+
+
+
+
 
 
 
