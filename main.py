@@ -1,4 +1,3 @@
-# import "packages" from flask
 from flask import Flask, render_template, request
 import requests, json
 
@@ -27,14 +26,8 @@ from templates.nutritional_info_api import get_info
 
 from crud.app_crud import app_crud
 
-
-from aboutus import aboutus
-
-app.register_blueprint(aboutus)
-
 app.register_blueprint(app_crud)
-app.register_blueprint(app_api)
-
+#app.register_blueprint(app_api)
 
 
 # connects default URL to render index.html
@@ -203,22 +196,6 @@ def api_translator():
 @app.route('/food_calorie')
 def calorie():
     return render_template("food_calorie.html")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @app.route('/athena')
 def athena():
