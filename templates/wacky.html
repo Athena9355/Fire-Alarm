@@ -13,150 +13,166 @@
 {% set img = "https://hessunacademy.com/wp-content/uploads/2021/05/funny-mad-libs.jpg" %}
 
 {% block content %}
-    <body >
+    <head>
+        <title> Mad Libs Generator </title>
+    </head>
 
-    <div class="display-4 text-center">Wacky Sentence Generator</div>
-    <div class="APIContainer">
-        <div style="text-align: center">
-            <div class="jokeContainer">
-                <div>
-                    <p id = "GFG_DOWN" class="h2 jokeTitle" style="color: #1da1f2">Wacky Sentence Generator</p>
-                </div>
+    <body>
+    <div id="madlib-generator">
+        <h1> Madlibs Generator</h1>
+        <form id="madlibs-form" onsubmit="return generate(event)">
+            <div class="row">
+                <input type="text" name="adjective" placeholder="adjective" />
             </div>
-            <button  class="btn btn-primary" id = "button" onclick = "GFG_Fun()"> WooHooooooooo </button>
-        </div>
+            <div class="row">
+                <input type="text" name="pluralNoun1" placeholder="plural_noun" />
+            </div>
+            <div class="row">
+                <input type="text" name="place" placeholder="place" />
+            </div>
+            <div class="row">
+                <input type="text" name="place2" placeholder="place" />
+            </div>
+            <div class="row">
+                <input type="text" name="place3" placeholder="place" />
+            </div>
+            <div class="row">
+                <input type="text" name="number" placeholder="number" />
+            </div>
+            <div class="row">
+                <input type="text" name="number2" placeholder="number" />
+            </div>
+            <div class="row">
+                <input type="text" name="number3" placeholder="number" />
+            </div>
+            <div class="row">
+                <input type="text" name="adjective2" placeholder="adjective" />
+            </div>
+            <div class="row">
+                <input type="text" name="adjective3" placeholder="adjective" />
+            </div>
+            <div class="row">
+                <input type="text" name="place4" placeholder="place" />
+            </div>
+            <div class="row">
+                <input type="text" name="pastTenseVerb" placeholder="past_tense_verb" />
+            </div>
+            <div class="row">
+                <input type="text" name="adjective3" placeholder="adjective" />
+            </div>
+            <div class="row">
+                <input type="text" name="pastTenseVerb2" placeholder="past_tense_verb" />
+            </div>
+            <div class="row">
+                <input type="text" name="pluralNoun2" placeholder="plural_noun" />
+            </div>
+            <div class="row">
+                <input type="text" name="name1" placeholder="name" />
+            </div>
+            <div class="row">
+                <input type="text" name="place4" placeholder="place" />
+            </div>
+            <div class="row">
+                <input type="text" name="noun2" placeholder="noun" />
+            </div>
+            <div class="row">
+                <input type="text" name="pastTenseVerb3" placeholder="past_tense_verb" />
+            </div>
+            <div class="row">
+                <input type="text" name="number4" placeholder="number" />
+                <div class="row">
+                    <input type="text" name="noun1" placeholder="noun" />
+                </div>
+                <button class="btn">Generate Story</button>
+        </form>
+        <article id="output"></article>
     </div>
-
     </body>
     <style>
-        .dropbtn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
+        body {
+            font-family: monoscope;
+            font-size: 12px;
+            background-color: #0099cc;
+        }
+
+        #madlibs-form {
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #output {
+            width: calc( 70% - 50px );
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #eee;
+            box-shadow: 1px 1px 2px #ccc;
+            min-height: 300px;
+        }
+
+        .added {
+            color: #003399;
+        }
+
+        .row {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .row input {
+            width: calc( 100% - 20px);
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-size: 10px;
+            color: #333
+        }
+
+        button {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #eee;
+        }
+
+        button:hover {
+            background-color: #8c8c8c;
             cursor: pointer;
         }
 
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: darkcyan;
+        button:focus {
+            outline: none;
         }
 
-        #myInput {
-            box-sizing: border-box;
-            background-image: url('searchicon.png');
-            background-position: 14px 12px;
-            background-repeat: no-repeat;
-            font-size: 16px;
-            padding: 14px 20px 12px 45px;
-            border: none;
-            border-bottom: 1px solid #ddd;
+        button:active {
+            background-color: #ddd;
+            color: #000;
+            border: 1px solid #888;
         }
-
-        #myInput:focus {outline: 3px solid #ddd;}
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f6f6f6;
-            min-width: 230px;
-            overflow: auto;
-            border: 1px solid #ddd;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {background-color: #ddd;}
-
-        .show {display: block;}
     </style>
-
-    <style>
-        /* general */
-        body {
-            margin-bottom: 100px;}
-
-        .APIContainer {
-            margin: 50px auto 150px auto;
-            padding: 50px 30px 50px 30px;
-            border: 1px solid darkgray;
-            border-radius: 5px;
-            width: 40%;
-            min-width: 500px;
-            height: 20%;
-        }
-
-        /* Chuck Norris */
-        .jokeContainer {
-            display: flex;
-            align-items: center;
-        }
-
-        .jokeTitle {
-            text-align: center;
-        }
-
-        #joke {
-            margin-left: 10px;
-            margin-top: 5px;
-            font-size: medium;
-            color: white;
-        }
-
-        #buttonGetJoke {
-            margin-left: auto;
-        }
-
-
-    </style>
-
     <script>
+        function generate(event) {
+            event.preventDefault();
 
-        const container = prompt("Enter a Container: ");
-        const adj = prompt("Enter an Adjective: ");
-        const adj2 = prompt("Enter another Adjective: ");
-        const adj3 = prompt("Enter another Adjective: ");
-        const adj4 = prompt("Enter another Adjective: ");
-        const food = prompt("Enter a food: ");
-        const food2 = prompt("Enter another food: ");
-        const noun = prompt("Enter a Noun: ");
-        const noun2 = prompt("Enter another Noun: ");
-        const noun3 = prompt("Enter another Noun: ");
-        const person = prompt("Enter a Person: ");
-        const person2 = prompt("Enter another Person: ");
-        const verb = prompt("Enter a Verb: ");
-        const verb2 = prompt("Enter another Verb: ");
-        const place = prompt("Enter a Place: ");
-        const place2 = prompt("Enter another Place: ");
-        const animal = prompt("Enter an Animal: ");
+            var data = [];
+            $('#madlibs-form').serializeArray().forEach( function(option){
+                data[option['name']] = option['value'];
+            })
 
-    </script>
+            const story = `
+<p>
+One <span class="added">${data.adjective} </span>  morning, long ago...a group of <span class="added">${data.pluralNoun1}</span> traveled far and wide. They passed <span class="added">${data.place}</span> , <span class="added">${data.place2}</span> , and toured  <span class="added">${data.place3}</span> 3 times. It took them <span class="added">${data.number}</spam> weeks, <span class="added">${data.number2}</span> days, and <span class="added">${data.number3}</span> hours. They were excited about the <span class="added">${data.adjective2}</span> skies and <span class="added">${data.adjective3}</span> grass they would see. Once they reached their final destination, <span class="added">${data.place4}</span> , they <span class="added">${data.pastTenseVerb}</span> all over the place.
+</p>
+<p>
+Finally they became <span class="added">${data.adjective3}</span> and <span class="added">${data.pastTenseVerb2}</span> for the rest of the night. Next they observed several <span class="added">${data.pluralNoun2}</span> . <span class"added">${data.name1}</span> became tired and fell asleep. The group of <span class="added">${data.pluralNoun1}</span> left the <span class="added">${data.place4}</span> without <span class="added">${data.name1}</span> . </p>
 
-    <script>
-        var up = document.getElementById('GFG_UP');
-        var down = document.getElementById('GFG_DOWN');
+<p>
+<span class="added">${data.name1}</span> woke up all alone. <span class="added">${data.name1}</span> screamed until it lost it's <span class="added">${data.noun2}</span>. <span class="added">${data.name1}</span> never <span class"added">${data.pastTenseVerb3}</span> again. <span class="added">${data.name1}</span> spent <span class="added">${data.number4}</span> years near <span class="added">${data.place4}</span> in the middle of nowhere. Luckily, <span class="added">${data.name1}</span> did make a friend. Even though it was a <span class="added">${data.noun1}</span>. <span class="added">${data.name1}</span> and the <span class="added">${data.noun1}</span> kept each other company. When <span class="added">${data.name1}</span> was found, <span class="added">${data.name1}</span> was diagnosed with schizoprenia. <span class="added">${data.noun1}</span> never existed. </p>
+`
 
-        var arr = ["Is your " + container + " full of " + adj + " food? Maybe you should buy the " + food + " in the cafeteria. The sandwiches are made with " + adj2 + " " + " " + noun + " . Yum. They are wrapped in " + noun2 + " and are very " + adj3 + ". But if you pack your own lunch, be sure to bring " + adj4 + " " + " " + noun3 + ". Everyone loves those. You can even share them with " + person + " .",
-            "At night I dream of " + food + " that is as big as a " + noun + ". When I try to take a bite, it " + verb + " on my " + noun2 + ". The best time I ever ate "  + food2 + " was at the " + place + ". It tasted " + adj3 + " . But don't ever think I would do it again, even if it is most " + adj4 + " . My friend, " + person2 + ", likes it best with " + noun3 + " ." + " Be sure to give the leftovers to your " + animal + ".",
-        "Our school cafeteria has really " + adj + " food. Just thinking about it makes my stomach " + verb + " . The spaghetti is " + adj2 + " and tastes like " + noun + " . One day, I swear one of my meatballs started to " + verb2 + " ! The turkey tacos were totally " + adj3 + " and look kind of like old " + noun2 + " . My friend Dana actually likes the meatloaf, even thought it's " + adj3 + " " + adj4 + " . I call it 'mystery meatloaf' and think it's really made out of " + noun3 + " . My dad said he'd make my lunches, but the first day, he made me a sandwich out of " + noun + " and peanut butter! I think I'd rather take my chances with the cafeteria!"]
-
-        up.innerHTML = "Click on the button to generate "
-            + "a random restuarant.<br><br>";
-
-        function GFG_Fun() {
-            down.innerHTML =
-                arr[Math.floor(Math.random() * arr.length)];
+            $('#output').html(story);
         }
     </script>
 {% endblock %}
