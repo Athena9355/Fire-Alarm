@@ -142,6 +142,11 @@ def pl():
 def nutrition():
     return render_template("nutrition.html")
 
+@app.route('/locationfinder')
+def locationfinder():
+    return render_template("locationfinder.html")
+
+
 
 @app.route('/nutritional_info_api', methods=['GET', 'POST'])
 def search():
