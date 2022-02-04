@@ -146,6 +146,10 @@ def nutrition():
 def locationfinder():
     return render_template("locationfinder.html")
 
+@app.route('/reservation')
+def reservation():
+    return render_template("reservation.html")
+
 
 
 @app.route('/nutritional_info_api', methods=['GET', 'POST'])
