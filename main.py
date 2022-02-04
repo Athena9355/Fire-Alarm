@@ -118,6 +118,9 @@ def oceanicfoodgen():
     return render_template("Restaurant Generator/oceanicfoodgen.html")
 
 
+@app.route('/foodgallery')
+def foodgallery():
+    return render_template("foodgallery.html")
 
 @app.route('/about_us')
 def about_us():
