@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import render_template, request
 import requests, json
 
 from __init__ import app
@@ -6,20 +6,11 @@ from __init__ import app
 # create a Flask instance
 
 from templates.aadya_aboutme_api import get_numberfact
+from templates.ordering_menus.inandout import tax_calculator
 
 #PLEASE DO NOT DELETE THESE: blue print doesn't work, even if these are not being called, however they are
 # needed for the calorie function.
-from templates.food_calorie_chipotle import food1
-from templates.food_calorie_chickfila import food1_chickfila
-from templates.food_calorie_paneera import food1_paneera
-from templates.food_calorie_subway import food1_subway
 
-
-
-
-
-from templates.athena_aboutme_api import get_word
-from templates.siya_aboutme_api import siya
 
 from templates.nutritional_info_api import get_info
 #from api.webapi import app_api
@@ -64,9 +55,6 @@ def result_recipe_rp():
 def result_recipe_all():
     return render_template("result_recipe_all.html")
 
-@app.route('/menus')
-def menus():
-    return render_template("menus.html")
 
 
 @app.route('/restaurants')
@@ -214,6 +202,7 @@ def athena():
     return render_template("athena.html")
 
 
+
 @app.route('/karthik')
 def karthik():
     return render_template("karthik.html")
@@ -233,6 +222,53 @@ def siya():
     output = json.loads(response.text)
     print(response.text)
     return render_template("siya.html", result = output)
+
+
+
+
+@app.route('/menus')
+def menus():
+    return render_template("menus.html")
+
+
+@app.route('/inandout')
+def inandout():
+    return render_template("ordering_menus/inandout.html")
+
+
+@app.route('/inandout', methods=['POST'])
+def inandout_function():
+    bill_final = " "
+    if request.form:
+        bill_amt = request.form.get("bill_html")
+        bill_final = tax_calculator(bill_amt)
+        if bill_amt != 0:  # input field has content
+            print("Please enter an input")
+        print(bill_final)
+    return render_template("ordering_menus/inandout.html", final=bill_final)
+
+@app.route('/kfc')
+def kfc():
+    return render_template("ordering_menus/kfc.html")
+
+
+@app.route('/kfc', methods=['POST'])
+def kfc_function():
+    bill_final = " "
+    if request.form:
+        bill_amt = request.form.get("bill_html")
+        bill_final = tax_calculator(bill_amt)
+        if bill_amt != 0:  # input field has content
+            print("Please enter an input")
+        print(bill_final)
+    return render_template("ordering_menus/kfc.html", final=bill_final)
+
+
+
+
+
+
+
 
 
 # runs the application on the development server

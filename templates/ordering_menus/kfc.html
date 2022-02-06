@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+</head>
+
+{% extends "pagelayout/index.html" %}
+{% set page_title = "Ordering Food From KFC" %}
+{% set page_description = "Want to Buy Food from KFC" %}
+{% set img = "https://upload.wikimedia.org/wikipedia/sco/b/bf/KFC_logo.svg" %}
+
+{% block content %}
+
+
+
+    <h2 style="text-align: center">Tax Calculator and Billing</h2>
+
+
+
+    <form action="kfc" id="translation" method="POST" >
+        <p>How much was your bill?
+            <br>
+            $ <input name="bill_html" id="bill_html">
+            <br>
+            <input type="submit" value="Calculate Bill">
+            <br>
+            <br>
+            {{ final }}
+
+    </form>
+
+    <form action="final" id="final">
+        <p>Shall we place the order?
+            <br>
+
+            <button onclick="return final()">Yes</button>
+            <br>
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        function final() {
+            let text1 = "Your order of ";
+            let text2 = " has been placed!";
+            document.getElementById("demo").innerHTML = text1.concat({{ final }}, " ", text2);
+            return false
+
+        }
+
+
+
+    </script>
+
+{% endblock %}
+</html>
