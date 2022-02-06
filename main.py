@@ -10,7 +10,12 @@ from templates.ordering_menus.inandout import tax_calculator
 
 #PLEASE DO NOT DELETE THESE: blue print doesn't work, even if these are not being called, however they are
 # needed for the calorie function.
-
+#PLEASE DO NOT DELETE THESE: blue print doesn't work, even if these are not being called, however they are
+# needed for the calorie function.
+from templates.food_calorie_chipotle import food1
+from templates.food_calorie_chickfila import food1_chickfila
+from templates.food_calorie_paneera import food1_paneera
+from templates.food_calorie_subway import food1_subway
 
 from templates.nutritional_info_api import get_info
 #from api.webapi import app_api
