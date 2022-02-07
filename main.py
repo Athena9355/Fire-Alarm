@@ -213,6 +213,12 @@ def karthik():
     return render_template("karthik.html")
 
 
+
+@app.route('/notpong')
+def notpong():
+    return render_template("pong.html")
+
+
 @app.route('/siya')
 def siya():
     return render_template("siya.html")
