@@ -262,6 +262,10 @@ def inandout_function():
 def kfc():
     return render_template("ordering_menus/kfc.html")
 
+@app.route('/pianotiles')
+def pianotiles():
+    return render_template("piano tile game/pianotiles.html")
+
 
 @app.route('/kfc', methods=['POST'])
 def kfc_function():
