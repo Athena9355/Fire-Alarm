@@ -11,11 +11,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
         <h1>random number <span id="randomNum"></span></h1>
+        <h1>The time is: <span id="time"></span> seconds.</h1>
     </head>
     <body>
-    <h1>click on the screen to start the game</h1>
+    <h1>Click on the screen to start the game!</h1>
     <div style="text-align: center">
-        <canvas id="pong" width="600" height="400" ></canvas>
+        <canvas id="pong" width="600" height="400"></canvas>
     </div>
 <script>
     let randomNum;
@@ -114,6 +115,7 @@
                         this.update((millis - lastTime) / 1000); /*updates the difference in time and convert it to whole seconds*/
                     }
                     lastTime = millis;
+                    document.getElementById("time").innerHTML = lastTime
                     /*attached callback to request animation again*/
                     requestAnimationFrame(callback)
                 };
@@ -196,6 +198,7 @@
                     } else {
                         playerId = 0;
                     }
+                    document.getElementById("score").innerHTML = playerId
 
                     /*adding score to the player who won*/
                     this.players[playerId].score ++;
