@@ -60,6 +60,10 @@ def result_recipe_rp():
 def result_recipe_all():
     return render_template("result_recipe_all.html")
 
+@app.route('/graph')
+def graph():
+    return render_template("graph.html")
+
 
 
 @app.route('/restaurants')
