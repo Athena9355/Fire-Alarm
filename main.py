@@ -213,6 +213,12 @@ def karthik():
     return render_template("karthik.html")
 
 
+
+@app.route('/notpong')
+def notpong():
+    return render_template("pong.html")
+
+
 @app.route('/siya')
 def siya():
     return render_template("siya.html")
@@ -255,6 +261,10 @@ def inandout_function():
 @app.route('/kfc')
 def kfc():
     return render_template("ordering_menus/kfc.html")
+
+@app.route('/memory')
+def memory():
+    return render_template("memory_game/memory_game.html")
 
 
 @app.route('/kfc', methods=['POST'])
