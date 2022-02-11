@@ -1,0 +1,71 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    <html>
+
+    <br>
+    <br>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {display:none;}
+    </style>
+
+
+    <body>
+    <br>
+
+    <p style="font-size: xxx-large; font-family: 'BM Hanna 11yrs Old'" class="w3-center">Rotating Popular Food Gallery</p>
+    <p style="font-size: xx-large; font-family: 'BM Hanna 11yrs Old'" class="w3-center">Inspiration for your next meal :)</p>
+    <br>
+    <div class="container" style="background-color: whitesmoke; width:550px; height: 430px; padding: 15px">
+        <div class="w3-content w3-section" style="max-width:500px; align-content: center">
+            <img class="Slides" src="/static/images/burger.jpg" style="width:100%" alt="burger">
+            <img class="Slides" src="/static/images/burrito.jpg" style="width:100%" alt="burrito">
+            <img class="Slides" src="/static/images/cakes.jpg" style="width:100%" alt="cake">
+            <img class="Slides" src="/static/images/pasta.jpg" style="width:100%" alt="pasta">
+            <img class="Slides" src="/static/images/pizza.jpg" style="width:100%" alt="pizza">
+            <img class="Slides" src="/static/images/rices.jpg" style="width:100%" alt="rice">
+            <img class="Slides" src="/static/images/sushi.png" style="width:100%" alt="sushi">
+        </div>
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("Slides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+    {% block background %}
+        <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vanta.fog.min.js') }}"></script>
+        <script>
+            VANTA.FOG({
+                el: "body",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 850.00,
+                minWidth: 200.00,
+                highlightColor: 0xffffff,
+                midtoneColor: 0xffffff,
+                lowlightColor: 0xfaaaaa,
+                baseColor: 0xfcd5ba,
+                speed: 5.00,
+                zoom: 0.80
+            })
+        </script>
+    {% endblock %}
+    </body>
+{% endblock %}

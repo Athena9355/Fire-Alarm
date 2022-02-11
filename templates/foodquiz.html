@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+{% include "layouts/base.html" %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+    background-color: mediumpurple;
+    text-align: center;
+    }
+</style>
+
+<title> FOOD Quiz </title>
+
+</html>
+
+
+{% set project = "quiz" %}
+
+<!-- made by siya-->
+
+<body>
+<h1> ART QUIZ</h1>
+{#    <div holds the quiz#}
+<div id="quiz"></div>
+{#    button submits the quiz#}
+<button id="submit">Submit Quiz</button>
+{#    <div displays results#}
+<div id="results"></div>
+</body>
+
+<script>
+        // Functions
+        function buildQuiz(){
+            // variable to store the HTML output including question and answer choices
+            const output = [];
+
+            // for loop loops through each question (iteration)
+            //parameters are current value (currentQuestion) and index (questionNumber)
+            myQuestions.forEach(
+                (currentQuestion, questionNumber) => {
+
+                    // variable to store the list of possible answers
+                    const answers = [];
+
+                    // and for each available answer...
+                    for(letter in currentQuestion.answers){
+
+                        // HTML radio buttons are enclosed in <label> element
+                        answers.push(
+                            `<label>
+                             <input type="radio" name="question${questionNumber}" value="${letter}">
+                             ${letter} :
+                             ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                    }
+                    // add this question and its answers to the output
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+                        <div class="answers"> ${answers.join('')} </div>`
+                    );
+                }
+            );
+
+            // finally combine our output list into one string of HTML and put it on the page
+            quizContainer.innerHTML = output.join('');
+        }
+        // Runs when user clicks Submit button
+        // Loops over answers, checks them, and shows results
+        function showResults(){
+            // gather answer containers from our quiz
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+
+            // keep track of user's answers
+            let numCorrect = 0;
+
+            // for each question...
+            myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+                // find selected answer
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                // if answer is correct
+                if(userAnswer === currentQuestion.correctAnswer){
+                    // add to the number of correct answers
+                    numCorrect++;
+
+                    // color the answers green
+                    answerContainers[questionNumber].style.color = 'lightgreen';
+                }
+                // if answer is wrong or blank
+                else{
+                    // color the answers red
+                    answerContainers[questionNumber].style.color = 'red';
+                }
+            });
+
+            // show number of correct answers out of total
+            resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        }
+
+        // HTML elements are stored in variables
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        //Using object literals (fixed values in source code) + array to hold quiz questions
+        //Since this is an array, questions will appear in the order they are listed
+
+
+        const myQuestions = [
+            {
+                question: "question 1",
+                answers: {
+                    a: "answer⠀",
+                    b: "answer⠀",
+                    c: "answer⠀",
+                    d: "answer⠀"
+                },
+                correctAnswer: "d"
+            },
+            {
+                question: "question",
+                        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer ⠀"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "question",
+        answers: {
+            a: "answer⠀",
+            b: "answer⠀",
+            c: "answer⠀",
+            d: "answer⠀"
+        },
+        correctAnswer: "b"
+    },
+];
+document.getElementById('quiz').style.color = 'white';
+// Runs immediately after page is opened
+buildQuiz();
+
+// on submit, show results
+submitButton.addEventListener('click', showResults);
+
+    </script>
