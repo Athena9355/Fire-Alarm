@@ -10,14 +10,26 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
+        <h1>random number <span id="randomNum"></span></h1>
     </head>
     <body>
     <h1>click on the screen to start the game</h1>
     <div style="text-align: center">
         <canvas id="pong" width="600" height="400" ></canvas>
     </div>
+<script>
+    let randomNum;
+    randomNum=0
+    setInterval(function test(){
+        randomNum = window.Math.floor(Math.random()* 75);
+        document.getElementById("randomNum").innerHTML = randomNum
 
-    <script>
+    }, 3000);
+
+
+
+
+
         /*setting up a vector to hold an x position and y position*/
         class Vec{
             /*default x and y = 0*/
@@ -149,16 +161,26 @@
                 this.ball.pos.y = this._canvas.height / 2;
                 this.ball.vel.x = 0; /*initial velocity set to 0*/
                 this.ball.vel.y = 0;
+
             }
             /*start the game when the user clicks*/
             start(){
                 if (this.ball.vel.x === 0 && this.ball.vel.y === 0){
                     this.ball.vel.x = 400;
                     this.ball.vel.y = 400;
+                    randomNum=0
                 }
             }
 
-            /*animates the ball*/
+            /*function rand(0, 1000) {
+                let randomNum = Math.random() * (1000);
+                return Math.round(randomNum);}*/
+
+
+
+
+
+                /*animates the ball*/
             update(dt){ /*takes dt and calcuate with it under the function update*/
                 this.ball.pos.x += this.ball.vel.x * dt;
                 this.ball.pos.y += this.ball.vel.y * dt;
@@ -187,7 +209,21 @@
                 this.draw();
 
                 /*making player 2. the computer that will follow the ball's y position*/
-                this.players[1].pos.y = this.ball.pos.y;
+                /*function rand(0, 1000) {
+                let randomNum = Math.random() * (1000);
+                return Math.round(randomNum);}*/
+
+
+
+              /*  let randomNum;
+
+                (function repeat() {
+                    randomNum = Math.random(0, 1000)* 1000;
+                    setTimeout(repeat, 100000000000000000000000000000000000);
+                    document.getElementById("randomNum").innerHTML = randomNum
+
+                })(); */
+                this.players[1].pos.y = this.ball.pos.y + randomNum;
 
                 this.players.forEach(player => this.collide(player, this.ball));
             }
