@@ -11,21 +11,21 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
         <h1>random number <span id="randomNum"></span></h1>
-        <h1>The time is: <span id="time"></span> seconds.</h1>
+        <h1>time <span id="time"></span></h1>
     </head>
     <body>
     <h1>Click on the screen to start the game!</h1>
     <div style="text-align: center">
-        <canvas id="pong" width="600" height="400"></canvas>
+        <canvas id="pong" width="600" height="400" ></canvas>
     </div>
-<script>
-    let randomNum;
-    randomNum=0
-    setInterval(function test(){
-        randomNum = window.Math.floor(Math.random()* 75);
-        document.getElementById("randomNum").innerHTML = randomNum
+    <script>
+        let randomNum;
+        randomNum=0
+        setInterval(function test(){
+            randomNum = window.Math.floor(Math.random()* 75);
+            document.getElementById("randomNum").innerHTML = randomNum
 
-    }, 3000);
+        }, 3000);
 
 
 
@@ -115,9 +115,9 @@
                         this.update((millis - lastTime) / 1000); /*updates the difference in time and convert it to whole seconds*/
                     }
                     lastTime = millis;
-                    document.getElementById("time").innerHTML = lastTime
                     /*attached callback to request animation again*/
                     requestAnimationFrame(callback)
+                    document.getElementById("time").innerHTML = lastTime
                 };
                 callback();
                 this.reset();
@@ -182,7 +182,7 @@
 
 
 
-                /*animates the ball*/
+            /*animates the ball*/
             update(dt){ /*takes dt and calcuate with it under the function update*/
                 this.ball.pos.x += this.ball.vel.x * dt;
                 this.ball.pos.y += this.ball.vel.y * dt;
@@ -198,7 +198,6 @@
                     } else {
                         playerId = 0;
                     }
-                    document.getElementById("score").innerHTML = playerId
 
                     /*adding score to the player who won*/
                     this.players[playerId].score ++;
@@ -218,14 +217,14 @@
 
 
 
-              /*  let randomNum;
+                /*  let randomNum;
 
-                (function repeat() {
-                    randomNum = Math.random(0, 1000)* 1000;
-                    setTimeout(repeat, 100000000000000000000000000000000000);
-                    document.getElementById("randomNum").innerHTML = randomNum
+                  (function repeat() {
+                      randomNum = Math.random(0, 1000)* 1000;
+                      setTimeout(repeat, 100000000000000000000000000000000000);
+                      document.getElementById("randomNum").innerHTML = randomNum
 
-                })(); */
+                  })(); */
                 this.players[1].pos.y = this.ball.pos.y + randomNum;
 
                 this.players.forEach(player => this.collide(player, this.ball));
