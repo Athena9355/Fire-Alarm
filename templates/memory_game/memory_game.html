@@ -1,123 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
+
+    <title>Memory Game</title>
+
+
+
 </head>
-{% extends "pagelayout/index.html" %}
-{% set page_title = "Memory Game" %}
-{% set img = "https://wallpapercave.com/wp/wp8828312.jpg" %}
 
-
-{% block content %}
 <body>
+<section class="memory-game">
+    <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="/static/images/aurelia.svg" alt="Aurelia" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="/static/images/aurelia.svg" alt="Aurelia" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
 
-<h1> Please ONLY click on 2 of the buttons</h1>
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back1" onclick="swapImage1()"/>
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="/static/images/vue.svg" alt="Vue" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="/static/images/vue.svg" alt="Vue" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
 
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back2" onclick="swapImage2()"/>
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="/static/images/angular.svg" alt="Angular" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="/static/images/angular.svg" alt="Angular" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
 
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back3" onclick="swapImage3()"/>
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="/static/images/ember.svg" alt="Ember" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="/static/images/ember.svg" alt="Ember" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
 
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back5" onclick="swapImage5()"/>
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="/static/images/backbone.svg" alt="Backbone" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="/static/images/backbone.svg" alt="Backbone" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
 
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back4" onclick="swapImage4()"/>
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="/static/images/react.svg" alt="React" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="/static/images/react.svg" alt="React" />
+        <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
+    </div>
+</section>
 
-<img alt="" src="/static/images/back_1.jpg" style="height: 300px" id="card_back6" onclick="swapImage6()"/>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        background: lightpink;
+    }
+
+    .memory-game {
+        width: 640px;
+        height: 640px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;
+    }
+
+    .memory-card {
+        width: calc(25% - 10px);
+        height: calc(33.333% - 10px);
+        margin: 5px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    }
+
+    .memory-card:active {
+        transform: scale(0.97);
+        transition: transform .2s;
+    }
+
+    .memory-card.flip {
+        transform: rotateY(180deg);
+    }
+
+    .front-face,
+    .back-face {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        border-radius: 5px;
+        background: yellow;
+        backface-visibility: hidden;
+    }
+
+    .front-face {
+        transform: rotateY(180deg);
+    }
+
+
+
+
+</style>
 
 
 <script>
+    const cards = document.querySelectorAll('.memory-card');
 
-    //generating a random card_back_id#
-    function card_back_num(min,max) {
-        let x = 1
-        let text = "card_back";
-        x = Math.floor(Math.random() * (max - min + 1) ) + min;
-        return document.getElementById("demo").innerHTML = text.concat("", x);
-
-    }
-
-    function swapImage1(){
-        var Image_Id = document.getElementById('card_back1');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_1.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
-
-    }
-
-
-        function swapImage2(){
-        var Image_Id = document.getElementById('card_back2');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_2.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
+    function flipCard() {
+        this.classList.toggle('flip');
 
 
     }
-
-    function swapImage3(){
-        var Image_Id = document.getElementById('card_back3');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_3.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
-
-    }
-
-    function swapImage4(){
-        var Image_Id = document.getElementById('card_back4');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_1.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
+    cards.forEach(card => card.addEventListener('click', flipCard))
 
 
-    }
-
-    function swapImage5(){
-        var Image_Id = document.getElementById('card_back5');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_2.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
-
-
-    }
-
-    function swapImage6(){
-        var Image_Id = document.getElementById('card_back6');
-        if (Image_Id.src.match("static/images/back_1.jpg")) {
-            Image_Id.src = "static/images/answer_3.jpg";
-        }
-        else {
-            Image_Id.src = "static/images/back_1.jpg";
-        }
-
-    }
 
 </script>
 
 
 
-
-
-
-
 </body>
 
-{% endblock %}
 </html>
 
