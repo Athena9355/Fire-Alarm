@@ -16,9 +16,10 @@
     <h1>Click on the screen to start the game!</h1>
     <div style="text-align: center">
         <canvas id="pong" width="600" height="400" ></canvas>
-        <h1>The score is: <span id="score"></span></h1>
     </div>
     <script>
+        //player 0: user
+        //player 1: computer
         let randomNum;
         randomNum=0
         setInterval(function test(){
@@ -28,12 +29,12 @@
         }, 3000);
 
         /*score tracker*/
-        var score = 0;
-        document.getElementById("score").innerHTML = score
+        var score0 = 0;
+        var score1 = 0;
         function drawScore() {
             ctx.font = "16px Arial";
             ctx.fillStyle = "#0095DD";
-            ctx.fillText("Score: "+score, 8, 20);
+            ctx.fillText("Score of: "+score1, 8, 20);
         }
 
 
