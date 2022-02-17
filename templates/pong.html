@@ -10,25 +10,31 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
-        <h1>random number <span id="randomNum"></span></h1>
-        <h1>time <span id="time"></span></h1>
+
     </head>
     <body>
     <h1>Click on the screen to start the game!</h1>
     <div style="text-align: center">
         <canvas id="pong" width="600" height="400" ></canvas>
+        <h1>The score is: <span id="score"></span></h1>
     </div>
     <script>
         let randomNum;
         randomNum=0
         setInterval(function test(){
             randomNum = window.Math.floor(Math.random()* 75);
-            document.getElementById("randomNum").innerHTML = randomNum
+            //document.getElementById("randomNum").innerHTML = randomNum
 
         }, 3000);
 
-
-
+        /*score tracker*/
+        var score = 0;
+        document.getElementById("score").innerHTML = score
+        function drawScore() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#0095DD";
+            ctx.fillText("Score: "+score, 8, 20);
+        }
 
 
         /*setting up a vector to hold an x position and y position*/
@@ -117,7 +123,7 @@
                     lastTime = millis;
                     /*attached callback to request animation again*/
                     requestAnimationFrame(callback)
-                    document.getElementById("time").innerHTML = lastTime
+                    //document.getElementById("time").innerHTML = lastTime
                 };
                 callback();
                 this.reset();
@@ -168,7 +174,9 @@
             /*start the game when the user clicks*/
             start(){
                 if (this.ball.vel.x === 0 && this.ball.vel.y === 0){
-                    this.ball.vel.x = 400;
+                    //math.random --> generate a number between 0 and 1. if the number is less than 0.5, we multiply the number by 1 but if the number is greater than 0.5, we multiply the number by -1. this randomly generates the direction the ball is going
+                    this.ball.vel.x = 400 * (Math.random() > 0.5 ? 1 : -1);
+                    //changes the y velocity a little
                     this.ball.vel.y = 400;
                     randomNum=0
                 }
@@ -192,7 +200,12 @@
                 if (this.ball.left < 0 || this.ball.right > this._canvas.width){/*past left end of canvas or ball past width of canvas*/
                     /*as the ball hits the wall, we will decide the direction of the velocity. if the velocity is to the right, the player on the right gets the point*/
                     /*keeping track of scores*/
+
+
+                    //reference code for score + https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
                     let playerId;
+                    const score0 = 0;
+                    const score1 = 0;
                     if (this.ball.vel.x < 0){
                         playerId = 1;
                     } else {
