@@ -77,7 +77,7 @@
     body {
         height: 100vh;
         display: flex;
-        background: lightpink;
+        background: #B2AC88;
     }
 
     .memory-game {
@@ -130,17 +130,38 @@
 </style>
 
 
+
+
 <script>
+
     const cards = document.querySelectorAll('.memory-card');
 
+    let hasFlippedCard = false;
+    let firstCard, secondCard;
     function flipCard() {
         this.classList.toggle('flip');
+
+        //first card
+        if (!hasFlippedCard) {
+            hasFlippedCard = true;
+            firstCard = this;
+
+        }
+
+//second card
+           else{
+                hasFlippedCard = false
+            secondCard = this
+            console.log(firstCard, secondCard)
+
+            }
+
+
+
 
 
     }
     cards.forEach(card => card.addEventListener('click', flipCard))
-
-
 
 </script>
 
