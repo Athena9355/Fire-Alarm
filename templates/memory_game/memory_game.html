@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
 
     <title>Memory Game</title>
+    {% include "layouts/navbar2.html" %}
 
 
 </head>
 
 
 <body>
+{% block content %}
+    <br>
+
 <section class="memory-game">
     <div class="memory-card" data-value="aurelia">
         <img class="front-face" src="/static/images/aurelia.svg" alt="Aurelia" />
@@ -75,8 +79,8 @@
 
     body {
         height: 100vh;
-        display: flex;
-        background: #B2AC88;
+
+        background: #CBC3E3;
     }
 
     .memory-game {
@@ -115,7 +119,7 @@
         padding: 20px;
         position: absolute;
         border-radius: 5px;
-        background: yellow;
+        background: #B2D2A4;
         backface-visibility: hidden;
     }
 
@@ -205,8 +209,9 @@
 
 </script>
 
+<button onclick="location.reload();">Done playing? Click here to play again!</button>
 
-
+{% endblock %}
 </body>
 
 
