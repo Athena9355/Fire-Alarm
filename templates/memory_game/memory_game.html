@@ -6,66 +6,65 @@
     <title>Memory Game</title>
 
 
-
 </head>
+
 
 <body>
 <section class="memory-game">
-    <div class="memory-card" data-framework="aurelia">
+    <div class="memory-card" data-value="aurelia">
         <img class="front-face" src="/static/images/aurelia.svg" alt="Aurelia" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="aurelia">
+    <div class="memory-card" data-value="aurelia">
         <img class="front-face" src="/static/images/aurelia.svg" alt="Aurelia" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 
-    <div class="memory-card" data-framework="vue">
+    <div class="memory-card" data-value="vue">
         <img class="front-face" src="/static/images/vue.svg" alt="Vue" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="vue">
+    <div class="memory-card" data-value="vue">
         <img class="front-face" src="/static/images/vue.svg" alt="Vue" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 
-    <div class="memory-card" data-framework="angular">
+    <div class="memory-card" data-value="angular">
         <img class="front-face" src="/static/images/angular.svg" alt="Angular" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="angular">
+    <div class="memory-card" data-value="angular">
         <img class="front-face" src="/static/images/angular.svg" alt="Angular" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 
-    <div class="memory-card" data-framework="ember">
+    <div class="memory-card" data-value="ember">
         <img class="front-face" src="/static/images/ember.svg" alt="Ember" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="ember">
+    <div class="memory-card" data-value="ember">
         <img class="front-face" src="/static/images/ember.svg" alt="Ember" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 
-    <div class="memory-card" data-framework="backbone">
+    <div class="memory-card" data-value="backbone">
         <img class="front-face" src="/static/images/backbone.svg" alt="Backbone" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="backbone">
+    <div class="memory-card" data-value="backbone">
         <img class="front-face" src="/static/images/backbone.svg" alt="Backbone" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 
-    <div class="memory-card" data-framework="react">
+    <div class="memory-card" data-value="react">
         <img class="front-face" src="/static/images/react.svg" alt="React" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
-    <div class="memory-card" data-framework="react">
+    <div class="memory-card" data-value="react">
         <img class="front-face" src="/static/images/react.svg" alt="React" />
         <img class="back-face" src="/static/images/Card_back_10.svg" alt="JS Badge" />
     </div>
 </section>
-
 
 <style>
     * {
@@ -137,9 +136,12 @@
     const cards = document.querySelectorAll('.memory-card');
 
     let hasFlippedCard = false;
+
+
     let firstCard, secondCard;
     function flipCard() {
         this.classList.toggle('flip');
+
 
         //first card
         if (!hasFlippedCard) {
@@ -147,27 +149,67 @@
             firstCard = this;
 
         }
-
-//second card
+            //second card
            else{
                 hasFlippedCard = false
             secondCard = this
-            console.log(firstCard, secondCard)
 
+            console.log(firstCard.dataset.value);
+            console.log(secondCard.dataset.value);
+            checkMatch()
             }
+    }
 
+    function checkMatch(){
 
-
+        if(firstCard.dataset.value === secondCard.dataset.value) {
+            //if it a match
+           disableCards()
+        }
+        else{
+            //cards did not match
+            unflip()
+            console.log("cards did not match")
+        }
 
 
     }
+
+    function disableCards(){
+        firstCard.removeEventListener('click', flipCard)
+        secondCard.removeEventListener('click', flipCard)
+        console.log("cards matched!");
+
+    }
+
+    function unflip(){
+        setTimeout(() => {
+            firstCard.classList.remove('flip')
+            secondCard.classList.remove('flip')
+
+        }, 300);
+
+    }
+
+    (function shuffle(){
+        cards.forEach(card => {
+            card.style.order = Math.floor(Math.random() * 12);
+            });
+
+
+    })() //the extra parentheses makes the function an immediately invoked function.
+
     cards.forEach(card => card.addEventListener('click', flipCard))
+
+
 
 </script>
 
 
 
 </body>
+
+
 
 </html>
 

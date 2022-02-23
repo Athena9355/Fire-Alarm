@@ -233,6 +233,10 @@ def kfc():
 def memory():
     return render_template("memory_game/memory_game.html")
 
+@app.route('/test')
+def test():
+    return render_template("memory_game/test.html")
+
 
 @app.route('/kfc', methods=['POST'])
 def kfc_function():
