@@ -115,9 +115,11 @@ def oceanicfoodgen():
 @app.route('/foodgallery')
 def foodgallery():
     return render_template("foodgallery.html")
+
 @app.route('/about_us')
 def about_us():
     return render_template("layouts/about_us.html")
+
 @app.route('/fetch')
 def fetch():
     return render_template("fetch.html")
@@ -127,16 +129,21 @@ def aboutustemp():
 @app.route('/pagelayout/index')
 def pl():
     return render_template("pagelayout/index.html")
+
 ##nutritional information api
 @app.route('/nutrition')
 def nutrition():
     return render_template("nutrition.html")
+
 @app.route('/locationfinder')
 def locationfinder():
     return render_template("locationfinder.html")
+
 @app.route('/reservation')
 def reservation():
     return render_template("reservation.html")
+
+
 @app.route('/nutritional_info_api', methods=['GET', 'POST'])
 def search():
     result = ""
@@ -148,9 +155,13 @@ def search():
         # print("Please enter an input")
         # print(result)
     return render_template("athena.html", result=result)  # works when nutrition.html is changed to athena.html
+
+
 @app.route('/darkmode')
 def darkmode():
     return render_template("darkmode.html")
+
+
 @app.route('/snakegame')
 def snakegame():
     return render_template("snakegame.html")
@@ -235,6 +246,8 @@ def kfc():
 @app.route('/memory')
 def memory():
     return render_template("memory_game/memory_game.html")
+
+
 
 
 @app.route('/kfc', methods=['POST'])
