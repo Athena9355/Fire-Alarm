@@ -182,6 +182,20 @@ def athena():
 @app.route('/karthik')
 def karthik():
     return render_template("karthik.html")
+@app.route('/gaurish')
+def gaurish():
+
+    url = "https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes"
+
+    headers = {
+        'x-rapidapi-host': "jokes-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    output = json.loads(response.text)
+    return render_template("gaurish.html", result=output)
 @app.route('/notpong')
 def notpong():
     return render_template("pong.html")
