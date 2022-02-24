@@ -142,6 +142,7 @@
                         '111101111101111', //8
                         '111101111001111', //9
                     ].map(str => {
+                        //the code goes through every string in the array and create a canvas accordingly
                         const canvas = document.createElement('canvas');
                         //canvas dimension: 3 by 5
                         canvas.height = this.CHAR_PIXEL * 5;
@@ -154,12 +155,11 @@
                         str.split('').forEach((fill, i) => {//will fill either a 1 or 0
                             //if we have a 1, we want to fill. 0 ==> no filling
                             if (fill === '1'){ //then we will add a pixel here
-                                context.fillRect(
-                                    (i % 3) * this.CHAR_PIXEL,
-                                    (i / 3) | 0) * this.CHAR_PIXEL, //have the corner painted
+                                context.fillRect((i % 3) * this.CHAR_PIXEL, (i / 3 | 0) * this.CHAR_PIXEL, this.CHAR_PIXEL, this.CHAR_PIXEL);
                             }
-                        })
-                    })
+                        });
+                        return canvas;
+                    });
                 this.reset();
             }
 
@@ -195,6 +195,26 @@
                 this._context.fillStyle = '#fff';
                 /*draw a rectangle from upper left hand corner to the full width and height*/
                 this._context.fillRect(rect.left, rect.bottom, rect.size.x, rect.size.y);
+            }
+
+            drawScore(){
+                const align = this._canvas.width / 3;//alignment has to be centered
+                const CHAR_W = this.CHAR_PIXEL * 4;//calculate the width. x4 becuase each is 3 px and we add an extra space to it
+                this.players.forEach((player, index) => {
+                    //convert the scores into characters
+                    const chars = player.score.toString().split('');//.split --> turns into array
+                    //calculate the offset
+                    //char.length = how many integers in a number
+                    // /2 to center it
+                    const offset = align * (index + 1) - (CHAR_W * chars.length / 2) * this.CHAR_PIXEL / 2;//offset from the left
+                    //char and pos will be position 1 and position 2
+                    //for example, if you have 12, the 1 will be position 0 and 2 will be 1
+                    chars.forEach((char, pos) => {
+                        this._context.drawImage(this.CHARS[char|0],
+                                                offset + pos * CHAR_W); //apply index of canvas we prepared earlier
+                    })
+
+                })
             }
 
             /*define reset method*/
