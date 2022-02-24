@@ -11,12 +11,105 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
 
+        <h1>random number <span id="randomNum"></span></h1>
+        <h1>Velocity <span id="vel"></span></h1>
+        <h1>time <span id="time"></span></h1>
     </head>
     <body>
+    <div class="dropdown">          SETTINGS
+        <div class="dropdownstyle" > Ball Speed|
+                <input type="checkbox" name="a" class="incline checkbox" id="abox" value="1" onclick="choosy()"> Low  </input>
+                <input type="checkbox" name="b" class="incline checkbox" id="bbox" value="1" onclick="choosy()"> Medium </input>
+                <input type="checkbox" name="c" class="incline checkbox" id="cbox" value="1" onclick="choosy()"> High </input>
+
+        </div>
+        <div class="dropdownstyle" > Color Scheme|
+            <input type="checkbox" name="d" class="incline checkbox" id="dbox" value="1" onclick="choosy()"> Red  </input>
+            <input type="checkbox" name="e" class="incline checkbox" id="ebox" value="1" onclick="choosy()"> Blue </input>
+            <input type="checkbox" name="f" class="incline checkbox" id="fbox" value="1" onclick="choosy()"> Green </input>
+
+        </div>
+        <div class="dropdownstyle" > AI Difficulty|
+            <input type="checkbox" name="g" class="incline checkbox" id="gbox" value="1" onclick="choosy()"> Novice  </input>
+            <input type="checkbox" name="h" class="incline checkbox" id="hbox" value="1" onclick="choosy()"> Intermediate </input>
+            <input type="checkbox" name="i" class="incline checkbox" id="ibox" value="1" onclick="choosy()"> Advanced </input>
+
+        </div>
+        <div class="dropdownstyle" > Background Color|
+            <input type="checkbox" name="j" class="incline checkbox" id="jbox" value="1" onclick="choosy()"> Black  </input>
+            <input type="checkbox" name="k" class="incline checkbox" id="kbox" value="1" onclick="choosy()"> White </input>
+            <input type="checkbox" name="l" class="incline checkbox" id="lbox" value="1" onclick="choosy()"> Random </input>
+
+        </div>
+    </div>
+
+=    <style>
+        .dropdownstyle {
+            background-color: #000000;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+            transform:scale(1.2);
+            background-color: gray;
+        }
+
+    </style>
+    <style>
+        .button1 {
+            border: 2px solid #463d3d;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            color: antiquewhite;
+            font-size: 20px;
+            background-color: darkblue;
+        }
+
+        /* hover over effect*/
+        .button1:hover {
+            box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+            transform:scale(2);
+            background-color: gray;
+        }
+    </style>
+
     <h1>Click on the screen to start the game!</h1>
     <div style="text-align: center">
         <canvas id="pong" width="600" height="400" ></canvas>
     </div>
+
     <script>
         //player 0: user
         //player 1: computer
@@ -26,7 +119,105 @@
             randomNum = window.Math.floor(Math.random()* 75);
             //document.getElementById("randomNum").innerHTML = randomNum
 
-        }, 3000);
+        }, 10000);
+
+
+        let vel;
+        vel=500
+        document.getElementById("vel").innerHTML = vel
+        function myFxn() {
+           /* if (document.getElementById('button').onclick === true){ */
+                vel= 1000;
+                document.getElementById("vel").innerHTML = vel
+
+            }
+        let colorpicked;
+        colorpicked='#ffffff'
+
+        let bcolor;
+        bcolor='#000000'
+
+
+
+
+        function choosy() {
+            const a = document.getElementById("abox")
+            const b = document.getElementById("bbox")
+            const c = document.getElementById("cbox")
+            const d = document.getElementById("dbox")
+            const e = document.getElementById("ebox")
+            const f = document.getElementById("fbox")
+            const g = document.getElementById("gbox")
+            const h = document.getElementById("hbox")
+            const i = document.getElementById("ibox")
+            const j = document.getElementById("jbox")
+            const k = document.getElementById("kbox")
+            const l = document.getElementById("lbox")
+
+            if (a.checked){
+                vel= 250;
+                document.getElementById("vel").innerHTML = vel;
+            }
+
+            if (b.checked){
+                vel= 500;
+                document.getElementById("vel").innerHTML = vel;
+            }
+            if (c.checked){
+                vel= 750;
+                document.getElementById("vel").innerHTML = vel;
+            }
+            if (d.checked){
+                colorpicked='#ff0000'
+            }
+            if (e.checked){
+                colorpicked='#0012ff'
+            }
+            if (f.checked){
+                colorpicked='#00ff04'
+            }
+            if (g.checked){
+                setInterval(function test(){
+                    randomNum = window.Math.floor(Math.random()* 100);
+                    document.getElementById("randomNum").innerHTML = randomNum
+
+                }, 3000);
+            }
+            if (h.checked){
+                setInterval(function test(){
+                    randomNum = window.Math.floor(Math.random()* 75);
+                    document.getElementById("randomNum").innerHTML = randomNum
+
+                }, 3000);
+            }
+            if (i.checked){
+                setInterval(function test(){
+                    randomNum = window.Math.floor(Math.random()* 60);
+                    document.getElementById("randomNum").innerHTML = randomNum
+
+                }, 3000);
+            }
+            if (j.checked){
+                bcolor='#000000'
+            }
+            if (k.checked){
+                bcolor='#ffffff'
+            }
+            if (l.checked){
+                bcolor="#" + ((1<<24)*Math.random() | 0).toString(16)
+/* Credit to https://stackoverflow.com/questions/1484506/random-color-generator for inspiration on random color code*/
+            }
+            }
+
+
+
+        /*else {
+            velocity=100;
+            document.getElementById("velocity").innerHTML = velocity;
+
+        }*/
+
+
 
         /*score tracker*/
         var score0 = 0;
@@ -177,7 +368,7 @@
 
             draw(){
                 /*background color of the canvas. color = black*/
-                this._context.fillStyle = '#000';
+                this._context.fillStyle = bcolor;
                 /*draw a rectangle from upper left hand corner to the full width and height*/
                 this._context.fillRect(0,0, this._canvas.width, this._canvas.height);
 
@@ -193,7 +384,7 @@
                 /*drawing a ball*/
                 /*color of the ball. color = white*/
                 /*create new ball*/
-                this._context.fillStyle = '#fff';
+                this._context.fillStyle = colorpicked;
                 /*draw a rectangle from upper left hand corner to the full width and height*/
                 this._context.fillRect(rect.left, rect.bottom, rect.size.x, rect.size.y);
             }
@@ -229,10 +420,14 @@
             /*start the game when the user clicks*/
             start(){
                 if (this.ball.vel.x === 0 && this.ball.vel.y === 0){
+
                     //math.random --> generate a number between 0 and 1. if the number is less than 0.5, we multiply the number by 1 but if the number is greater than 0.5, we multiply the number by -1. this randomly generates the direction the ball is going
                     this.ball.vel.x = 400 * (Math.random() > 0.5 ? 1 : -1);
                     //changes the y velocity a little
                     this.ball.vel.y = 400;
+                    this.ball.vel.x = vel;
+                    this.ball.vel.y = vel;
+
                     randomNum=0
                 }
             }
