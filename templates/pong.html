@@ -185,6 +185,7 @@
 
                 /*draw the players*/
                 this.players.forEach(player => this.drawRect(player)); /*we can use draw Rect for player because players will be rectangle*/
+                this.drawScore();
 
             }
 
@@ -206,12 +207,12 @@
                     //calculate the offset
                     //char.length = how many integers in a number
                     // /2 to center it
-                    const offset = align * (index + 1) - (CHAR_W * chars.length / 2) * this.CHAR_PIXEL / 2;//offset from the left
+                    const offset = align * (index + 1) - (CHAR_W * chars.length / 2) + this.CHAR_PIXEL / 2;//offset from the left
                     //char and pos will be position 1 and position 2
                     //for example, if you have 12, the 1 will be position 0 and 2 will be 1
                     chars.forEach((char, pos) => {
                         this._context.drawImage(this.CHARS[char|0],
-                                                offset + pos * CHAR_W); //apply index of canvas we prepared earlier
+                                                offset + pos * CHAR_W, 20); //apply index of canvas we prepared earlier
                     })
 
                 })
