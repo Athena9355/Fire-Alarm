@@ -127,6 +127,39 @@
                     //document.getElementById("time").innerHTML = lastTime
                 };
                 callback();
+                //3458
+                this.CHAR_PIXEL = 10;
+                this.CHARS =
+                    [
+                        '111101101101111', //displays 0
+                        '010010010010010', //1
+                        '111001111100111', //2
+                        '111001111001111', //3
+                        '101101111001001', //4
+                        '111100111001111', //5
+                        '111100111101111', //6
+                        '111001001001001', //7
+                        '111101111101111', //8
+                        '111101111001111', //9
+                    ].map(str => {
+                        const canvas = document.createElement('canvas');
+                        //canvas dimension: 3 by 5
+                        canvas.height = this.CHAR_PIXEL * 5;
+                        canvas.width = this.CHAR_PIXEL * 3;
+                        //2d context
+                        const context = canvas.getContext('2d');
+                        context.fillStyle = '#fff' //white context
+                        //paint the canvas individually
+                        //str from str defined above
+                        str.split('').forEach((fill, i) => {//will fill either a 1 or 0
+                            //if we have a 1, we want to fill. 0 ==> no filling
+                            if (fill === '1'){ //then we will add a pixel here
+                                context.fillRect(
+                                    (i % 3) * this.CHAR_PIXEL,
+                                    (i / 3) | 0) * this.CHAR_PIXEL, //have the corner painted
+                            }
+                        })
+                    })
                 this.reset();
             }
 
