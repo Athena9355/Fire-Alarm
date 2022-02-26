@@ -10,38 +10,36 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pong Game</title>
-
-        <h1>random number <span id="randomNum"></span></h1>
-        <h1>Velocity <span id="vel"></span></h1>
-        <h1>time <span id="time"></span></h1>
     </head>
     <body>
-    <div class="dropdown">          SETTINGS
-        <div class="dropdownstyle" > Ball Speed|
-                <input type="checkbox" name="a" class="incline checkbox" id="abox" value="1" onclick="choosy()"> Low  </input>
-                <input type="checkbox" name="b" class="incline checkbox" id="bbox" value="1" onclick="choosy()"> Medium </input>
-                <input type="checkbox" name="c" class="incline checkbox" id="cbox" value="1" onclick="choosy()"> High </input>
+    <center>
+        <div class="dropdown">          SETTINGS
+            <div class="dropdownstyle" > Ball Speed
+                    <input type="checkbox" name="a" class="incline checkbox" id="abox" value="1" onclick="choosy()"> Low  </input>
+                    <input type="checkbox" name="b" class="incline checkbox" id="bbox" value="1" onclick="choosy()"> Medium </input>
+                    <input type="checkbox" name="c" class="incline checkbox" id="cbox" value="1" onclick="choosy()"> High </input>
 
-        </div>
-        <div class="dropdownstyle" > Color Scheme|
-            <input type="checkbox" name="d" class="incline checkbox" id="dbox" value="1" onclick="choosy()"> Red  </input>
-            <input type="checkbox" name="e" class="incline checkbox" id="ebox" value="1" onclick="choosy()"> Blue </input>
-            <input type="checkbox" name="f" class="incline checkbox" id="fbox" value="1" onclick="choosy()"> Green </input>
+            </div>
+            <div class="dropdownstyle" > Color Scheme
+                <input type="checkbox" name="d" class="incline checkbox" id="dbox" value="1" onclick="choosy()"> Red  </input>
+                <input type="checkbox" name="e" class="incline checkbox" id="ebox" value="1" onclick="choosy()"> Blue </input>
+                <input type="checkbox" name="f" class="incline checkbox" id="fbox" value="1" onclick="choosy()"> Green </input>
 
-        </div>
-        <div class="dropdownstyle" > AI Difficulty|
-            <input type="checkbox" name="g" class="incline checkbox" id="gbox" value="1" onclick="choosy()"> Novice  </input>
-            <input type="checkbox" name="h" class="incline checkbox" id="hbox" value="1" onclick="choosy()"> Intermediate </input>
-            <input type="checkbox" name="i" class="incline checkbox" id="ibox" value="1" onclick="choosy()"> Advanced </input>
+            </div>
+            <div class="dropdownstyle" > AI Difficulty
+                <input type="checkbox" name="g" class="incline checkbox" id="gbox" value="1" onclick="choosy()"> Novice  </input>
+                <input type="checkbox" name="h" class="incline checkbox" id="hbox" value="1" onclick="choosy()"> Intermediate </input>
+                <input type="checkbox" name="i" class="incline checkbox" id="ibox" value="1" onclick="choosy()"> Advanced </input>
 
-        </div>
-        <div class="dropdownstyle" > Background Color|
-            <input type="checkbox" name="j" class="incline checkbox" id="jbox" value="1" onclick="choosy()"> Black  </input>
-            <input type="checkbox" name="k" class="incline checkbox" id="kbox" value="1" onclick="choosy()"> White </input>
-            <input type="checkbox" name="l" class="incline checkbox" id="lbox" value="1" onclick="choosy()"> Random </input>
+            </div>
+            <div class="dropdownstyle" > Background Color
+                <input type="checkbox" name="j" class="incline checkbox" id="jbox" value="1" onclick="choosy()"> Black  </input>
+                <input type="checkbox" name="k" class="incline checkbox" id="kbox" value="1" onclick="choosy()"> White </input>
+                <input type="checkbox" name="l" class="incline checkbox" id="lbox" value="1" onclick="choosy()"> Random </input>
 
+            </div>
         </div>
-    </div>
+    </center>
 
 =    <style>
         .dropdownstyle {
@@ -124,11 +122,11 @@
 
         let vel;
         vel=500
-        document.getElementById("vel").innerHTML = vel
+
         function myFxn() {
            /* if (document.getElementById('button').onclick === true){ */
                 vel= 1000;
-                document.getElementById("vel").innerHTML = vel
+
 
             }
         let colorpicked;
@@ -156,16 +154,16 @@
 
             if (a.checked){
                 vel= 250;
-                document.getElementById("vel").innerHTML = vel;
+
             }
 
             if (b.checked){
                 vel= 500;
-                document.getElementById("vel").innerHTML = vel;
+
             }
             if (c.checked){
                 vel= 750;
-                document.getElementById("vel").innerHTML = vel;
+
             }
             if (d.checked){
                 colorpicked='#ff0000'
@@ -179,21 +177,21 @@
             if (g.checked){
                 setInterval(function test(){
                     randomNum = window.Math.floor(Math.random()* 100);
-                    document.getElementById("randomNum").innerHTML = randomNum
+
 
                 }, 3000);
             }
             if (h.checked){
                 setInterval(function test(){
                     randomNum = window.Math.floor(Math.random()* 75);
-                    document.getElementById("randomNum").innerHTML = randomNum
+
 
                 }, 3000);
             }
             if (i.checked){
                 setInterval(function test(){
                     randomNum = window.Math.floor(Math.random()* 60);
-                    document.getElementById("randomNum").innerHTML = randomNum
+
 
                 }, 3000);
             }
