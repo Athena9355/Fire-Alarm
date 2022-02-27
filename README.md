@@ -413,6 +413,3 @@ Scrum Board - Assignments and Backlog **1/1**
 - Your [scrum board](https://github.com/Athena9355/Fire-Alarm/projects/1) looks very active and you have issues in each column
 
 _Overall: 4.7/5_
-<h2>To Be Continued</h2>
-
-  create task plan
