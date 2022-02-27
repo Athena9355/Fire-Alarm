@@ -9,6 +9,7 @@ Grrrrrr. Your stomach is growling. Starving, yet unable to think, you can't help
 
 [Insights](https://github.com/Athena9355/Fire-Alarm/graphs/contributors)<br>
 [Scrum Board](https://github.com/Athena9355/Fire-Alarm/projects/1)<br>
+[Our Deployed Website](https://fire-alarm.tk/)
 
 <h2>Pair Share Journals</h2>
 
