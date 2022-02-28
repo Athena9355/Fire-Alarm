@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
 
-$primary: #03fcf8;
-$secondary: #fc03f0;
-$tertiary: #fc9803;
+$primary: #d7f2f7;
+$tertiary: #ddc0f0;
 
 body{
   font-weight: 300;
@@ -60,11 +59,11 @@ body{
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: $secondary;
+  color: #000;
   font-family: 'Cardo', sans-serif;
 }
 .search-control::placeholder{
-  color: $secondary;
+  color: #000000;
   font-family: 'Cardo', serif;
 }
 .search-btn{
@@ -79,7 +78,7 @@ body{
   font-size: 20px;
 }
 .search-btn:hover{
-  background: $secondary;
+  background: $primary;
 }
 .meal-result{
   margin-top: 4rem;
@@ -117,7 +116,7 @@ body{
 .recipe-btn{
   background-color: $primary;
   border-radius: 100px;
-  box-shadow: $secondary 0 -25px 18px -14px inset,$secondary 0 1px 2px,$secondary 0 2px 4px,$secondary 0 4px 8px,$secondary 0 8px 16px,$secondary 0 16px 32px;
+  box-shadow: $primary 0 -25px 18px -14px inset,$primary 0 1px 2px,$primary 0 2px 4px,$primary 0 4px 8px,$primary 0 8px 16px,$primary 0 16px 32px;
   color: #000;
   cursor: pointer;
   display: inline-block;
@@ -135,7 +134,7 @@ body{
 .recipe-btn:hover {
   background-color: $tertiary;
   color: #fff;
-  box-shadow: $secondary 0 -25px 18px -14px inset,$secondary 0 1px 2px,$secondary 0 2px 4px,$secondary 0 4px 8px,$secondary 0 8px 16px,$secondary 0 16px 32px;
+  box-shadow: $primary 0 -25px 18px -14px inset,$primary 0 1px 2px,$primary 0 2px 4px,$primary 0 4px 8px,$primary 0 8px 16px,$primary 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
 
@@ -212,7 +211,7 @@ body{
 .recipe-category{
   background: #fff;
   font-weight: 600;
-  color: $secondary;
+  color: $primary;
   display: inline-block;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
