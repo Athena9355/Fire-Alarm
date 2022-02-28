@@ -14,15 +14,79 @@
 
 
 {% block content %}
-<select id='eatery'>
-    <option>Select An Option...</option>
-    <option value="0">In-N-Out Burger</option>
-    <option value="1">Breakfast Republic</option>
-    <option value="2">KFC</option>
-    <option value="3">Taco Bell</option>
-    <option value="4">Jamba Juice</option>
-    <option value="5">Chick-Fil-A</option>
-</select>
+
+<div>
+    <div class="filterbox">
+        <h1>Available Menus</h1>
+
+        <div id="men4u" style='display:none;'>
+            <ul id="Restaurants">
+                <li value="0"><a>In-N-Out Burger</a></li>
+
+                <li value="2"><a>KFC</a></li>
+                <li value="3"><a>Jamba Juice</a></li>
+                <li value="4"><a>Chick-Fil-A</a></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+            .filterbox{
+                padding: 15px;
+                border-radius: 5px;
+                background-color: #fff;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                text-align:center;
+                box-shadow: 0 6px 8px rgba(0,0,0,.1);
+                transition: all .4s;
+            }
+            .filterbox h1{
+                margin-bottom: 15px;
+                color: #4686f6;
+            }
+            .filterbox input{
+                padding: 10px 15px;
+                margin-bottom: 15px;
+                width: calc(100%);
+                font-size: 18px;
+            }
+            .filterbox ul li{
+                list-style-type: none;
+                padding: 15px 0;
+                background-color: #cfd8dc;
+                transition: .4s;
+            }
+            .filterbox ul a{
+                color: #212121;
+                text-decoration: none;
+            }
+        </style>
+</div>
+
+
+<div class="row gx-5 align-items-center" style="
+            padding: 105px;
+            border-radius: 5px;
+            background-color: lavender;
+            position: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            text-align:center;
+            box-shadow: 0 6px 8px rgba(0,0,0,.1);
+            transition: all .4s;">
+    <select id='eatery'>
+        <option>Select An Option...</option>
+        <option value="0">In-N-Out Burger</option>
+
+
+        <option value="2">KFC</option>
+        <option value="3">Jamba Juice</option>
+        <option value="4">Chick-Fil-A</option>
+    </select>
+</div>
+
 
 
 
@@ -32,59 +96,52 @@
             <!-- In-N-Out, Value 0 -->
             <div>
                 <div class="text-center" style='display:none;' id='innout'>
-                    <div class="dropdown">
-                        <span><i class="bi bi-arrow-90deg-right icon-feature text-gradient d-block mb-3"></i></span>
-                        <div class="dropdown-content">
-                            <a href="https://www.in-n-out.com/menu#doubledouble"><p>DOUBLE-DOUBLE®</p></a>
-                            <a href="https://www.in-n-out.com/menu#cheeseburger"><p>CHEESEBURGER</p></a>
-                            <a href="https://www.in-n-out.com/menu#hamburger"><p>HAMBURGER</p></a>
-                            <a href="https://www.in-n-out.com/menu#fries"><p>FRENCH FRIES</p></a>
-                            <a href="https://www.in-n-out.com/menu#beverages"><p>BEVERAGES</p></a>
-                            <a href="https://www.in-n-out.com/menu#shakes"><p>SHAKES</p></a>
-                            <a href="https://www.in-n-out.com/menu/not-so-secret-menu"><p>Secret Menu Items</p></a>
-                        </div>
+
+                    <br>
+                    <br>
+
                         <h3 class="font-alt">In-N-Out Burger</h3>
                         <p class="text-muted mb-0">American regional chain of fast food restaurants</p>
-                    </div>
+                    <span><i class="bi bi-arrow-90deg-right icon-feature text-gradient d-block mb-3"></i></span>
+                            <a href="inandout"><p>DOUBLE-DOUBLE® ---- $7.89</p></a>
+                            <a href="inandout"><p>CHEESEBURGER ---- $2.95</p></a>
+                            <a href="inandout"><p>HAMBURGER ---- $6.35</p></a>
+                            <a href="inandout"><p>FRENCH FRIES ---- $1.95</p></a>
+                            <a href="inandout"><p>BEVERAGES ---- $1.95 </p></a>
+                            <a href="inandout"><p>SHAKES ---- $2.50</p></a>
+
+
+
                 </div>
 
 
-                <!-- Breakfast Republic, Value 1 -->
-                <div class="text-center" style='display:none;' id='br'>
-                    <div class="dropdown">
-                        <span><i class="bi-egg-fried icon-feature text-gradient d-block mb-3"></i></span>
-                        <div class="dropdown-content">
-                            <a href="https://www.in-n-out.com/menu#doubledouble"><p>BENEDICTS</p></a>
-                            <a href="https://www.in-n-out.com/menu#cheeseburger"><p>OMELETES</p></a>
-                            <a href="https://www.in-n-out.com/menu#hamburger"><p>SCRAMBLES</p></a>
-                            <a href="https://www.in-n-out.com/menu#fries"><p>PANCAKES</p></a>
-                            <a href="https://www.in-n-out.com/menu#beverages"><p>FRENCH TOAST</p></a>
-                            <a href="https://www.in-n-out.com/menu#shakes"><p>VEGAN</p></a>
-                            <a href="https://www.in-n-out.com/menu/not-so-secret-menu"><p>SIDES</p></a>
-                        </div>
-                        <h3 class="font-alt">Breakfast Republic</h3>
-                        <p class="text-muted mb-0">San Diego's top spot to enjoy the most important meal of the day, breakfast</p>
-                    </div>
-                </div>
+
 
             </div>
+                </div>
 
-            <!-- KFC, Value 2 -->
+
+
+
+
+
+            <!-- KFC, Value 1 -->
             <div>
                 <div class="text-center" style='display:none;' id='kfc'>
-                    <div class="dropdown">
+<br>
+                    <br>
+                    <h3 class="font-alt">KFC</h3>
+                    <p class="text-muted mb-0">American fast food restaurant chain that specializes in fried chicken</p>
                         <span><i class="bi-bucket-fill icon-feature text-gradient d-block mb-3"></i></span>
-                        <div class="dropdown-content">
-                            <p>KFC CHICKEN SANDWICH COMBO</p>
-                            <p>10 PIECE FEAST</p>
-                            <p>8 PC. TENDERS MEAL</p>
-                            <p>MENU Item</p>
-                            <p>MENU Item</p>
-                            <p>MENU Item</p>
-                            <p>MENU Item</p>
+
+                        <a href="kfc"><p>KFC CHICKEN SANDWICH COMBO ---- $7.89</p></a>
+                        <a href="kfc"><p>0 PIECE FEAST ---- $7.89</p></a>
+                        <a href="kfc"><p>8 PC. TENDERS MEAL ---- $7.89</p></a>
+
+
                         </div>
-                        <h3 class="font-alt">KFC</h3>
-                        <p class="text-muted mb-0">American fast food restaurant chain that specializes in fried chicken</p>
+
+
                     </div>
                 </div>
 
@@ -111,7 +168,7 @@
             </div>
 
             <!-- Jamba Juice, Value 4 -->
-            <div>
+
                 <div class="text-center" style='display:none;' id='jamba'>
                     <div class="dropdown">
                         <span><i class="bi-cup-straw icon-feature text-gradient d-block mb-3"></i></span>
@@ -217,24 +274,8 @@
         });
     </script>
 
-                {% endblock %}
+
+{% endblock %}
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -31,9 +31,10 @@
     <script>
 
         function fetchData() {
-            return fetch('https://csp.nighthawkcodingsociety.com/api/jokes', {
+            fetch('https://csp.nighthawkcodingsociety.com/api/jokes', {
                 mode: "no-cors"})
                 .then(data => console.log(data));
+            alert("Done using Fetch!");
 
         }
 
